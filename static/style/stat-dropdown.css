@@ -6,7 +6,7 @@
     width: 100%;
     height: auto;
     padding: auto;
-    gap: .3vw;
+    gap: 6px;
 }
 
 .stat-custom-dropdown{
@@ -41,27 +41,30 @@
 
 #stat-selected-name, #stat-selected-value{
     color: beige;
-    font-size: .8vw;
+    font-size: 12px;
 }
 
 #substat-selected-name, #substat-selected-value{
     color: beige;
-    font-size: .8vw;
+    font-size: 12px;
 }
 
 #substat-selected-role{
     color: rgb(255, 175, 42);
-    font-size: .8vw;
+    font-size: 12px;
 }
 
 .stat-dropdown-button{
-    padding: .45vw;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     width: 100%;
 }
 
 .substat-dropdown-button{
-    padding: .3vw;
-    padding-left: .45vw;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     width: 100%;
 }
 

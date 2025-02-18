@@ -2,10 +2,10 @@
     display: flex;
     /*background-color: rgb(28, 28, 28);*/
     box-sizing: border-box;
-    padding: .15vw;
-    border-radius: .6vw;
+    padding: 2px;
+    border-radius: 10px;
     box-sizing: border-box;
-    width: 12%;
+    width: 75px;
     aspect-ratio: 1;
     object-fit: cover;
     transform: scale(1);
@@ -19,7 +19,7 @@
 }
 
 .wengine-img{
-    border-radius: .6vw;
+    border-radius: 10px;
     box-sizing: border-box;
     object-fit: cover;
     width: 100%;
@@ -27,8 +27,7 @@
 }
 
 .wengine-box{
-    padding: 0.1vw;
-    gap: .3vw;
+    gap: 6px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;

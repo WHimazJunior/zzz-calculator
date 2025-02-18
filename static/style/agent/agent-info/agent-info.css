@@ -25,8 +25,7 @@
 .agent-main-stats{
     display: flex;
     box-sizing: border-box;
-    gap: .4vw;
-    margin-top: .4vw;
+    gap: 10px;
     width: 100%;
     height: 15%;
 }
@@ -36,25 +35,25 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    gap: .3vw;
+    gap: 5px;
     width: 50%;
 }
 
 .agent-actual-level-label{
-    text-shadow: -.1vw -.1vw 0 #000, .1vw -.1vw 0 #000, -.1vw .1vw 0 #000, .15vw .15vw 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
     font-style: italic;
-    font-size: 1.2vw;
+    font-size: 18px;
 }
 
 .agent-max-level-label{
     font-style: italic;
-    font-size: 1.75vw;
+    font-size: 28px;
     color: black;
 }
 
 .agent-max-label{
     font-style: bold;
-    font-size: 1vw;
+    font-size: 16px;
     color: rgb(102, 102, 102);
 }
 
@@ -70,8 +69,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: -0.2vw;
+    margin-right: -2px;
     background-color: black;
-    border-radius: 1vw;
-    height: 102%;
+    border-radius: 200px;
+    height: 106%;
 }

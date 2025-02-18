@@ -6,7 +6,7 @@
     aspect-ratio: 1;
     border-radius: 50%;
     background: linear-gradient(75deg, rgb(28, 29, 24), rgb(60, 58, 63));
-    border: .2vw solid rgb(5, 3, 3);
+    border: 4px solid rgb(5, 3, 3);
 }
 
 .w-engine-content{
@@ -19,7 +19,7 @@
     z-index: 8;
     background-repeat: no-repeat;
     background-size: cover;
-    outline: .2vw solid rgb(5, 3, 3);
+    outline: 4px solid rgb(5, 3, 3);
     transform: scale(1);
     -webkit-transition: transform .15s ease-in-out;
 }
@@ -45,7 +45,7 @@
     width: 80%;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: .2vw solid rgb(5, 3, 3);
+    border: 4px solid rgb(5, 3, 3);
 }
 
 

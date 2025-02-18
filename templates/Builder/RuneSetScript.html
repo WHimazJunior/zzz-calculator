@@ -46,6 +46,7 @@
                                  sub_stat_name:  "", sub_stat_value:  0, sub_stat_type:  ""}];
         
     /**/
+    const discs_list = {{Discs|safe}};
 
     const stat_dropdownButton = document.getElementById("stat-dropdownButton");
     const stat_dropdownList = document.getElementById("stat-dropdownList");
@@ -144,7 +145,6 @@
 
     function updateAgentStats(){
         const stats_list = {{Stats|safe}};
-        const discs_list = {{Discs|safe}};
         stats_list.forEach(stat => {
             let stat_label = document.querySelector(".stat_"+stat["id"]);
 
@@ -271,8 +271,6 @@
     }
 
     function setDiscInfo(id, slot){
-        discs_list = {{Discs|safe}};
-
         discs_list.forEach(disc => {
             if(disc["id"] == id){
                 slot["id"] = id;
@@ -293,8 +291,6 @@
     }
 
     function changeDiscInfo(position){
-        discs_list = {{Discs|safe}};
-        
         discs_list.forEach(disc => {
             disc_slot.forEach(slot => {
                 const slot_name = document.getElementById("slot-disc-name-label");
@@ -554,6 +550,7 @@
                             if(slot["slot"] == position){
                                 slot["is_active"] = true;
                                 background_div = document.getElementById("disc-background-"+position);
+                                console.log("background-image: url("+disc_div.getAttribute("data-img")+")");
                                 background_div.style = "background-image: url("+disc_div.getAttribute("data-img")+")";
                                 setDiscInfo(disc_div.getAttribute("data-id"), slot);
                                 document.getElementById("slot-position-selected").value = position;

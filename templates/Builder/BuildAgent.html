@@ -23,13 +23,17 @@
     <link rel="stylesheet" href="{% static 'style/disc/disc-selection.css' %}">
     <link rel="stylesheet" href="{% static 'style/disc/slot.css' %}">
     <link rel="stylesheet" href="{% static 'style/stat-dropdown.css' %}">
-    <link>
+
+    <link rel="stylesheet" href="{% static 'style/selector/agent-selector.css' %}">
+    <link rel="stylesheet" href="{% static 'style/selector/wengine-selector.css' %}">
+    <link rel="stylesheet" href="{% static 'style/selector/disc-selector.css' %}">
+
     <title>ZZZ Calculator</title>
 </head>
 <body>
     {% load GetRandomAgent %}
     {% getAgent as random_agent %}
-    
+
     <div class="content-row">
         <div class="content-row-upper-separator-agent">
             {% include "Builder/AgentInfo.html" %}
@@ -45,6 +49,7 @@
     <div class="content-row">
         <div class="content-row-lower-separator">
             {% include "Builder/AgentSelection.html" %}
+            
         </div>
         <div class="content-row-lower-separator">
             {% include "Builder/WEngineSelection.html" %}

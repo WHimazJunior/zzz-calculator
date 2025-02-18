@@ -39,17 +39,20 @@
     border-radius: 50%;
     /*background: linear-gradient(rgb(94, 94, 96), rgb(54, 53, 58), rgb(91, 91, 91));*/
     background: linear-gradient(75deg, rgb(34, 34, 36), rgb(71, 69, 72));
-    border: .2vw solid rgb(5, 3, 3);
+    border: 4px solid rgb(5, 3, 3);
     color: rgb(20, 20, 20);
     transform: scale(1);
-    -webkit-transition: transform .15s ease-in-out;
+    -webkit-transition: transform .25s ease-in-out;
+    -webkit-transition: rotate .25s ease-in-out;
 }
 
 #disc:hover, #disc.active{
     cursor: pointer;
-    transform: scale(1.1);
     color: rgb(124, 189, 66);
-    -webkit-transition: transform .15s ease-in-out;
+    transform: scale(1.1);
+    rotate: 360deg;
+    -webkit-transition: transform .25s ease-in-out;
+    -webkit-transition: rotate .25s ease-in-out;
 }
 
 .disc-outline-1, .disc-outline-3{
@@ -99,7 +102,7 @@
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: rgb(50, 50, 55);
-    font-size: 1.2vw;
+    font-size: 16px;
     font-family: straczynski;
     font-weight: bold;
 }
@@ -119,7 +122,7 @@
     height: 75%;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: .2vw solid rgb(21, 19, 22);
+    border: 4px solid rgb(21, 19, 22);
     background: linear-gradient(rgb(39, 38, 43), rgb(24, 24, 24), rgb(39, 38, 43));
 }
 

@@ -1,0 +1,94 @@
+{% load static %}
+<div class="wengine-box">
+    {% for wengine in Wengines %}
+    {% if wengine.tier == "S" %}
+        <div id="{{wengine.id}}" class="wengine-icon" style="background: linear-gradient(-75deg, rgb(255, 125, 0), rgb(250, 210, 5));"
+            onclick="getWEngineInfo(event)">
+            <img id="{{wengine.id}}" class="wengine-img" src="{% static 'WEngines/'|add:wengine.name|add:'.png' %}">
+        </div>
+    {% elif wengine.tier == "A" %}
+        <div id="{{wengine.id}}" class="wengine-icon" style="background: linear-gradient(-75deg, rgb(158, 0, 250), rgb(240, 5, 250));"
+            onclick="getWEngineInfo(event)">
+            <img id="{{wengine.id}}" class="wengine-img" src="{% static 'WEngines/'|add:wengine.name|add:'.png' %}">
+        </div>
+    {% else %}
+        <div id="{{wengine.id}}" class="wengine-icon" style="background: linear-gradient(-75deg, rgb(0, 122, 189), rgb(50, 192, 226));"
+            onclick="getWEngineInfo(event)">
+            <img id="{{wengine.id}}" class="wengine-img" src="{% static 'WEngines/'|add:wengine.name|add:'.png' %}">
+        </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<script>
+    function getWEngineInfo(event){
+        wengine_name = document.getElementById("w-engine-name-label");
+        wengine_video = document.getElementById("w-engine-video");
+        wengine_player = document.getElementById("w-engine-video-player");
+
+        wengine_base_stat_name  = document.getElementById("w-engine-base-stat-name");
+        wengine_base_stat_value = document.getElementById("w-engine-base-stat-value");
+        wengine_sub_stat_name   = document.getElementById("w-engine-sub-stat-name");
+        wengine_sub_stat_value  = document.getElementById("w-engine-sub-stat-value");
+
+        wengine_type_icon = document.getElementById("w-engine-type-image");
+
+
+        wengine_video.style.display =
+            wengine_video.style === "block" ? "none" : "block";
+
+        wengine_list = {{Wengines|safe}};
+
+        wengine_list.forEach(wengine => {
+            if(event.target.id == wengine["id"]){
+                wengine_agent_list = {{WenginesAgent|safe}};
+                wengine_owner = document.getElementById("w-engine-owner-image");
+                let owner_path = "";
+                let perc_string = "";
+
+                wengine_name.innerHTML = wengine["name"];
+
+                wengine_base_stat_name.innerHTML  = wengine["main_stat_name"];
+                wengine_base_stat_value.innerHTML = wengine["main_stat_value"];
+                
+
+                if(wengine["sub_stat_type"] == "Percentage") perc_string = "%";
+
+                wengine_sub_stat_name.innerHTML   = wengine["sub_stat_name"];
+                wengine_sub_stat_value.innerHTML  = wengine["sub_stat_value"] + perc_string;
+
+                video_path = "{% static 'WEngines/Video/' %}"
+                wengine_player.src = video_path + wengine["name"] + '.mp4';
+
+
+                wengine_slot.forEach(slot => {
+                    slot["id"] = wengine["id"];
+                    slot["main_stat_name"] = wengine["main_stat_name"];
+                    slot["main_stat_value"] = wengine["main_stat_value"];
+                    slot["main_stat_type"] = wengine["main_stat_type"];
+
+                    slot["sub_stat_name"] = wengine["sub_stat_name"];
+                    slot["sub_stat_value"] = wengine["sub_stat_value"];
+                    slot["sub_stat_type"] = wengine["sub_stat_type"];
+                });
+
+                
+                wengine_agent_list.forEach(wengine_agent => {
+                    if(wengine_agent["id"] == wengine["id"])
+                        owner_path = "{% static 'Agents/' %}" + wengine_agent["agent_name"] + ".png";
+                });
+
+                wengine_owner.src = 
+                    owner_path == "" ? wengine_owner.src = "{% static 'Agents/Icon.png' %}" : wengine_owner.src = owner_path;
+
+                let type_icon_path = "{% static 'Types/' %}" + wengine["type"] + ".png";
+                wengine_type_icon.src = type_icon_path;
+
+                updateAgentStats();
+            }
+        });
+
+        //resizeWEngineOverflowText(document.getElementById("overflow-div-wengine-name"));
+        callResizer();
+    }
+</script>

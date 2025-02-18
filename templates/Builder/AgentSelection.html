@@ -1,0 +1,106 @@
+{% load static %}
+<div class="agents-box">
+    {% for agent in Agents %}
+    {% if agent.tier == "S" %}
+        <div id="{{agent.id}}" class="agent-icon" style="background: linear-gradient(-75deg, rgb(255, 125, 0), rgb(250, 210, 5));"
+            onclick="getAgentInfo(event)">
+            <img id="{{agent.id}}" class="agent-img" src="{% static 'Agents/'|add:agent.name|add:'.png' %}">
+        </div>
+    {% else %}
+        <div id="{{agent.id}}" class="agent-icon" style="background: linear-gradient(-75deg, rgb(158, 0, 250), rgb(240, 5, 250));"
+            onclick="getAgentInfo(event)">
+            <img id="{{agent.id}}" class="agent-img" src="{% static 'Agents/'|add:agent.name|add:'.png' %}">
+        </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<script>
+    function getAgentInfo(event){
+        const agent_name = document.getElementById("agent-name");
+        const agent_nickname = document.getElementById("agent-nickname");
+        const agent_tier = document.getElementById("agent-tier-img");
+        const agent_faction = document.getElementById("agent-faction");
+        const faction_img = document.getElementById("faction-img");
+        const faction_background = document.getElementById("agent-faction-background-image");
+        const agent_element = document.getElementById("agent-element-img");
+        const agent_element_label = document.getElementById("agent-element-label");
+        const agent_type = document.getElementById("agent-type-img");
+        const agent_type_label = document.getElementById("agent-type-label");
+
+        const stat_hp = document.getElementById("stat_hp");
+        const stat_atk = document.getElementById("stat_atk");
+        const stat_def = document.getElementById("stat_def");
+        const stat_impact = document.getElementById("stat_impact");
+        const stat_crit_rate = document.getElementById("stat_crit_rate");
+        const stat_crit_damage = document.getElementById("stat_crit_damage");
+        const stat_anomaly_mastery = document.getElementById("stat_anomaly_mastery");
+        const stat_anomaly_proficiency= document.getElementById("stat_anomaly_proficiency");
+        const stat_pen_ratio = document.getElementById("stat_pen_ratio");
+        const stat_energy_regen = document.getElementById("stat_energy_regen");
+
+        console.log(event.target.id);
+        agents_list = {{Agents|safe}};
+        agents_list.forEach(agent => {
+            if(event.target.id == agent['id']){
+                agent_name.innerHTML = agent['name'];
+                agent_nickname.innerHTML = agent['nickname'];
+
+                tier_path = "{% static 'Tier/' %}";
+                agent_tier.src = tier_path + agent['tier'] + '.png';
+
+                agent_faction.innerHTML = agent['faction'];
+
+                faction_path = "{% static 'Factions/' %}";
+                faction_img.src = faction_path + agent['faction'] + '.png';
+                faction_background.src = faction_path + agent['faction'] + '.png';
+
+                element_path = "{% static 'Elements/' %}";
+                agent_element.src = element_path + agent['element'] + '.png';
+                agent_element_label.innerHTML = agent['element'];
+
+                type_path = "{% static 'Types/' %}";
+                agent_type.src = type_path + agent['type'] + '.png';
+                agent_type_label.innerHTML = agent['type'];
+
+
+
+                stat_hp.innerHTML = agent['health_point'];
+                stat_hp.setAttribute("data-value", agent['health_point']);
+
+                stat_atk.innerHTML = agent['attack'];
+                stat_atk.setAttribute("data-value", agent['attack']);
+
+                stat_def.innerHTML = agent['defense'];
+                stat_def.setAttribute("data-value", agent['defense']);
+
+                stat_impact.innerHTML = agent['impact'];
+                stat_impact.setAttribute("data-value", agent['impact']);
+
+                stat_crit_rate.innerHTML = agent['crit_rate'];
+                stat_crit_rate.setAttribute("data-value", agent['crit_rate']);
+
+                stat_crit_damage.innerHTML = agent['crit_damage'];
+                stat_crit_damage.setAttribute("data-value", agent['crit_damage']);
+
+                stat_anomaly_mastery.innerHTML = agent['anomaly_mastery'];
+                stat_anomaly_mastery.setAttribute("data-value", agent['anomaly_mastery']);
+
+                stat_anomaly_proficiency.innerHTML = agent['anomaly_proficiency'];
+                stat_anomaly_proficiency.setAttribute("data-value", agent['anomaly_proficiency']);
+
+                stat_pen_ratio.innerHTML = agent['penetration_ratio'];
+                stat_pen_ratio.setAttribute("data-value", agent['penetration_ratio']);
+
+                stat_energy_regen.innerHTML = agent['energy_regen'];
+                stat_energy_regen.setAttribute("data-value", agent['energy_regen']);
+
+                return;
+            }
+        });
+
+        //resizeAgentFactionOverflowText(document.getElementById("overflow_div_agent_faction"));
+        //resizeAgentNameOverflowText(document.getElementById("overflow_div_agent_name"));
+        callResizer();
+    }
+</script>

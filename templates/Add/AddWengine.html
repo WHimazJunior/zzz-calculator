@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style/dropdown.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/agent.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/tier.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/faction.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/element.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/type.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/agent-stats.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'style/inputs.css' %}">
+    <title>ZZZ Calculator</title>
+</head>
+<body>
+    <div class="content-row">
+        <form id="disc-form" class="disc-form" method="POST" action="wengine">
+            {% csrf_token %}
+            
+            <input type="text" id="wengine-name" name="wengine-name">Name
+            <br>
+            <input type="text" id="wengine-tier" name="wengine-tier">Tier
+            <br>
+
+            <input type="number" id="base-value" name="base-value">Base Stat
+            <input type="hidden" id="base-input" name="base-input" value="3">
+            
+            <br>
+
+            <input type="number" id="sub-value" name="sub-value">
+            <input type="hidden" id="sub-input" name="sub-input" value="3">
+
+            <div class="stats-custom-dropdown">
+                <button type="button" id="stats-dropdownButton" class="stats-dropdown-button" data-change="sub">
+                    <span id="stats-selectedText">Sub-Stat</span>
+                </button>
+                <ul id="stats-dropdownList" class="stats-dropdown-list" data-change="sub">
+                    {% for stat in Stats %}
+                        <li data-value="{{stat.id}}" data-name="{{stat.name}}" data-change="sub">
+                            {{stat.name}}
+                            {% if stat.type == 'Percentage' %}
+                                %
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <br>
+
+            <input type="hidden" id="type-input" name="type-input" value="3">
+            <div class="stats-custom-dropdown">
+                <button type="button" id="stats-dropdownButton" class="stats-dropdown-button" data-change="type">
+                    <span id="stats-selectedText">Type</span>
+                </button>
+                <ul id="stats-dropdownList" class="stats-dropdown-list" data-change="type">
+                    {% for type in Types %}
+                        <li data-value="{{type.id}}" data-name="{{type.name}}" data-change="type">
+                            {{type.name}}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <script src="{% static 'scripts/tier.js' %}"></script>
+
+    <script>
+        const list_dropdownButton = document.querySelectorAll("#stats-dropdownButton");
+        const list_dropdownList = document.querySelectorAll("#stats-dropdownList");
+        
+        //const stats_dropdownButton = document.getElementById("stats-dropdownButton");
+        //const stats_dropdownList = document.querySelectorAll("stats-dropdownList");
+        const stats_selectedText = document.getElementById("stats-selectedText");
+        const stats_input = document.getElementById("stats-input");
+
+        list_dropdownButton.forEach(dropdownBtn => {
+            dropdownBtn.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                list_dropdownList.forEach(dropdownList => {
+                    if(dropdownBtn.getAttribute("data-change") == dropdownList.getAttribute("data-change"))
+                        dropdownList.style.display =
+                            dropdownList.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
+        
+        document.querySelectorAll(".stats-dropdown-list li").forEach((item) => {
+            item.addEventListener("click", () => {
+                type = item.getAttribute("data-change");
+                document.getElementById(type+"-input").value = item.getAttribute("data-value");
+
+                list_dropdownList.forEach(dropdownList => {
+                    if(type == dropdownList.getAttribute("data-change"))
+                        dropdownList.style.display = "none";
+                });
+            });
+        });
+
+        document.addEventListener("click", (event) => {
+            list_dropdownButton.forEach(dropdownBtn => {
+                if (!dropdownBtn.contains(event.target) && !dropdownBtn.contains(event.target)) {
+
+                    list_dropdownList.forEach(dropdownList => {
+                        if(dropdownBtn.getAttribute("data-change") == dropdownList.getAttribute("data-change"))
+                            dropdownList.style.display = "none";
+                    });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

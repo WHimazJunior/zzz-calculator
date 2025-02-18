@@ -1,0 +1,103 @@
+.agent-frame{
+    display: flex;
+    align-items: flex-start;
+    background-color: rgb(34, 34, 34);
+    box-sizing: border-box;
+    border: .2vw black solid;
+    padding: .3vw;
+    flex-wrap: wrap;
+    border-radius: .75vw;
+    width: 60%;
+    height: 100%;
+}
+
+.agent-info-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+}
+
+.agent-info-label{
+    margin-left: 1vw;
+    font-size: .6vw;
+    color: rgb(22, 22, 22);
+}
+
+.agent-info{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, black, rgb(23, 23, 23));
+    padding: .5vw;
+    padding-left: .75vw;
+    border-radius: .5vw;
+    width: 100%;
+    height: 35%;
+    position: relative;
+}
+
+.agent-info-labels{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.agent-info-row1{
+    font-size: 1vw;
+    line-height: .8vw;
+    display: flex;
+    align-items: center;
+    gap: .4vw;
+    height: 25%;
+}
+
+.agent-info-row2{
+    font-size: 2vw;
+    line-height: 1.4vw;
+    padding-top: 3%;
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.agent-info-row3{
+    font-size: .6vw;
+    height: 25%;
+    overflow: hidden;
+    letter-spacing: .3vw;
+    align-content: flex-end;
+}
+
+.agent-level-row{
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    gap: .2vw;
+    align-items: center;
+    width: 100%;
+}
+
+.agent-level, .agent-attributes{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+
+    height: 100%;
+    width: 50%;
+    background-color: rgb(33, 33, 33);
+    border: .15vw solid black;
+    border-radius: .8vw;
+}
+
+.agent-attributes-row{
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    gap: .2vw;
+    align-items: center;
+    width: 100%;
+}

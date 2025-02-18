@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style/dropdown.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/agent.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/tier.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/faction.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/element.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/type.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/agent-stats.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'style/inputs.css' %}">
+    <title>ZZZ Calculator</title>
+</head>
+<body>
+    <div class="content-row">
+        <form id="agent-form" class="agent-form" method="POST" action="agent">
+            {% csrf_token %}
+            <div class="agent-frame">
+                <div style="width: 100%;"><label class="agent-info-label">AGENT INFO</label></div>
+                <div class="agent-info">
+                    <div class="agent-info-labels">
+                        <div class="agent-info-row1">
+                            <img id="agent-tier-img" class="agent-tier-img" src="{% static 'Tier/S.png' %}">
+                            <input type="hidden" id="faction-input" name="faction-input" value="">
+                            <input type="hidden" id="tier-input" name="tier-input" value="S">
+                            <div class="faction-custom-dropdown">
+                                <button type="button" id="faction-dropdownButton" class="faction-dropdown-button">
+                                    <img class="faction-button-icon" id="faction-selectedIcon" src="{% static 'Factions/Unknown.png' %}" alt=""/>
+                                    <span id="faction-selectedText">Factions</span>
+                                </button>
+                                <ul id="faction-dropdownList" class="faction-dropdown-list">
+                                    {% for faction in Factions %}
+                                        <li data-value="{{faction.name}}" data-icon="{% static 'Factions/'|add:faction.name|add:'.png' %}">
+                                            <img src="{% static 'Factions/'|add:faction.name|add:'.png' %}" alt="{{faction.name}} Icon" /> {{faction.name}}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="overflow_div" class="agent-info-row2">
+                            <label class="agent-nickname" style="color: beige;">Name</label>
+                            <input class="name-input" name="name-input" type="text">
+                        </div>
+                        <div class="agent-info-row3">
+                            <label class="agent-nickname">Nickname</label>
+                            <input class="nickname-input" name="nickname-input" type="text">
+                        </div>
+                    </div>
+                    <div class="agent-info-img">
+                        <img id="agent-faction-img" class="faction-img" src="{% static 'Factions/Unknown.png' %}">
+                    </div>
+                </div>
+                <div class="agent-stats">
+                    <div class="agent-main-stats">
+                        <div class="agent-level">
+                            <div class="agent-level-row">
+                                <div class="agent-actual-level">
+                                    <label class="agent-actual-level-label">Lv.60</label>
+                                </div>
+                                <div class="black_bar"></div>
+                                <div class="agent-max-level-row">
+                                    <div class="agent-max-level">
+                                        <label class="agent-max-level-label">60</label>
+                                    </div>
+                                    <div class="agent-max">
+                                        <label class="agent-max-label">MAX</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="agent-attributes">
+                            <div class="agent-attributes-row">
+                                <input type="hidden" id="element-input" name="element-input" value="">
+                                <input type="hidden" id="type-input" name="type-input" value="">
+
+                                <div class="agent-element">
+                                    <div class="element-custom-dropdown">
+                                        <button type="button" id="element-dropdownButton" class="element-dropdown-button">
+                                            <img class="element-button-icon" id="element-selectedIcon" src="{% static 'Elements/Missing.png' %}" alt=""/>
+                                            <span id="element-selectedText">Elements</span>
+                                        </button>
+                                        <ul id="element-dropdownList" class="element-dropdown-list">
+                                            {% for element in Elements %}
+                                                <li data-value="{{element.name}}" data-icon="{% static 'Elements/'|add:element.name|add:'.png' %}">
+                                                    <img src="{% static 'Elements/'|add:element.name|add:'.png' %}" alt="{{element.name}} Icon" /> {{element.name}}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="black_bar"></div>
+
+                                <div class="agent-type">
+                                    <div class="type-custom-dropdown">
+                                        <button type="button" id="type-dropdownButton" class="type-dropdown-button">
+                                            <img class="type-button-icon" id="type-selectedIcon" src="{% static 'Types/Missing.png' %}" alt=""/>
+                                            <span id="type-selectedText">Types</span>
+                                        </button>
+                                        <ul id="type-dropdownList" class="type-dropdown-list">
+                                            {% for type in Types %}
+                                                <li data-value="{{type.name}}" data-icon="{% static 'Types/'|add:type.name|add:'.png' %}">
+                                                    <img src="{% static 'Types/'|add:type.name|add:'.png' %}" alt="{{type.name}} Icon" /> {{type.name}}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agent-sub-stats">
+                        <div class="stats">
+                            <div class="stat" data-name="hp">
+                                <span>HP</span>
+                                <span><input class="input-stats" name="hp-input" type="number" min="0"></span>
+                            </div>
+                            <div class="stat" data-name="atk">
+                                <span>ATK</span>
+                                <span><input class="input-stats" name="atk-input" type="number" min="0"></span>
+                            </div>
+                            <div class="stat" data-name="def">
+                                <span>DEF</span>
+                                <span><input class="input-stats" name="def-input" type="number" min="0"></span>
+                            </div>
+                            <div class="stat" data-name="impact">
+                                <span>Impact</span>
+                                <span><input class="input-stats" name="impact-input" type="number" min="0"></span>
+                            </div>
+                            <div class="stat" data-name="crit_rate">
+                                <span>CRIT Rate</span>
+                                <span><input class="input-stats" name="crit_rate-input" step="0.01" type="number" min="0"></span>
+                            </div>
+                            <div class="stat" data-name="crit_damage">
+                                <span>CRIT DMG</span>
+                                <span><input class="input-stats" name="crit_damage-input" step="0.01" type="number" min="0"></span>
+                            </div>
+                            <div class="stat" data-name="anomaly_mastery">
+                                <span>Anomaly Mastery</span>
+                                <span><input class="input-stats" name="anomaly_mastery-input" type="number" min="0"></span>
+                            </div>
+                            <div class="stat" data-name="anomaly_proficiency">
+                                <span>Anomaly Proficiency</span>
+                                <span><input class="input-stats" name="anomaly_proficiency-input" type="number" min="0"></span>
+                            </div>
+                            <div class="stat" data-name="pen_ratio">
+                                <span>PEN Ratio</span>
+                                <span><input class="input-stats" name="pen_ratio-input" type="number" min="0"></span>
+                            </div>
+                            <div class="stat" data-name="energy_regen">
+                                <span>Energy Regen</span>
+                                <span><input class="input-stats" name="energy_regen-input" step="0.01" type="number" min="0"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+      
+    <script src="{% static 'scripts/dropdown.js' %}"></script>
+    <script src="{% static 'scripts/tier.js' %}"></script>
+    <script src="{% static 'scripts/resizeText.js' %}"></script>
+
+    {% include "Add/Scripts.html" %}
+</body>
+</html>

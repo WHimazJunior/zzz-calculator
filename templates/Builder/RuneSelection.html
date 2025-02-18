@@ -1,0 +1,8 @@
+{% load static %}
+<div class="disc-box">
+    {% for disc in Discs %}
+        <div id="disc-active" data-id="{{disc.id}}" class="disc-icon" data-img="{% static 'Discs/'|add:disc.disc_name|add:'.png' %}">
+            <img id="disc-active" data-id="{{disc.id}}" class="disc-img" src="{% static 'Discs/'|add:disc.disc_name|add:'.png' %}">
+        </div>
+    {% endfor %}
+</div>

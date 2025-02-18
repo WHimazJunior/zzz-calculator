@@ -1,0 +1,12 @@
+.agent-tier-img{
+    width: 1.5vw;
+    aspect-ratio: 1;
+    transform: scale(1);
+    -webkit-transition: transform .15s ease-in-out;
+}
+
+.agent-tier-img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    -webkit-transition: transform .15s ease-in-out;
+}

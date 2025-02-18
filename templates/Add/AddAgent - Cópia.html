@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style/dropdown.css' %}">
+    <script src="{% static 'scripts/dropdown.js' %}" defer></script>
+    <title>ZZZ Calculator</title>
+</head>
+<body>
+    {% load GetRandomAgent %}
+    {% getAgent as random_agent %}
+    <form id="agent-form" class="agent-form" method="POST" action="agent">
+        {% csrf_token %}
+        <div class="agent-frame">
+            <div style="width: 100%;"><label class="agent-info-label">AGENT INFO</label></div>
+            <div class="agent-info">
+                <div class="agent-info-labels">
+                    <div class="agent-info-row1">
+                        <img class="agent-tier-img" src="{% static 'Tier/'|add:random_agent.tier|add:'.png' %}">
+                        <select id="agent-faction-select" name="faction" class="agent-element-select">
+                            {% for faction in Factions %}
+                                <option value="{{faction.name}}">{{faction.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div id="overflow_div" class="agent-info-row2">
+                        <label class="agent-nickname" style="color: beige;">Name</label>
+                        <input name="name" type="text">
+                    </div>
+                    <div class="agent-info-row3">
+                        <label class="agent-nickname">Nickname</label>
+                        <input name="nickname" type="text">
+                    </div>
+                </div>
+                <div class="agent-info-img">
+                    <img id="agent-faction-img" class="faction-img" src="{% static 'Factions/'|add:random_agent.faction|add:'.png' %}">
+                </div>
+            </div>
+            <div class="agent-stats">
+                <div class="agent-main-stats">
+                    <div class="agent-level">
+                        <div class="agent-level-row">
+                            <div class="agent-actual-level">
+                                <label class="agent-actual-level-label">Lv.60</label>
+                            </div>
+                            <div class="black_bar"></div>
+                            <div class="agent-max-level-row">
+                                <div class="agent-max-level">
+                                    <label class="agent-max-level-label">60</label>
+                                </div>
+                                <div class="agent-max">
+                                    <label class="agent-max-label">MAX</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="agent-attributes">
+                        <div class="agent-attributes-row">
+                            <div class="agent-element">
+                                <img id="agent-element-img" class="agent-element-img" src="{% static 'Elements/'|add:random_agent.element|add:'.png' %}">
+                                <select id="agent-element-select" name="element" class="agent-element-select">
+                                    {% for element in Elements %}
+                                        <option value="{{element.name}}" data-image="{% static 'Elements/'|add:random_agent.element|add:'.png' %}">{{element.name}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="black_bar"></div>
+                            <div class="agent-type">
+                                <img id="agent-type-img" class="agent-type-img" src="{% static 'Types/'|add:random_agent.type|add:'.png' %}">
+                                <select id="agent-type-select" name="type" class="agent-type-select">
+                                    {% for type in Types %}
+                                        <option value="{{type.name}}"><img id="agent-type-img" class="agent-type-img">{{type.name}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-sub-stats">
+                    <div class="stats">
+                        <div class="stat" data-name="hp">
+                            <span>HP</span>
+                            <span><input name="hp" type="number" min="0"></span>
+                        </div>
+                        <div class="stat" data-name="atk">
+                            <span>ATK</span>
+                            <span><input name="atk" type="number" min="0"></span>
+                        </div>
+                        <div class="stat" data-name="def">
+                            <span>DEF</span>
+                            <span><input name="def" type="number" min="0"></span>
+                        </div>
+                        <div class="stat" data-name="impact">
+                            <span>Impact</span>
+                            <span><input name="impact" type="number" min="0"></span>
+                        </div>
+                        <div class="stat" data-name="crit_rate">
+                            <span>CRIT Rate</span>
+                            <span><input name="crit_rate" type="number" min="0"></span>
+                        </div>
+                        <div class="stat" data-name="crit_damage">
+                            <span>CRIT DMG</span>
+                            <span><input name="crit_damage" type="number" min="0"></span>
+                        </div>
+                        <div class="stat" data-name="anomaly_mastery">
+                            <span>Anomaly Mastery</span>
+                            <span><input name="anomaly_mastery" type="number" min="0"></span>
+                        </div>
+                        <div class="stat" data-name="anomaly_proficiency">
+                            <span>Anomaly Proficiency</span>
+                            <span><input name="anomaly_proficiency" type="number" min="0"></span>
+                        </div>
+                        <div class="stat" data-name="pen_ratio">
+                            <span>PEN Ratio</span>
+                            <span><input name="pen_ratio" type="number" min="0"></span>
+                        </div>
+                        <div class="stat" data-name="energy_regen">
+                            <span>Energy Regen</span>
+                            <span><input name="energy_regen" type="number" min="0"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <div class="custom-dropdown">
+        <button id="dropdownButton" class="dropdown-button">
+          <img id="selectedIcon" src="images/physical.png" alt="Icon" />
+          <span id="selectedText">Elements</span>
+        </button>
+      
+        <ul id="dropdownList" class="dropdown-list">
+            {% for element in Elements %}
+                <li data-value="{{element.name}}" data-icon="{% static 'Elements/'|add:element.name|add:'.png' %}">
+                    <img class="" src="{% static 'Elements/'|add:element.name|add:'.png' %}"/> {{element.name}}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <style>
+        .custom-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            display: flex;
+            align-items: center;
+            background-color: red;
+            padding: 8px;
+            cursor: pointer;
+            gap: 8px;
+        }
+
+        .dropdown-list {
+            display: none;
+            position: absolute;
+            background-color: red;
+            list-style: none;
+            padding: 0;
+            margin: 5px 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .dropdown-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .dropdown-list li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .dropdown-list img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+
+    
+    <script>
+        /*Resize Text Size of Stats*/
+        function resizeOverflowText(div){
+            let fontSize = parseInt(window.getComputedStyle(div).fontSize);
+            //console.log(div.dataset.name);
+            while(div.scrollHeight > div.clientHeight ||
+                div.scrollWidth  > div.clientWidth){
+                fontSize--;
+                div.style.fontSize = fontSize + 'px';
+                
+                if(div.style.fontSize < 5){
+                    div.style.fontSize = '5px';    
+                    break;
+                }
+            }
+        }
+
+        const divs = document.querySelectorAll("div.stat");
+        divs.forEach((div) => resizeOverflowText(div));
+
+        const elementSelect = document.getElementById("agent-element-select")
+        elementSelect.addEventListener('change', function(){
+            console.log(elementSelect.value);
+            image = document.getElementById("agent-element-img");
+            element = elementSelect.value;
+            path = "{% static 'Elements/' %}";
+            path += element + ".png";
+            image.src = path;
+            console.log(image.src);
+        });
+
+
+        const dropdownButton = document.getElementById("dropdownButton");
+        const dropdownList = document.getElementById("dropdownList");
+        const selectedIcon = document.getElementById("selectedIcon");
+        const selectedText = document.getElementById("selectedText");
+
+        dropdownButton.addEventListener("click", () => {
+            dropdownList.style.display =
+            dropdownList.style.display === "block" ? "none" : "block";
+        });
+
+        document.querySelectorAll(".dropdown-list li").forEach((item) => {
+            item.addEventListener("click", () => {
+            const icon = item.getAttribute("data-icon");
+            const value = item.textContent.trim();
+
+            selectedIcon.src = icon;
+            selectedText.textContent = value;
+
+            dropdownList.style.display = "none";
+            });
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!dropdownButton.contains(event.target) && !dropdownList.contains(event.target)) {
+            dropdownList.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

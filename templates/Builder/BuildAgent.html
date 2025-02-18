@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style/dropdown.css' %}">
+
+    <link rel="stylesheet" href="{% static 'style/agent/agent-selection.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/agent-info.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/agent.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/tier.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/faction.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/element.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/type.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/agent-stats.css' %}">
+    <link rel="stylesheet" href="{% static 'style/agent/agent-info/agent-hidden-stats.css' %}">
+
+    <link rel="stylesheet" href="{% static 'style/wengine/wengine-selection.css' %}">
+    <link rel="stylesheet" href="{% static 'style/wengine/wengine.css' %}">
+    <link rel="stylesheet" href="{% static 'style/wengine/wengine-stats.css' %}">
+
+    <link rel="stylesheet" href="{% static 'style/disc/disc-set.css' %}">
+    <link rel="stylesheet" href="{% static 'style/disc/disc-selection.css' %}">
+    <link rel="stylesheet" href="{% static 'style/disc/slot.css' %}">
+    <link rel="stylesheet" href="{% static 'style/stat-dropdown.css' %}">
+    <link>
+    <title>ZZZ Calculator</title>
+</head>
+<body>
+    {% load GetRandomAgent %}
+    {% getAgent as random_agent %}
+    
+    <div class="content-row">
+        <div class="content-row-upper-separator-agent">
+            {% include "Builder/AgentInfo.html" %}
+            <div class="content-row-extra-info">
+                {% include "Builder/WEngineInfo.html" %}
+                {% include "Builder/AgentHiddenStats.html" %}
+            </div>
+        </div>
+        <div class="content-row-upper-separator-disc">
+            {% include "Builder/RuneSet.html" %}
+        </div>
+    </div>
+    <div class="content-row">
+        <div class="content-row-lower-separator">
+            {% include "Builder/AgentSelection.html" %}
+        </div>
+        <div class="content-row-lower-separator">
+            {% include "Builder/WEngineSelection.html" %}
+        </div>
+        <div class="content-row-lower-separator">
+            {% include "Builder/RuneSelection.html" %}
+        </div>
+    </div>
+
+    <script src="{% static 'scripts/resizeText.js' %}"></script>
+</body>
+</html>

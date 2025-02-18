@@ -1,0 +1,196 @@
+{% load static %}
+<div class="disc-selection-aspect-ratio">
+    <div class="disc-frame">
+        <div class="left-discs">
+            <div class="disc-outline-1">
+                <div id="disc" class="disc-1" data-value="1">
+                    <div class="disc-border">
+                        <div class="disc-content">
+                            <label id="disc-label-1" class="disc-label">1</label>
+                            <div id="disc-background-1" class="disc-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="disc-outline-2">
+                <div id="disc" class="disc-2" data-value="2">
+                    <div class="disc-border">
+                        <div class="disc-content">
+                            <label id="disc-label-2" class="disc-label">2</label>
+                            <div id="disc-background-2" class="disc-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="disc-outline-3">
+                <div id="disc" class="disc-3" data-value="3">
+                    <div class="disc-border">
+                        <div class="disc-content">
+                            <label id="disc-label-3" class="disc-label">3</label>
+                            <div id="disc-background-3" class="disc-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-engine-border">
+            <div class="w-engine-frame">
+                <div id="w-engine" class="w-engine-content">
+                    <div id="w-engine-video" class="w-engine-video">
+                        <video autoplay loop id="w-engine-video-player" class="w-engine-video-player" src="{% static '' %}">
+                            
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-discs">
+            <div class="disc-outline-6">
+                <div id="disc" class="disc-6" data-value="6">
+                    <div class="disc-border">
+                        <div class="disc-content">
+                            <label id="disc-label-6" class="disc-label">6</label>
+                            <div id="disc-background-6" class="disc-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="disc-outline-5">
+                <div id="disc" class="disc-5" data-value="5">
+                    <div class="disc-border">
+                        <div class="disc-content">
+                            <label id="disc-label-5" class="disc-label">5</label>
+                            <div id="disc-background-5" class="disc-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="disc-outline-4">
+                <div id="disc" class="disc-4" data-value="4">
+                    <div class="disc-border">
+                        <div class="disc-content">
+                            <label id="disc-label-4" class="disc-label">4</label>
+                            <div id="disc-background-4" class="disc-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<input type="hidden" id="slot-position-selected" value="0">
+
+<div class="slot-frame">
+    <div class="slot-frame-info" id="slot-frame-info">
+        <div class="slot-disc-name">
+            <label id="slot-disc-name-label" class="slot-disc-name-label"> </label>
+        </div>
+        <div class="slot-disc-content">
+            <div class="slot-disc-stats">
+                <div class="slot-disc-main-stat">
+                    <label id="slot-main-stat-label" class="slot-main-stat-label">Main Stat</label>
+                    <div class="stat-custom-dropdown">
+                        <button type="button" id="stat-dropdownButton" class="stat-dropdown-button">
+                            <span id="stat-selected-name">Main Stat</span>
+                            <span id="stat-selected-value"></span>
+                        </button>
+                        <ul id="stat-dropdownList" class="stat-dropdown-list">
+                            <!--CONTENT-STATS-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="slot-disc-sub-stat">
+                    <label id="slot-sub-stat-label" class="slot-sub-stat-label">Sub-Stats</label>
+                    <div class="substat-dropdowns">
+                        <div class="substat-block">
+                            <div class="substat-custom-dropdown">
+                                <button type="button" id="substat-dropdownButton" class="substat-dropdown-button" data-value="1">
+                                    <div class="substat-value-info">
+                                        <span id="substat-selected-name" data-value="1">Stat 1</span>
+                                        <span id="substat-selected-role" data-value="1"></span>
+                                    </div>
+                                    <span id="substat-selected-value" data-value="1"></span>
+                                </button>
+                                <ul id="substat-dropdownList" class="substat-dropdown-list" data-value="1">
+                                    <!--CONTENT-STATS-->
+                                </ul>
+                            </div>
+                            <div class="stat-change-button">
+                                <button id="up-stat" class="up-stat" data-value="1">▲</button>
+                                <button id="down-stat" class="down-stat" data-value="1">▼</button>
+                            </div>
+                        </div>
+                        <div class="substat-block">
+                            <div class="substat-custom-dropdown">
+                                <button type="button" id="substat-dropdownButton" class="substat-dropdown-button" data-value="2">
+                                    <div class="substat-value-info">
+                                        <span id="substat-selected-name" data-value="2">Stat 2</span>
+                                        <span id="substat-selected-role" data-value="2"></span>
+                                    </div>
+                                    <span id="substat-selected-value" data-value="2"></span>
+                                </button>
+                                <ul id="substat-dropdownList" class="substat-dropdown-list" data-value="2">
+                                    <!--CONTENT-STATS-->
+                                </ul>
+                            </div>
+                            <div class="stat-change-button">
+                                <button id="up-stat" class="up-stat" data-value="2">▲</button>
+                                <button id="down-stat" class="down-stat" data-value="2">▼</button>
+                            </div>
+                        </div>
+                        <div class="substat-block">
+                            <div class="substat-custom-dropdown">
+                                <button type="button" id="substat-dropdownButton" class="substat-dropdown-button" data-value="3">
+                                    <div class="substat-value-info">
+                                        <span id="substat-selected-name" data-value="3">Stat 3</span>
+                                        <span id="substat-selected-role" data-value="3"></span>
+                                    </div>
+                                    
+                                    <span id="substat-selected-value" data-value="3"></span>
+                                </button>
+                                <ul id="substat-dropdownList" class="substat-dropdown-list" data-value="3">
+                                    <!--CONTENT-STATS-->
+                                </ul>
+                            </div>
+                            <div class="stat-change-button">
+                                <button id="up-stat" class="up-stat" data-value="3">▲</button>
+                                <button id="down-stat" class="down-stat" data-value="3">▼</button>
+                            </div>
+                        </div>
+                        <div class="substat-block">
+                            <div class="substat-custom-dropdown">
+                                <button type="button" id="substat-dropdownButton" class="substat-dropdown-button" data-value="4">
+                                    <div class="substat-value-info">
+                                        <span id="substat-selected-name" data-value="4">Stat 4</span>
+                                        <span id="substat-selected-role" data-value="4"></span>
+                                    </div>
+                                    <span id="substat-selected-value" data-value="4"></span>
+                                </button>
+                                <ul id="substat-dropdownList" class="substat-dropdown-list" data-value="4">
+                                    <!--CONTENT-STATS-->
+                                </ul>
+                            </div>
+                            <div class="stat-change-button">
+                                <button id="up-stat" class="up-stat" data-value="4">▲</button>
+                                <button id="down-stat" class="down-stat" data-value="4">▼</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slot-disc-effect">
+                <label id="slot-effect-label" class="slot-effect-label">Set Effect</label>
+                <div class="slot-stat">
+                    <span id="slot-effect-name"></span>
+                </div>
+                <label id="slot-effect-value" class="slot-effect-value"> </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'scripts/dropdown.js' %}"></script>
+{% include "Builder/RuneSetScript.html" %}

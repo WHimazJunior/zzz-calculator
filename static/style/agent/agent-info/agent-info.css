@@ -1,0 +1,77 @@
+.agent-stats{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60%;
+}
+
+.agent-info-img{
+    box-sizing: border-box;
+    margin-right: 1.5vw;
+    height: 100%;
+    width: 25%;
+    z-index: 10;
+}
+
+.agent-name{
+    color: beige;
+}
+
+.agent-nickname{
+    color: rgb(50, 50, 50);
+}
+
+.agent-main-stats{
+    display: flex;
+    box-sizing: border-box;
+    gap: .4vw;
+    margin-top: .4vw;
+    width: 100%;
+    height: 15%;
+}
+
+.agent-actual-level, .agent-max-level-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: .3vw;
+    width: 50%;
+}
+
+.agent-actual-level-label{
+    text-shadow: -.1vw -.1vw 0 #000, .1vw -.1vw 0 #000, -.1vw .1vw 0 #000, .15vw .15vw 0 #000;
+    font-style: italic;
+    font-size: 1.2vw;
+}
+
+.agent-max-level-label{
+    font-style: italic;
+    font-size: 1.75vw;
+    color: black;
+}
+
+.agent-max-label{
+    font-style: bold;
+    font-size: 1vw;
+    color: rgb(102, 102, 102);
+}
+
+.agent-max-level, .agent-max{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.agent-max{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -0.2vw;
+    background-color: black;
+    border-radius: 1vw;
+    height: 102%;
+}

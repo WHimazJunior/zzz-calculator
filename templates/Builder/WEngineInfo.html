@@ -1,0 +1,31 @@
+{% load static %}
+<div class="w-engine-stats-frame">
+    <div id="overflow-div-wengine-name" class="w-engine-name">
+        <label id="w-engine-name-label" class="w-engine-name-label"></label>
+    </div>
+    <div class="w-engine-info">
+        <div class="w-engine-level">
+            <label class="w-engine-level">Lv. 60/60</label>
+        </div>
+        <div class="w-engine-icons">
+            <img id="w-engine-owner-image" class="w-engine-owner-image" src="{% static 'Agents/Icon.png' %}">
+            <img id="w-engine-type-image" class="w-engine-type-image" src="{% static 'Agents/Missing.png' %}">
+        </div>
+    </div>
+    <div class="w-engine-stats">
+        <div class="w-engine-base-stat">
+            <label class="w-engine-base-stat-label">Base Stat</label>
+            <div class="w-engine-base-stat-values">
+                <label id="w-engine-base-stat-name" class="w-engine-base-stat-name"></label>
+                <label id="w-engine-base-stat-value" class="w-engine-base-stat-value"></label>
+            </div>
+        </div>
+        <div class="w-engine-sub-stat">
+            <label class="w-engine-sub-stat-label">Advanced Stat</label>
+            <div class="w-engine-sub-stat-values">
+                <label id="w-engine-sub-stat-name" class="w-engine-sub-stat-name"></label>
+                <label id="w-engine-sub-stat-value" class="w-engine-sub-stat-value"></label>
+            </div>
+        </div>
+    </div>
+</div>

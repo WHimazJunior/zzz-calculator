@@ -1,0 +1,167 @@
+.slot-frame{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: rgb(34, 34, 34);
+    box-sizing: border-box;
+    border: 0.2vw black solid;
+    padding: .4vw;
+    flex-wrap: wrap;
+    border-radius: 1vw;
+    height: 100%;
+    width: 45%;
+}
+
+.slot-frame-info{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-sizing: border-box;
+    /*background-color: white;*/
+    width: 100%;
+    height: 100%;
+}
+
+.slot-disc-name{
+    width: 100%;
+    height: 10%;
+    font-size: 1.2vw;
+    /*background-color: blue;*/
+}
+
+.slot-disc-stats{
+    display: grid;
+    width: 100%;
+    height: 70%;
+    font-size: .8vw;
+    /*background-color: red;*/
+}
+
+.slot-disc-effect{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    font-size: .8vw;
+    /*background-color: green;*/
+}
+
+.roles-upper-block{
+    width: 100%;
+    height: 45%;
+    background-color: blue;
+}
+.roles-lower-block{
+    width: 100%;
+    height: 35%;
+    background-color: blue;
+}
+
+.slot-frame-roles{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    height: 100%;
+    width: 20%;
+}
+
+.slot-stats-roles{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: green;
+    height: 45%;
+    width: 100%;
+}
+
+.up-stat, .down-stat{
+    color: beige;
+    box-sizing: border-box;
+    width: 40%;
+    padding: 0;
+    aspect-ratio: 1;
+    background-color: rgb(20, 20, 20);
+    border: .2vw solid black;
+    font-size: .5vw;
+    transform: scale(1);
+    -webkit-transition: transform .15s ease-in-out;
+}
+
+.up-stat:hover, .down-stat:hover{
+    color: rgb(255, 175, 42);;
+    transform: scale(1.05);
+    -webkit-transition: transform .15s ease-in-out;
+    cursor: pointer;
+}
+
+.stat-change-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .1vw;
+    height: 100%;
+    width: 20%;
+}
+
+.slot-disc-main-stat{
+    margin-top: 2%;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: .05vw;
+    /*background-color: rgba(255, 255, 255, .7);*/
+    /*background-color: red;*/
+}
+
+.slot-disc-sub-stat{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: .05vw;
+    /*background-color: rgba(0, 0, 0, .7);*/
+    /*background-color: red;*/
+}
+
+.slot-stat{
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: black;
+    padding: .5vw;
+    border-radius: 200px;
+    height: 25%;
+    justify-content: space-between;
+    white-space: wrap;
+}
+
+.slot-main-stat-label, .slot-sub-stat-label, .slot-effect-label{
+    color: rgb(142, 142, 142)
+}
+
+.slot-effect-value{
+    margin-left: .5vw;
+    margin-top: .2vw;
+}
+
+.overflow-div{
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+.slot-disc-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 90%;
+}

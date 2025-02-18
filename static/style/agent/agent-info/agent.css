@@ -7,8 +7,8 @@
     padding: 4px;
     flex-wrap: wrap;
     border-radius: 15px;
-    width: 60%;
-    height: 100%;
+    width: 600px;
+    height: 400px;
     gap: 5px;
 }
 
@@ -58,7 +58,7 @@
 
 .agent-info-row2{
     font-size: 30px;
-    line-height: 20px;
+    line-height: 25px;
     padding-top: 8px;
     height: 50%;
     width: 100%;

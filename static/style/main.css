@@ -14,6 +14,11 @@
   src: url(straczynskibold.ttf);
 }
 
+@font-face {
+  font-family: ZZZCore;
+  src: url(ZZZCore.ttf);
+}
+
 html, body{
   display: flex;
   font-family: ZZZ;
@@ -58,8 +63,11 @@ html, body{
   width: 100%;
 }
 
-.content-row-lower-separator{
-  /*width: 30%;*/
+.content-row-lower-separator-selectors{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .content-row-extra-info{

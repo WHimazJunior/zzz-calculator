@@ -38,8 +38,8 @@ function resizeAgentFactionOverflowText(div){
         fontSize -= 0.3;
         div.style.fontSize = fontSize + 'px';
         
-        if(fontSize < 14){
-            div.style.fontSize = '14px';
+        if(fontSize < 12){
+            div.style.fontSize = '12px';
             break;
         }
     }

@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="{% static 'style/selector/wengine-selector.css' %}">
     <link rel="stylesheet" href="{% static 'style/selector/disc-selector.css' %}">
 
+    <link rel="stylesheet" href="{% static 'style/core/core.css' %}">
+
     <title>ZZZ Calculator</title>
 </head>
 <body>
@@ -46,15 +48,13 @@
             {% include "Builder/RuneSet.html" %}
         </div>
     </div>
-    <div class="content-row" style="justify-content: space-between;">
-        <div class="content-row-lower-separator">
+    <div class="content-row">
+        <div class="content-row-lower-separator-core">
+            {% include "Builder/AgentCore.html" %}
+        </div>
+        <div class="content-row-lower-separator-selectors">
             {% include "Builder/AgentSelection.html" %}
-            
-        </div>
-        <div class="content-row-lower-separator">
             {% include "Builder/WEngineSelection.html" %}
-        </div>
-        <div class="content-row-lower-separator">
             {% include "Builder/RuneSelection.html" %}
         </div>
     </div>

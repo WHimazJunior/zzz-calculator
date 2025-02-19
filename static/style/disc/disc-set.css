@@ -42,8 +42,8 @@
     border: 4px solid rgb(5, 3, 3);
     color: rgb(20, 20, 20);
     transform: scale(1);
-    -webkit-transition: transform .25s ease-in-out;
-    -webkit-transition: rotate .25s ease-in-out;
+    -webkit-transition: transform .5s ease-in-out;
+    -webkit-transition: rotate .5s ease-in-out;
 }
 
 #disc:hover, #disc.active{
@@ -51,8 +51,8 @@
     color: rgb(124, 189, 66);
     transform: scale(1.1);
     rotate: 360deg;
-    -webkit-transition: transform .25s ease-in-out;
-    -webkit-transition: rotate .25s ease-in-out;
+    -webkit-transition: transform .5s ease-in-out;
+    -webkit-transition: rotate .5s ease-in-out;
 }
 
 .disc-outline-1, .disc-outline-3{

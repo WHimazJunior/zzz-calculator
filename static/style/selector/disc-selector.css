@@ -2,19 +2,19 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 175px;
+    width: 200px;
 }
 
 .disc-grid-container {
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3, 50px);
-    grid-template-rows: repeat(2, 50px);
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(2, 60px);
     gap: 8px;
 }
 
 .disc-grid-item {
-    width: 50px;
+    width: 60px;
     aspect-ratio: 1;
     object-fit: cover;
     cursor: pointer;

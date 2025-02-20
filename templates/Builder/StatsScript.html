@@ -40,13 +40,20 @@
                                             substat_name_1:"Stat 1",  substat_value_1: "", substat_type_1: "", substat_role_1: 0,
                                             substat_name_2:"Stat 2",  substat_value_2: "", substat_type_2: "", substat_role_2: 0,
                                             substat_name_3:"Stat 3",  substat_value_3: "", substat_type_3: "", substat_role_3: 0,
-                                            substat_name_4:"Stat 4",  substat_value_4: "", substat_type_4: "", substat_role_4: 0}]
+                                            substat_name_4:"Stat 4",  substat_value_4: "", substat_type_4: "", substat_role_4: 0}];
 
     let wengine_slot = [{ id: 0, main_stat_name: "", main_stat_value: 0, main_stat_type: "",
                                  sub_stat_name:  "", sub_stat_value:  0, sub_stat_type:  ""}];
+
+    let agent_core = [
+        {slot: 1, letter: "A", stat_id: 3, stat_value: 25,  is_active: false},
+        {slot: 2, letter: "B", stat_id: 0, stat_value: 0,   is_active: false},
+        {slot: 3, letter: "C", stat_id: 3, stat_value: 25,  is_active: false},
+        {slot: 4, letter: "D", stat_id: 0, stat_value: 0,   is_active: false},
+        {slot: 5, letter: "E", stat_id: 3, stat_value: 25,  is_active: false},
+        {slot: 6, letter: "F", stat_id: 0, stat_value: 0,   is_active: false}];
         
     /**/
-    const discs_list = {{Discs|safe}};
 
     const stat_dropdownButton = document.getElementById("stat-dropdownButton");
     const stat_dropdownList = document.getElementById("stat-dropdownList");
@@ -550,7 +557,6 @@
                             if(slot["slot"] == position){
                                 slot["is_active"] = true;
                                 background_div = document.getElementById("disc-background-"+position);
-                                console.log("background-image: url("+disc_div.getAttribute("data-img")+")");
                                 background_div.style = "background-image: url("+disc_div.getAttribute("data-img")+")";
                                 setDiscInfo(disc_div.getAttribute("data-id"), slot);
                                 document.getElementById("slot-position-selected").value = position;

@@ -102,7 +102,7 @@
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: rgb(50, 50, 55);
-    font-size: 16px;
+    font-size: 24px;
     font-family: straczynski;
     font-weight: bold;
 }
@@ -134,5 +134,4 @@
     height: 90%;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: none;
 }

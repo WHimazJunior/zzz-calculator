@@ -50,6 +50,17 @@ class Basestatsname(models.Model):
         db_table = 'basestatsname'
 
 
+class Colors(models.Model):
+    name = models.CharField(max_length=255, blank=True, null=True)
+    light_color = models.CharField(max_length=12, blank=True, null=True)
+    light_gradient = models.CharField(max_length=12, blank=True, null=True)
+    dark_gradient = models.CharField(max_length=12, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'colors'
+
+
 class Constantmainstat(models.Model):
     statname = models.ForeignKey(Basestatsname, models.DO_NOTHING, blank=True, null=True)
     value = models.FloatField(blank=True, null=True)

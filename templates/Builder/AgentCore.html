@@ -2,48 +2,48 @@
 
 <div class="core-frame">
     <div class="core-column-level">
-        <div class="core-level-outline">
-            <div class="core-label-outline">
-                <div class="core-base">
+        <div id="core-button" class="core-level-outline" data-letter="A">
+            <div class="core-label-outline" data-letter="A">
+                <div class="core-base" data-letter="A" onclick="activateCore(event)">
                     A
                 </div>
             </div>
         </div>
-        <div class="core-level-outline">
-            <div class="core-label-outline">
-                <div class="core-base">
+        <div id="core-button" class="core-level-outline" data-letter="B">
+            <div class="core-label-outline" data-letter="B">
+                <div class="core-base" data-letter="B" onclick="activateCore(event)">
                     B
                 </div>
             </div>
         </div>
     </div>
     <div class="core-column-level">
-        <div class="core-level-outline">
-            <div class="core-label-outline">
-                <div class="core-base">
+        <div id="core-button" class="core-level-outline" data-letter="C">
+            <div class="core-label-outline" data-letter="C">
+                <div class="core-base" data-letter="C" onclick="activateCore(event)">
                     C
                 </div>
             </div>
         </div>
-        <div class="core-level-outline">
-            <div class="core-label-outline">
-                <div class="core-base">
+        <div id="core-button" class="core-level-outline" data-letter="D">
+            <div class="core-label-outline" data-letter="D">
+                <div class="core-base" data-letter="D" onclick="activateCore(event)">
                     D
                 </div>
             </div>
         </div>
     </div>
     <div class="core-column-level">
-        <div class="core-level-outline">
-            <div class="core-label-outline">
-                <div class="core-base">
+        <div id="core-button" class="core-level-outline" data-letter="E">
+            <div class="core-label-outline" data-letter="E">
+                <div class="core-base" data-letter="E" onclick="activateCore(event)">
                     E
                 </div>
             </div>
         </div>
-        <div class="core-level-outline">
-            <div class="core-label-outline">
-                <div class="core-base">
+        <div id="core-button" class="core-level-outline" data-letter="F">
+            <div class="core-label-outline" data-letter="F">
+                <div class="core-base" data-letter="F" onclick="activateCore(event)">
                     F
                 </div>
             </div>
@@ -88,3 +88,48 @@
         </div>
     </div>
 </div>
+
+<script>
+    function activateCore(event){
+        console.log(event.target.getAttribute("data-letter"));
+        var letter = event.target.getAttribute("data-letter");
+
+        agent_core.forEach(core => {
+            if(core["letter"] == letter){
+                core["is_active"] = !core["is_active"];
+                for(let index = agent_core.length; index >= 0; index--)
+                    if(index > core["slot"])
+                        agent_core[index-1]["is_active"] = false;
+                
+                for(let index = 1; index <= agent_core.length; index++)
+                    if(index < core["slot"])
+                        agent_core[index-1]["is_active"] = true;
+            }
+        });
+        
+        agent_core.forEach(core => {
+            console.log(core["slot"] + " | " + core["is_active"]);
+            if(core["is_active"]){
+                core_outline_list = document.querySelectorAll(".core-label-outline");
+
+                core_outline_list.forEach(core_outline => {
+                    if(core["letter"] == core_outline.getAttribute("data-letter")){
+                        core_outline.style = 
+                            "color: rgb(28, 224, 239);"+
+                            "text-shadow: -1px -1px 0 rgb(13, 13, 13), 0 0 3px rgb(28, 224, 239), 0 0 4px rgb(28, 224, 239), 0 0 5px rgb(28, 224, 239), 0 0 6px rgb(28, 224, 239), 0 0 9px rgb(28, 224, 239);";
+                    }
+                });
+            }else{
+                core_outline_list = document.querySelectorAll(".core-label-outline");
+
+                core_outline_list.forEach(core_outline => {
+                    if(core["letter"] == core_outline.getAttribute("data-letter")){
+                        core_outline.style = 
+                            "color: rgb(27, 28, 27);"+
+                            "text-shadow: -1px -1px 0 rgb(13, 13, 13);";
+                    }
+                });
+            }
+        });
+    }
+</script>

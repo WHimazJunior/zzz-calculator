@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 620px;
+    width: 520px;
     gap: 20px;
-    aspect-ratio: 62/20;
+    aspect-ratio: 52/20;
 }
 
 .core-column-level, .core-column-effect{
@@ -39,6 +39,7 @@
 }
 
 .core-label-outline, .core-effect-outline{
+    text-shadow: -1px -1px 0 rgb(13, 13, 13);
     display: flex;
     justify-content: center;
     color: rgb(27, 28, 27);
@@ -87,6 +88,7 @@
     aspect-ratio: 1;
     border-radius: 50%;
     background: linear-gradient(30deg, rgb(90, 93, 90), rgb(32, 31, 32));
+    user-select: none;
 }
 
 .core-effect-base{

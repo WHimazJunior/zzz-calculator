@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Agentinfo, Agentstats, Basestatsname, Constantmainstat, Constantsubstat, Discs, Element, Faction, Passivestat, Rolesubstat, Type, Wengine, WengineAgent, Wenginemainstats, Wenginesubstats
+from .models import Agentinfo, Agentstats, Basestatsname, Constantmainstat, Constantsubstat, Discs, Element, Faction, Passivestat, Rolesubstat, Type, Wengine, WengineAgent, Wenginemainstats, Wenginesubstats, Colors
 from .models import Agents, Discsinfo, Possiblepositionstat, Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo
 
 class AgentinfoSerializer(serializers.ModelSerializer):
@@ -124,4 +124,9 @@ class WengineinfoSerializer(serializers.ModelSerializer):
 class WengineagentinfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Wengineagentinfo
+        fields = '__all__'
+
+class ColorsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Colors
         fields = '__all__'

@@ -3,8 +3,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
 
-from .models import Basestatsname, Element, Type, Faction, Agents, Agentinfo, Agentstats, Discsinfo, Passivestat, Discs, Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo, Wengine, Wenginemainstats, Wenginesubstats
-from .serializer import BasestatsnameSerializer, ElementSerializer, TypeSerializer, FactionSerializer, AgentsSerializer, AgentstatsSerializer, AgentinfoSerializer, DiscsinfoSerializer, PassivestatSerializer, DiscsSerializer, PossiblestatsSerializer, PossiblesubstatsSerializer, ConstantsubstatsSerializer, WengineinfoSerializer, WengineagentinfoSerializer, WengineSerializer, WenginemainstatsSerializer, WenginesubstatsSerializer
+from .models import Basestatsname, Element, Type, Faction, Agents, Agentinfo, Agentstats, Discsinfo, Passivestat, Discs, Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo, Wengine, Wenginemainstats, Wenginesubstats, Colors
+from .serializer import BasestatsnameSerializer, ElementSerializer, TypeSerializer, FactionSerializer, AgentsSerializer, AgentstatsSerializer, AgentinfoSerializer, DiscsinfoSerializer, PassivestatSerializer, DiscsSerializer, PossiblestatsSerializer, PossiblesubstatsSerializer, ConstantsubstatsSerializer, WengineinfoSerializer, WengineagentinfoSerializer, WengineSerializer, WenginemainstatsSerializer, WenginesubstatsSerializer, ColorsSerializer
 
 # Create your views here.
 
@@ -184,4 +184,12 @@ def GetWengineInfoById(request, pk):
     if request.method == "GET":
         table = Wengineinfo.objects.filter(id=pk)
         serializer = WengineinfoSerializer(table, many=True)
+        return Response(serializer.data)
+    
+
+@api_view(['GET'])
+def GetColors(request):
+    if request.method == "GET":
+        table = Colors.objects.all()
+        serializer = ColorsSerializer(table, many=True)
         return Response(serializer.data)

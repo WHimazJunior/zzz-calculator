@@ -12,6 +12,9 @@ from zzz_calculator.settings import STYLES_URL, STYLES_ROOT, API_URL
 def index(request):
     return render(request, 'Builder/BuildAgent.html', cache_api())
 
+def settings(request):
+    return render(request, 'Settings/Settings.html', cache_api())
+
 def addWengine(request):
     tables = cache_api()
 
@@ -217,6 +220,7 @@ def getTableId(table, name):
 
 def getApiRequest(URL):
     REQUEST_URL = API_URL + URL
+    print(REQUEST_URL)
 
     response = requests.get(REQUEST_URL, timeout=10)
     response.raise_for_status()
@@ -237,7 +241,8 @@ def cache_api():
         '/stats/sub/possible',  # 7
         '/stats/sub/constant',  # 8
         '/wengines/',           # 9
-        '/wengines/agent']      # 10
+        '/wengines/agent',      # 10
+        '/colors/']             # 11
     
     
     for endpoint in endpoints:
@@ -258,6 +263,7 @@ def cache_api():
         "ConstantSubStats": cache.get(endpoints[8]),
         "Wengines": cache.get(endpoints[9]),
         "WenginesAgent": cache.get(endpoints[10]),
+        "Colors": cache.get(endpoints[11]),
         "STYLES_URL": STYLES_URL,
         "STYLES_ROOT": STYLES_ROOT,
     }

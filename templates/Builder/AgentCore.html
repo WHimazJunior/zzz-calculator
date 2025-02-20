@@ -1,7 +1,5 @@
 {% load static %}
 
-
-
 <div class="core-frame">
     <div class="core-column-level">
         <div id="core-button" class="core-level-outline" data-letter="A">
@@ -102,7 +100,6 @@
 
 <script>
     function activateCore(event){
-        console.log(event.target.getAttribute("data-letter"));
         var letter = event.target.getAttribute("data-letter");
 
         agent_core.forEach(core => {
@@ -119,15 +116,14 @@
         });
         
         agent_core.forEach(core => {
-            console.log(core["slot"] + " | " + core["is_active"]);
             if(core["is_active"]){
                 core_outline_list = document.querySelectorAll(".core-label-outline");
 
                 core_outline_list.forEach(core_outline => {
                     if(core["letter"] == core_outline.getAttribute("data-letter")){
                         core_outline.style = 
-                            "color: rgb(28, 224, 239);"+
-                            "text-shadow: -1px -1px 0 rgb(13, 13, 13), 0 0 3px rgb(28, 224, 239), 0 0 4px rgb(28, 224, 239), 0 0 5px rgb(28, 224, 239), 0 0 6px rgb(28, 224, 239), 0 0 9px rgb(28, 224, 239);";
+                            "color: var(--light-color);"+
+                            "text-shadow: -1px -1px 0 rgb(13, 13, 13), 0 0 3px var(--light-color), 0 0 4px var(--light-color), 0 0 5px var(--light-color), 0 0 6px var(--light-color), 0 0 9px var(--light-color);";
                     }
                 });
             }else{

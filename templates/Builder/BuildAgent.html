@@ -29,33 +29,44 @@
     <link rel="stylesheet" href="{% static 'style/selector/disc-selector.css' %}">
 
     <link rel="stylesheet" href="{% static 'style/core/core.css' %}">
+    <link rel="stylesheet" href="{% static 'style/color/color.css' %}">
 
     <title>ZZZ Calculator</title>
 </head>
 <body>
-    {% load GetRandomAgent %}
-    {% getAgent as random_agent %}
-
-    <div class="content-row">
-        <div class="content-row-upper-separator-agent">
-            {% include "Builder/AgentInfo.html" %}
-            <div class="content-row-extra-info">
-                {% include "Builder/WEngineInfo.html" %}
-                {% include "Builder/AgentHiddenStats.html" %}
+    <header>
+        <label class="title">ZZZ Calculator</label>
+        <img class="settings-icon active"
+            src="{% static 'Settings/settings-icon.png' %}"
+            alt=" "
+            onclick="location.href='/settings'">
+    </header>
+    <div class="content">
+        <div class="content-row">
+            <div class="content-row-upper-separator-agent">
+                {% load GetRandomAgent %}
+                {% getAgent as random_agent %}
+                {% include "Builder/AgentInfo.html" %}
+                <div class="content-row-extra-info">
+                    {% include "Builder/WEngineInfo.html" %}
+                    {% include "Builder/AgentHiddenStats.html" %}
+                </div>
+            </div>
+            <div class="content-row-upper-separator-disc">
+                {% include "Builder/RuneSet.html" %}
             </div>
         </div>
-        <div class="content-row-upper-separator-disc">
-            {% include "Builder/RuneSet.html" %}
-        </div>
-    </div>
-    <div class="content-row">
-        <div class="content-row-lower-separator-core">
-            {% include "Builder/AgentCore.html" %}
-        </div>
-        <div class="content-row-lower-separator-selectors">
-            {% include "Builder/AgentSelection.html" %}
-            {% include "Builder/WEngineSelection.html" %}
-            {% include "Builder/RuneSelection.html" %}
+        <div class="content-row">
+            <div class="content-row-lower-separator-core">
+                {% include "Builder/AgentCore.html" %}
+                {% include "Settings/SetColorCookie.html" %}
+                {% include "Settings/SetColor.html" %}
+            </div>
+            <div class="content-row-lower-separator-selectors">
+                {% include "Builder/AgentSelection.html" %}
+                {% include "Builder/WEngineSelection.html" %}
+                {% include "Builder/RuneSelection.html" %}
+            </div>
         </div>
     </div>
 

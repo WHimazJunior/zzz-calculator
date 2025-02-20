@@ -38,4 +38,7 @@ urlpatterns = [
 
     #Factions
     path('factions/', views.GetFactions),
+
+    #Colors
+    path('colors/', views.GetColors),
 ]

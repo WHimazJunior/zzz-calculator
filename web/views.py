@@ -220,7 +220,6 @@ def getTableId(table, name):
 
 def getApiRequest(URL):
     REQUEST_URL = API_URL + URL
-    print(REQUEST_URL)
 
     response = requests.get(REQUEST_URL, timeout=10)
     response.raise_for_status()

@@ -1,0 +1,42 @@
+.core-info-frame{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 700px;
+    aspect-ratio: 52/14;
+    background: repeating-linear-gradient(
+        45deg,  /* Ângulo dos traços */
+        rgba(0, 0, 0, 0.8) 0px,  /* Cor escura */
+        rgba(0, 0, 0, 0.8) 2px,  /* Espessura da linha */
+        rgba(255, 255, 255, 0.05) 4px, /* Espaço entre linhas */
+        rgba(255, 255, 255, 0.05) 8px
+    );
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.core-info-name{
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    height: 30%;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 3px solid rgb(50, 50, 50);
+}
+
+.core-info-effects{
+    display: flex;
+    height: 70%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.45);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.core-info-single-effect{
+    margin-bottom: 4%;
+}

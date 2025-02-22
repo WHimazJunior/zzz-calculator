@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
+import json
 
 from .models import Basestatsname, Element, Type, Faction, Agents, Agentinfo, Agentstats, Discsinfo, Passivestat, Discs, Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo, Wengine, Wenginemainstats, Wenginesubstats, Colors
 from .serializer import BasestatsnameSerializer, ElementSerializer, TypeSerializer, FactionSerializer, AgentsSerializer, AgentstatsSerializer, AgentinfoSerializer, DiscsinfoSerializer, PassivestatSerializer, DiscsSerializer, PossiblestatsSerializer, PossiblesubstatsSerializer, ConstantsubstatsSerializer, WengineinfoSerializer, WengineagentinfoSerializer, WengineSerializer, WenginemainstatsSerializer, WenginesubstatsSerializer, ColorsSerializer

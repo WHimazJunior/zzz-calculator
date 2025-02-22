@@ -143,3 +143,38 @@ CREATE TABLE PossibleSubStat(
 
     FOREIGN KEY (statname_id) REFERENCES BaseStatsName (id) ON DELETE CASCADE
 );
+
+CREATE TABLE colors(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255),
+    light_color varchar(12),
+    light_gradient varchar(12),
+    dark_gradient varchar(12)
+);
+
+INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
+VALUES (NULL, 'Light Blue', '#1ce0ef', '#1fadba', '#115c62');
+
+INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
+VALUES (NULL, 'Orange', '#ef691c', '#ba581f', '#622f11');
+
+INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
+VALUES (NULL, 'Yellow', '#efdd1c', '#baad1f', '#625b11');
+
+INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
+VALUES (NULL, 'Pink', '#ef1cef', '#ba1fba', '#621162');
+
+INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
+VALUES (NULL, 'Hot Pink', '#ef1c86', '#ba1f6c', '#62113a');
+
+INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
+VALUES (NULL, 'Purple', '#741cef', '#601fba', '#331162');
+
+INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
+VALUES (NULL, 'Red', '#ef1c1c', '#ba1f1f', '#621111');
+
+INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
+VALUES (NULL, 'Green', '#38ef1c', '#34ba1f', '#1c6211');
+
+INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
+VALUES (NULL, 'Blue', '#1c1cef', '#1f1fba', '#111162');

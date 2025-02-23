@@ -36,6 +36,7 @@
     <title>ZZZ Calculator</title>
 </head>
 <body>
+    {% include "Builder/SetGlobalVariablesScript.html" %}
     <header>
         <label class="title">ZZZ Calculator</label>
         <img class="settings-icon active"
@@ -55,7 +56,7 @@
                 </div>
             </div>
             <div class="content-row-upper-separator-disc">
-                {% include "Builder/RuneSet.html" %}
+                {% include "Builder/DiscSet.html" %}
             </div>
         </div>
         <div class="content-row">
@@ -67,12 +68,12 @@
             <div class="content-row-lower-separator-selectors">
                 {% include "Builder/AgentSelection.html" %}
                 {% include "Builder/WEngineSelection.html" %}
-                {% include "Builder/RuneSelection.html" %}
+                {% include "Builder/DiscSelection.html" %}
             </div>
         </div>
     </div>
 
     <script src="{% static 'scripts/resizeText.js' %}"></script>
-    {% include "Builder/StatsScript.html" %}
+    <script src="{% static 'scripts/stats/stats.js' %}"></script>
 </body>
 </html>

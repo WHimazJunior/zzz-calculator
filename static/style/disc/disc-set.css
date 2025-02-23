@@ -135,3 +135,11 @@
     aspect-ratio: 1;
     border-radius: 50%;
 }
+
+.disc-selection-centered{
+    display: flex;
+    height: 100%;
+    width: 55%;
+    justify-content: center;
+    align-items: center;
+}

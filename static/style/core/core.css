@@ -61,6 +61,15 @@
 
 .core-effect-outline{
     background-color: rgb(18, 15, 18);
+    animation: rotateCore 10s linear infinite;
+}
+
+@keyframes rotateCore{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
 }
 
 @-webkit-keyframes glow {
@@ -185,55 +194,57 @@
     justify-content: center;
     align-content: center;
     position: absolute;
-    border-bottom: 30px solid rgb(16, 16, 16);
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
+    border-bottom: 50px solid rgb(16, 16, 16);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
     width: 0;
-    transform: rotate(36deg);
-    margin-left: 60px;
-    margin-top: -5px;
+    transform: rotate(32deg);
+    margin-left: 70%;
+    margin-top: -10%;
 }
 
 .core-effect-triangle{
     position: absolute;
-    border-bottom: 26px solid rgb(25, 25, 25);
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
+    border-bottom: 42px solid rgb(25, 25, 25);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
     width: 0;
-    margin-top: 2px;
+    margin-top: 5px;
 }
 
 .core-effect-sub-triangle{
     position: absolute;
-    border-bottom: 15px solid var(--light-color);
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    border-bottom: 30px solid var(--light-color);
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
     width: 0;
-    margin-left: -10px;
+    margin-left: -18px;
     margin-top: 8px;
 }
 
 .core-effect-triangle-bar{
     position: absolute;
-    width: 2px;
-    height: 12px;
+    width: 3px;
+    height: 20px;
     background-color: rgb(25, 25, 25);
 }
 
 #core-effect-triangle-bar-1{
     transform: rotate(90deg);
+    margin-top: 3px;
+    margin-left: 0px;
 }
 
 #core-effect-triangle-bar-2{
     transform: rotate(210deg);
-    margin-top: 6px;
-    margin-left: 2px;
+    margin-top: 12px;
+    margin-left: 5px;
 }
 
 #core-effect-triangle-bar-3{
     transform: rotate(330deg);
-    margin-left: -5px;
-    margin-top: 5px;
+    margin-left: -6px;
+    margin-top: 13px;
 }
 
 .core-label{
@@ -243,3 +254,4 @@
 .core-label:hover{
     cursor: pointer;
 }
+

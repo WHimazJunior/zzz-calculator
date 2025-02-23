@@ -1,0 +1,2227 @@
+[
+    {
+        "name": "Hoshimi Miyabi",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "617",
+                "BaseATK": "127",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,370",
+                "BaseATK": "196",
+                "BaseDEF": "108"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,793",
+                "BaseATK": "241",
+                "BaseDEF": "141"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,630",
+                "BaseATK": "317",
+                "BaseDEF": "207"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,054",
+                "BaseATK": "362",
+                "BaseDEF": "241"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,891",
+                "BaseATK": "439",
+                "BaseDEF": "307"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,314",
+                "BaseATK": "485",
+                "BaseDEF": "340"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,152",
+                "BaseATK": "562",
+                "BaseDEF": "407"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,576",
+                "BaseATK": "607",
+                "BaseDEF": "441"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,413",
+                "BaseATK": "683",
+                "BaseDEF": "507"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,836",
+                "BaseATK": "728",
+                "BaseDEF": "540"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,673",
+                "BaseATK": "805",
+                "BaseDEF": "606"
+            }
+        ]
+    },
+    {
+        "name": "Nicole Demara",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "655",
+                "BaseATK": "93",
+                "BaseDEF": "50"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,454",
+                "BaseATK": "140",
+                "BaseDEF": "111"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,903",
+                "BaseATK": "173",
+                "BaseDEF": "145"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,792",
+                "BaseATK": "227",
+                "BaseDEF": "213"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,242",
+                "BaseATK": "261",
+                "BaseDEF": "248"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,131",
+                "BaseATK": "314",
+                "BaseDEF": "315"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,580",
+                "BaseATK": "347",
+                "BaseDEF": "349"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,469",
+                "BaseATK": "400",
+                "BaseDEF": "417"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,919",
+                "BaseATK": "433",
+                "BaseDEF": "451"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,808",
+                "BaseATK": "486",
+                "BaseDEF": "519"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,257",
+                "BaseATK": "520",
+                "BaseDEF": "554"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,145",
+                "BaseATK": "574",
+                "BaseDEF": "622"
+            }
+        ]
+    },
+    {
+        "name": "Anby Demara",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "603",
+                "BaseATK": "95",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,339",
+                "BaseATK": "143",
+                "BaseDEF": "109"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,753",
+                "BaseATK": "177",
+                "BaseDEF": "143"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,572",
+                "BaseATK": "232",
+                "BaseDEF": "210"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "2,986",
+                "BaseATK": "266",
+                "BaseDEF": "244"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,804",
+                "BaseATK": "320",
+                "BaseDEF": "310"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,218",
+                "BaseATK": "354",
+                "BaseDEF": "343"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,036",
+                "BaseATK": "408",
+                "BaseDEF": "410"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,450",
+                "BaseATK": "441",
+                "BaseDEF": "444"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,269",
+                "BaseATK": "495",
+                "BaseDEF": "511"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,682",
+                "BaseATK": "529",
+                "BaseDEF": "545"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,500",
+                "BaseATK": "583",
+                "BaseDEF": "612"
+            }
+        ]
+    },
+    {
+        "name": "Astra Yao",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "692",
+                "BaseATK": "103",
+                "BaseDEF": "48"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,537",
+                "BaseATK": "156",
+                "BaseDEF": "106"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "2,012",
+                "BaseATK": "193",
+                "BaseDEF": "139"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,951",
+                "BaseATK": "253",
+                "BaseDEF": "205"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,426",
+                "BaseATK": "290",
+                "BaseDEF": "238"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,366",
+                "BaseATK": "350",
+                "BaseDEF": "304"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,841",
+                "BaseATK": "386",
+                "BaseDEF": "337"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,780",
+                "BaseATK": "446",
+                "BaseDEF": "402"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "6,255",
+                "BaseATK": "483",
+                "BaseDEF": "436"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "7,194",
+                "BaseATK": "543",
+                "BaseDEF": "502"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,669",
+                "BaseATK": "580",
+                "BaseDEF": "535"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,609",
+                "BaseATK": "640",
+                "BaseDEF": "600"
+            }
+        ]
+    },
+    {
+        "name": "Ellen Joe",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "617",
+                "BaseATK": "135",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,370",
+                "BaseATK": "209",
+                "BaseDEF": "108"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,793",
+                "BaseATK": "257",
+                "BaseDEF": "141"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,630",
+                "BaseATK": "339",
+                "BaseDEF": "207"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,054",
+                "BaseATK": "387",
+                "BaseDEF": "241"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,891",
+                "BaseATK": "470",
+                "BaseDEF": "307"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,314",
+                "BaseATK": "519",
+                "BaseDEF": "340"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,152",
+                "BaseATK": "602",
+                "BaseDEF": "407"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,576",
+                "BaseATK": "650",
+                "BaseDEF": "441"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,413",
+                "BaseATK": "732",
+                "BaseDEF": "507"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,836",
+                "BaseATK": "780",
+                "BaseDEF": "540"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,673",
+                "BaseATK": "863",
+                "BaseDEF": "606"
+            }
+        ]
+    },
+    {
+        "name": "Ben Bigger",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "690",
+                "BaseATK": "94",
+                "BaseDEF": "58"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,532",
+                "BaseATK": "142",
+                "BaseDEF": "129"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "2,005",
+                "BaseATK": "176",
+                "BaseDEF": "169"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,941",
+                "BaseATK": "229",
+                "BaseDEF": "248"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,415",
+                "BaseATK": "262",
+                "BaseDEF": "288"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,350",
+                "BaseATK": "316",
+                "BaseDEF": "367"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,823",
+                "BaseATK": "350",
+                "BaseDEF": "407"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,759",
+                "BaseATK": "403",
+                "BaseDEF": "486"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "6,232",
+                "BaseATK": "436",
+                "BaseDEF": "526"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "7,168",
+                "BaseATK": "490",
+                "BaseDEF": "605"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,641",
+                "BaseATK": "524",
+                "BaseDEF": "645"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,577",
+                "BaseATK": "578",
+                "BaseDEF": "724"
+            }
+        ]
+    },
+    {
+        "name": "Jane Doe",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "626",
+                "BaseATK": "127",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,390",
+                "BaseATK": "196",
+                "BaseDEF": "108"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,820",
+                "BaseATK": "241",
+                "BaseDEF": "141"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,670",
+                "BaseATK": "317",
+                "BaseDEF": "207"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,099",
+                "BaseATK": "362",
+                "BaseDEF": "241"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,949",
+                "BaseATK": "439",
+                "BaseDEF": "307"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,379",
+                "BaseATK": "485",
+                "BaseDEF": "340"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,229",
+                "BaseATK": "562",
+                "BaseDEF": "407"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,659",
+                "BaseATK": "607",
+                "BaseDEF": "441"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,508",
+                "BaseATK": "683",
+                "BaseDEF": "507"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,938",
+                "BaseATK": "728",
+                "BaseDEF": "540"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,788",
+                "BaseATK": "805",
+                "BaseDEF": "606"
+            }
+        ]
+    },
+    {
+        "name": "Luciana de Montefio",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "645",
+                "BaseATK": "95",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,433",
+                "BaseATK": "143",
+                "BaseDEF": "109"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,876",
+                "BaseATK": "177",
+                "BaseDEF": "143"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,751",
+                "BaseATK": "232",
+                "BaseDEF": "210"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,194",
+                "BaseATK": "266",
+                "BaseDEF": "244"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,070",
+                "BaseATK": "320",
+                "BaseDEF": "310"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,513",
+                "BaseATK": "354",
+                "BaseDEF": "343"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,389",
+                "BaseATK": "408",
+                "BaseDEF": "410"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,832",
+                "BaseATK": "441",
+                "BaseDEF": "444"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,708",
+                "BaseATK": "495",
+                "BaseDEF": "511"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,150",
+                "BaseATK": "529",
+                "BaseDEF": "545"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,025",
+                "BaseATK": "583",
+                "BaseDEF": "612"
+            }
+        ]
+    },
+    {
+        "name": "Billy Kid",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "555",
+                "BaseATK": "113",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,233",
+                "BaseATK": "173",
+                "BaseDEF": "108"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,614",
+                "BaseATK": "213",
+                "BaseDEF": "141"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,367",
+                "BaseATK": "280",
+                "BaseDEF": "207"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "2,748",
+                "BaseATK": "321",
+                "BaseDEF": "241"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,502",
+                "BaseATK": "389",
+                "BaseDEF": "307"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "3,883",
+                "BaseATK": "429",
+                "BaseDEF": "340"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "4,637",
+                "BaseATK": "496",
+                "BaseDEF": "407"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,018",
+                "BaseATK": "537",
+                "BaseDEF": "441"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "5,771",
+                "BaseATK": "604",
+                "BaseDEF": "507"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,153",
+                "BaseATK": "644",
+                "BaseDEF": "540"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "6,907",
+                "BaseATK": "712",
+                "BaseDEF": "606"
+            }
+        ]
+    },
+    {
+        "name": "Burnice White",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "592",
+                "BaseATK": "124",
+                "BaseDEF": "48"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,315",
+                "BaseATK": "191",
+                "BaseDEF": "106"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,722",
+                "BaseATK": "235",
+                "BaseDEF": "139"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,526",
+                "BaseATK": "310",
+                "BaseDEF": "205"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "2,932",
+                "BaseATK": "355",
+                "BaseDEF": "238"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,736",
+                "BaseATK": "430",
+                "BaseDEF": "304"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,143",
+                "BaseATK": "474",
+                "BaseDEF": "337"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "4,947",
+                "BaseATK": "549",
+                "BaseDEF": "402"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,353",
+                "BaseATK": "593",
+                "BaseDEF": "436"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,157",
+                "BaseATK": "668",
+                "BaseDEF": "502"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,564",
+                "BaseATK": "713",
+                "BaseDEF": "535"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,368",
+                "BaseATK": "788",
+                "BaseDEF": "600"
+            }
+        ]
+    },
+    {
+        "name": "Caesar King",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "766",
+                "BaseATK": "101",
+                "BaseDEF": "61"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,701",
+                "BaseATK": "153",
+                "BaseDEF": "134"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "2,227",
+                "BaseATK": "191",
+                "BaseDEF": "176"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "3,266",
+                "BaseATK": "250",
+                "BaseDEF": "259"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,791",
+                "BaseATK": "288",
+                "BaseDEF": "300"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,831",
+                "BaseATK": "347",
+                "BaseDEF": "382"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "5,357",
+                "BaseATK": "384",
+                "BaseDEF": "424"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "6,396",
+                "BaseATK": "443",
+                "BaseDEF": "506"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "6,921",
+                "BaseATK": "481",
+                "BaseDEF": "547"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "7,960",
+                "BaseATK": "539",
+                "BaseDEF": "629"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "8,486",
+                "BaseATK": "577",
+                "BaseDEF": "671"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "9,526",
+                "BaseATK": "636",
+                "BaseDEF": "753"
+            }
+        ]
+    },
+    {
+        "name": "Corin Wickes",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "561",
+                "BaseATK": "116",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,246",
+                "BaseATK": "178",
+                "BaseDEF": "108"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,631",
+                "BaseATK": "219",
+                "BaseDEF": "141"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,392",
+                "BaseATK": "288",
+                "BaseDEF": "207"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "2,777",
+                "BaseATK": "330",
+                "BaseDEF": "241"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,538",
+                "BaseATK": "400",
+                "BaseDEF": "307"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "3,923",
+                "BaseATK": "441",
+                "BaseDEF": "340"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "4,684",
+                "BaseATK": "510",
+                "BaseDEF": "405"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,069",
+                "BaseATK": "552",
+                "BaseDEF": "438"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "5,830",
+                "BaseATK": "621",
+                "BaseDEF": "504"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,215",
+                "BaseATK": "662",
+                "BaseDEF": "538"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "6,976",
+                "BaseATK": "732",
+                "BaseDEF": "604"
+            }
+        ]
+    },
+    {
+        "name": "Grace Howard",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "602",
+                "BaseATK": "119",
+                "BaseDEF": "48"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,336",
+                "BaseATK": "183",
+                "BaseDEF": "106"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,749",
+                "BaseATK": "225",
+                "BaseDEF": "139"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,566",
+                "BaseATK": "296",
+                "BaseDEF": "205"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "2,979",
+                "BaseATK": "339",
+                "BaseDEF": "238"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,795",
+                "BaseATK": "410",
+                "BaseDEF": "304"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,208",
+                "BaseATK": "452",
+                "BaseDEF": "337"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,024",
+                "BaseATK": "523",
+                "BaseDEF": "402"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,436",
+                "BaseATK": "566",
+                "BaseDEF": "436"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,253",
+                "BaseATK": "637",
+                "BaseDEF": "502"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,666",
+                "BaseATK": "679",
+                "BaseDEF": "535"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,482",
+                "BaseATK": "750",
+                "BaseDEF": "600"
+            }
+        ]
+    },
+    {
+        "name": "Koleda Belobog",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "653",
+                "BaseATK": "106",
+                "BaseDEF": "48"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,451",
+                "BaseATK": "161",
+                "BaseDEF": "106"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,899",
+                "BaseATK": "199",
+                "BaseDEF": "139"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,785",
+                "BaseATK": "261",
+                "BaseDEF": "204"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,234",
+                "BaseATK": "299",
+                "BaseDEF": "237"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,121",
+                "BaseATK": "361",
+                "BaseDEF": "302"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,569",
+                "BaseATK": "398",
+                "BaseDEF": "334"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,456",
+                "BaseATK": "460",
+                "BaseDEF": "398"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,905",
+                "BaseATK": "498",
+                "BaseDEF": "431"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,792",
+                "BaseATK": "560",
+                "BaseDEF": "496"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,240",
+                "BaseATK": "598",
+                "BaseDEF": "529"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,127",
+                "BaseATK": "660",
+                "BaseDEF": "594"
+            }
+        ]
+    },
+    {
+        "name": "Lighter",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "677",
+                "BaseATK": "109",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,503",
+                "BaseATK": "166",
+                "BaseDEF": "109"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,935",
+                "BaseATK": "213",
+                "BaseDEF": "143"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,853",
+                "BaseATK": "277",
+                "BaseDEF": "210"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,285",
+                "BaseATK": "325",
+                "BaseDEF": "244"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,203",
+                "BaseATK": "389",
+                "BaseDEF": "310"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,635",
+                "BaseATK": "436",
+                "BaseDEF": "343"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,553",
+                "BaseATK": "500",
+                "BaseDEF": "410"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,984",
+                "BaseATK": "548",
+                "BaseDEF": "444"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,903",
+                "BaseATK": "612",
+                "BaseDEF": "511"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,335",
+                "BaseATK": "659",
+                "BaseDEF": "545"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,253",
+                "BaseATK": "722",
+                "BaseDEF": "612"
+            }
+        ]
+    },
+    {
+        "name": "Von Lycaon",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "677",
+                "BaseATK": "105",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,503",
+                "BaseATK": "160",
+                "BaseDEF": "108"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,967",
+                "BaseATK": "197",
+                "BaseDEF": "141"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,885",
+                "BaseATK": "258",
+                "BaseDEF": "207"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,350",
+                "BaseATK": "296",
+                "BaseDEF": "241"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,268",
+                "BaseATK": "357",
+                "BaseDEF": "307"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,732",
+                "BaseATK": "394",
+                "BaseDEF": "340"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,650",
+                "BaseATK": "456",
+                "BaseDEF": "407"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "6,114",
+                "BaseATK": "494",
+                "BaseDEF": "441"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "7,033",
+                "BaseATK": "555",
+                "BaseDEF": "507"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,498",
+                "BaseATK": "592",
+                "BaseDEF": "540"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,416",
+                "BaseATK": "653",
+                "BaseDEF": "606"
+            }
+        ]
+    },
+    {
+        "name": "Nekomiya Mana",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "608",
+                "BaseATK": "131",
+                "BaseDEF": "47"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,350",
+                "BaseATK": "202",
+                "BaseDEF": "104"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,767",
+                "BaseATK": "249",
+                "BaseDEF": "136"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,592",
+                "BaseATK": "329",
+                "BaseDEF": "200"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,009",
+                "BaseATK": "376",
+                "BaseDEF": "233"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,833",
+                "BaseATK": "456",
+                "BaseDEF": "298"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,250",
+                "BaseATK": "502",
+                "BaseDEF": "330"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,075",
+                "BaseATK": "582",
+                "BaseDEF": "394"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,492",
+                "BaseATK": "629",
+                "BaseDEF": "427"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,317",
+                "BaseATK": "708",
+                "BaseDEF": "491"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,735",
+                "BaseATK": "755",
+                "BaseDEF": "523"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,560",
+                "BaseATK": "835",
+                "BaseDEF": "587"
+            }
+        ]
+    },
+    {
+        "name": "Piper Wheel",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "561",
+                "BaseATK": "109",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,246",
+                "BaseATK": "166",
+                "BaseDEF": "109"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,631",
+                "BaseATK": "205",
+                "BaseDEF": "143"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,392",
+                "BaseATK": "270",
+                "BaseDEF": "210"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "2,777",
+                "BaseATK": "309",
+                "BaseDEF": "244"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,538",
+                "BaseATK": "373",
+                "BaseDEF": "310"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "3,923",
+                "BaseATK": "412",
+                "BaseDEF": "343"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "4,684",
+                "BaseATK": "476",
+                "BaseDEF": "410"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,069",
+                "BaseATK": "515",
+                "BaseDEF": "444"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "5,830",
+                "BaseATK": "580",
+                "BaseDEF": "511"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,215",
+                "BaseATK": "619",
+                "BaseDEF": "545"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "6,976",
+                "BaseATK": "683",
+                "BaseDEF": "612"
+            }
+        ]
+    },
+    {
+        "name": "Qingyi",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "663",
+                "BaseATK": "109",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,473",
+                "BaseATK": "166",
+                "BaseDEF": "109"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,928",
+                "BaseATK": "205",
+                "BaseDEF": "143"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,828",
+                "BaseATK": "270",
+                "BaseDEF": "210"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,284",
+                "BaseATK": "309",
+                "BaseDEF": "244"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,184",
+                "BaseATK": "373",
+                "BaseDEF": "310"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,639",
+                "BaseATK": "412",
+                "BaseDEF": "343"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,540",
+                "BaseATK": "476",
+                "BaseDEF": "410"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,995",
+                "BaseATK": "515",
+                "BaseDEF": "444"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,895",
+                "BaseATK": "579",
+                "BaseDEF": "511"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,350",
+                "BaseATK": "618",
+                "BaseDEF": "545"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,250",
+                "BaseATK": "683",
+                "BaseDEF": "612"
+            }
+        ]
+    },
+    {
+        "name": "Alexandrina Sebastiane",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "692",
+                "BaseATK": "103",
+                "BaseDEF": "48"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,537",
+                "BaseATK": "157",
+                "BaseDEF": "106"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "2,012",
+                "BaseATK": "194",
+                "BaseDEF": "139"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,951",
+                "BaseATK": "254",
+                "BaseDEF": "205"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,426",
+                "BaseATK": "291",
+                "BaseDEF": "238"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,366",
+                "BaseATK": "351",
+                "BaseDEF": "304"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,841",
+                "BaseATK": "388",
+                "BaseDEF": "337"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,780",
+                "BaseATK": "448",
+                "BaseDEF": "402"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "6,255",
+                "BaseATK": "484",
+                "BaseDEF": "436"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "7,194",
+                "BaseATK": "544",
+                "BaseDEF": "502"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,669",
+                "BaseATK": "581",
+                "BaseDEF": "535"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,609",
+                "BaseATK": "642",
+                "BaseDEF": "600"
+            }
+        ]
+    },
+    {
+        "name": "Seth Lowell",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "699",
+                "BaseATK": "93",
+                "BaseDEF": "60"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,553",
+                "BaseATK": "140",
+                "BaseDEF": "133"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "2,033",
+                "BaseATK": "173",
+                "BaseDEF": "174"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,982",
+                "BaseATK": "225",
+                "BaseDEF": "255"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,462",
+                "BaseATK": "258",
+                "BaseDEF": "296"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,412",
+                "BaseATK": "311",
+                "BaseDEF": "377"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,892",
+                "BaseATK": "344",
+                "BaseDEF": "418"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,841",
+                "BaseATK": "397",
+                "BaseDEF": "500"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "6,321",
+                "BaseATK": "430",
+                "BaseDEF": "542"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "7,270",
+                "BaseATK": "482",
+                "BaseDEF": "623"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,751",
+                "BaseATK": "515",
+                "BaseDEF": "664"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,701",
+                "BaseATK": "568",
+                "BaseDEF": "746"
+            }
+        ]
+    },
+    {
+        "name": "Soldier 11",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "617",
+                "BaseATK": "128",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,370",
+                "BaseATK": "197",
+                "BaseDEF": "109"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,793",
+                "BaseATK": "243",
+                "BaseDEF": "143"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,630",
+                "BaseATK": "321",
+                "BaseDEF": "210"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,054",
+                "BaseATK": "366",
+                "BaseDEF": "244"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,891",
+                "BaseATK": "443",
+                "BaseDEF": "310"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,314",
+                "BaseATK": "489",
+                "BaseDEF": "343"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,152",
+                "BaseATK": "567",
+                "BaseDEF": "410"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,576",
+                "BaseATK": "613",
+                "BaseDEF": "444"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,413",
+                "BaseATK": "691",
+                "BaseDEF": "511"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,836",
+                "BaseATK": "736",
+                "BaseDEF": "545"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,673",
+                "BaseATK": "813",
+                "BaseDEF": "612"
+            }
+        ]
+    },
+    {
+        "name": "Soukaku",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "645",
+                "BaseATK": "96",
+                "BaseDEF": "48"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,433",
+                "BaseATK": "145",
+                "BaseDEF": "106"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,876",
+                "BaseATK": "179",
+                "BaseDEF": "139"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,751",
+                "BaseATK": "234",
+                "BaseDEF": "204"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,194",
+                "BaseATK": "268",
+                "BaseDEF": "237"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "4,070",
+                "BaseATK": "323",
+                "BaseDEF": "303"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,513",
+                "BaseATK": "358",
+                "BaseDEF": "336"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,389",
+                "BaseATK": "413",
+                "BaseDEF": "401"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,832",
+                "BaseATK": "447",
+                "BaseDEF": "434"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,708",
+                "BaseATK": "501",
+                "BaseDEF": "499"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "7,150",
+                "BaseATK": "535",
+                "BaseDEF": "532"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "8,025",
+                "BaseATK": "590",
+                "BaseDEF": "597"
+            }
+        ]
+    },
+    {
+        "name": "Tsukishiro Yanagi",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "626",
+                "BaseATK": "126",
+                "BaseDEF": "49"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,390",
+                "BaseATK": "194",
+                "BaseDEF": "109"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,820",
+                "BaseATK": "239",
+                "BaseDEF": "143"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,670",
+                "BaseATK": "315",
+                "BaseDEF": "210"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "3,099",
+                "BaseATK": "360",
+                "BaseDEF": "244"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,949",
+                "BaseATK": "435",
+                "BaseDEF": "310"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,379",
+                "BaseATK": "479",
+                "BaseDEF": "343"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,229",
+                "BaseATK": "555",
+                "BaseDEF": "410"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,659",
+                "BaseATK": "600",
+                "BaseDEF": "444"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,508",
+                "BaseATK": "676",
+                "BaseDEF": "511"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,938",
+                "BaseATK": "721",
+                "BaseDEF": "545"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,788",
+                "BaseATK": "797",
+                "BaseDEF": "612"
+            }
+        ]
+    },
+    {
+        "name": "Zhu Yuan",
+        "stats": [
+            {
+                "PromotionLevel": "0",
+                "Level": "1/10",
+                "BaseHP": "602",
+                "BaseATK": "132",
+                "BaseDEF": "48"
+            },
+            {
+                "PromotionLevel": "0",
+                "Level": "10/10",
+                "BaseHP": "1,336",
+                "BaseATK": "204",
+                "BaseDEF": "106"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "10/20",
+                "BaseHP": "1,749",
+                "BaseATK": "251",
+                "BaseDEF": "139"
+            },
+            {
+                "PromotionLevel": "1",
+                "Level": "20/20",
+                "BaseHP": "2,566",
+                "BaseATK": "332",
+                "BaseDEF": "205"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "20/30",
+                "BaseHP": "2,979",
+                "BaseATK": "380",
+                "BaseDEF": "238"
+            },
+            {
+                "PromotionLevel": "2",
+                "Level": "30/30",
+                "BaseHP": "3,795",
+                "BaseATK": "461",
+                "BaseDEF": "304"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "30/40",
+                "BaseHP": "4,208",
+                "BaseATK": "508",
+                "BaseDEF": "337"
+            },
+            {
+                "PromotionLevel": "3",
+                "Level": "40/40",
+                "BaseHP": "5,024",
+                "BaseATK": "588",
+                "BaseDEF": "402"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "40/50",
+                "BaseHP": "5,436",
+                "BaseATK": "635",
+                "BaseDEF": "436"
+            },
+            {
+                "PromotionLevel": "4",
+                "Level": "50/50",
+                "BaseHP": "6,253",
+                "BaseATK": "716",
+                "BaseDEF": "502"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "50/60",
+                "BaseHP": "6,666",
+                "BaseATK": "763",
+                "BaseDEF": "535"
+            },
+            {
+                "PromotionLevel": "5",
+                "Level": "60/60",
+                "BaseHP": "7,482",
+                "BaseATK": "844",
+                "BaseDEF": "600"
+            }
+        ]
+    }
+]

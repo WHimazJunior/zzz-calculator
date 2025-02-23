@@ -1,0 +1,12 @@
+{% load static %}
+<script>
+    const stats_list = {{Stats|safe}};
+    const possible_stats_list = {{PossibleStats|safe}};
+    const constant_substats = {{ConstantSubStats|safe}};
+    const possible_substats_list = {{PossibleSubStats|safe}};
+    const agents_list = {{Agents|safe}};
+    const discs_list = {{Discs|safe}};
+    const wengine_list = {{Wengines|safe}};
+    const wengine_agent_list = {{WenginesAgent|safe}};
+    const static_path = "{% static '' %}";
+</script>

@@ -5,9 +5,9 @@ from rest_framework import status
 import json
 
 from .models import Basestatsname, Element, Type, Faction, Agentinfo, Agentstats, Passivestat, Discs, Wengine, Wenginemainstats, Wenginesubstats, Colors, AgentsStatsPerLevel
-from .models import Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo, Discsinfo, Agents
+from .models import Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo, Discsinfo, Agents, Agentcorestats
 from .serializer import BasestatsnameSerializer, ElementSerializer, TypeSerializer, FactionSerializer, AgentstatsSerializer, AgentinfoSerializer, PassivestatSerializer, DiscsSerializer, WengineSerializer, WenginemainstatsSerializer, WenginesubstatsSerializer, ColorsSerializer, AgentsStatsPerLevelSerializer
-from .serializer import PossiblestatsSerializer, PossiblesubstatsSerializer, ConstantsubstatsSerializer, WengineinfoSerializer, WengineagentinfoSerializer, DiscsinfoSerializer, AgentsSerializer
+from .serializer import PossiblestatsSerializer, PossiblesubstatsSerializer, ConstantsubstatsSerializer, WengineinfoSerializer, WengineagentinfoSerializer, DiscsinfoSerializer, AgentsSerializer, AgentcorestatsSerializer
 
 # Create your views here.
 
@@ -214,4 +214,10 @@ def GetDiscsInfo(request):
 def GetAgents(request):
     table = Agents.objects.all()
     serializer = AgentsSerializer(table, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def GetAgentsCoreStats(request):
+    table = Agentcorestats.objects.all()
+    serializer = AgentcorestatsSerializer(table, many=True)
     return Response(serializer.data)

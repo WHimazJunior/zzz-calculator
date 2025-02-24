@@ -36,4 +36,39 @@ function activateCore(event){
             });
         }
     });
+
+    updateCoreDescription();
+}
+
+function updateCoreDescription(){
+    base_stat_id = 3;
+    base_stat = 0;
+    extra_stat_id = 0;
+    extra_stat = 0;
+
+    agent_core.forEach(slot => {
+        if(slot["slot"]%2 == 0) extra_stat_id = slot["stat_id"];
+        if(slot["is_active"]){
+            if(slot["slot"]%2 == 0)
+                extra_stat+=slot["stat_value"];
+            else
+                base_stat+=slot["stat_value"];
+        }
+    });
+
+
+    let base_div = document.getElementById("core-base-effect");
+    let extra_div = document.getElementById("core-second-effect");
+
+    base_div.innerHTML = "Base ATK increase by " + base_stat;
+    stats_list.forEach(stat => {
+        if(stat["id"] == extra_stat_id){
+            if(stat["name"] == "Energy Regen")
+                extra_div.innerHTML = stat["name"] + " increase by " + Number(extra_stat).toFixed(2);
+            else if(stat["type"] == "Percentage")
+                extra_div.innerHTML = stat["name"] + " increase by " + Number(extra_stat).toFixed(1);
+            else
+                extra_div.innerHTML = stat["name"] + " increase by " + Number(extra_stat).toFixed(0);
+        }
+    });
 }

@@ -105,3 +105,13 @@ ON agentinfo.element_id = element.id
 INNER JOIN type
 ON agentinfo.type_id = type.id
 ORDER BY agentinfo.tier;
+
+CREATE VIEW agent_core_stats AS
+SELECT agentinfo.id, agentinfo.name, agentinfo.nickname, basestatsname.id AS 'stat_id', basestatsname.name AS 'stat_name', basestatsname.type AS 'stat_type', constant_core_stat.value AS 'stat_value'
+FROM `agent_core_constant_stat`
+INNER JOIN agentinfo
+ON agentinfo.id = agent_core_constant_stat.agent_id
+INNER JOIN constant_core_stat
+ON constant_core_stat.id = agent_core_constant_stat.constant_stat_id
+INNER JOIN basestatsname
+ON constant_core_stat.stat_id = basestatsname.id;

@@ -4,8 +4,10 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 import json
 
-from .models import Basestatsname, Element, Type, Faction, Agents, Agentinfo, Agentstats, Discsinfo, Passivestat, Discs, Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo, Wengine, Wenginemainstats, Wenginesubstats, Colors
-from .serializer import BasestatsnameSerializer, ElementSerializer, TypeSerializer, FactionSerializer, AgentsSerializer, AgentstatsSerializer, AgentinfoSerializer, DiscsinfoSerializer, PassivestatSerializer, DiscsSerializer, PossiblestatsSerializer, PossiblesubstatsSerializer, ConstantsubstatsSerializer, WengineinfoSerializer, WengineagentinfoSerializer, WengineSerializer, WenginemainstatsSerializer, WenginesubstatsSerializer, ColorsSerializer
+from .models import Basestatsname, Element, Type, Faction, Agentinfo, Agentstats, Passivestat, Discs, Wengine, Wenginemainstats, Wenginesubstats, Colors, AgentsStatsPerLevel
+from .models import Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo, Discsinfo, Agents
+from .serializer import BasestatsnameSerializer, ElementSerializer, TypeSerializer, FactionSerializer, AgentstatsSerializer, AgentinfoSerializer, PassivestatSerializer, DiscsSerializer, WengineSerializer, WenginemainstatsSerializer, WenginesubstatsSerializer, ColorsSerializer, AgentsStatsPerLevelSerializer
+from .serializer import PossiblestatsSerializer, PossiblesubstatsSerializer, ConstantsubstatsSerializer, WengineinfoSerializer, WengineagentinfoSerializer, DiscsinfoSerializer, AgentsSerializer
 
 # Create your views here.
 
@@ -37,16 +39,10 @@ def GetFactions(request):
     serializer = FactionSerializer(table, many=True)
     return Response(serializer.data)
 
-@api_view(['GET'])
-def GetAgents(request):
-    table = Agents.objects.all()
-    serializer = AgentsSerializer(table, many=True)
-    return Response(serializer.data)
-
 @api_view(['GET', 'POST'])
 def PostAgentInfo(request):
     if request.method == "GET":
-        table = Agentinfo.objects.all()
+        table = Agentinfo.objects.all().order_by('tier')
         serializer = AgentinfoSerializer(table, many=True)
         return Response(serializer.data)
     if request.method == "POST":
@@ -71,11 +67,19 @@ def PostAgentStats(request):
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['GET'])
-def GetDiscsInfo(request):
-    table = Discsinfo.objects.all()
-    serializer = DiscsinfoSerializer(table, many=True)
-    return Response(serializer.data)
+@api_view(['GET', 'POST'])
+def PostAgentLevels(request):
+    if request.method == "GET":
+        table = AgentsStatsPerLevel.objects.all()
+        serializer = AgentsStatsPerLevelSerializer(table, many=True)
+        return Response(serializer.data)
+    if request.method == "POST":
+        serializer = AgentsStatsPerLevelSerializer(data=request.data)    
+        if serializer:
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'POST'])
 def PostPassiveStatDisc(request):
@@ -104,42 +108,6 @@ def PostInfoDisc(request):
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(status=status.HTTP_400_BAD_REQUEST)
-
-@api_view(['GET'])
-def GetPossibleStats(request):
-    if request.method == "GET":
-        table = Possiblestats.objects.all()
-        serializer = PossiblestatsSerializer(table, many=True)
-        return Response(serializer.data)
-    
-@api_view(['GET'])
-def GetPossibleSubStats(request):
-    if request.method == "GET":
-        table = Possiblesubstats.objects.all()
-        serializer = PossiblesubstatsSerializer(table, many=True)
-        return Response(serializer.data)
-    
-@api_view(['GET'])
-def GetConstantSubStats(request):
-    if request.method == "GET":
-        table = Constantsubstats.objects.all()
-        serializer = ConstantsubstatsSerializer(table, many=True)
-        return Response(serializer.data)
-    
-@api_view(['GET'])
-def GetWengineInfo(request):
-    if request.method == "GET":
-        table = Wengineinfo.objects.all()
-        serializer = WengineinfoSerializer(table, many=True)
-        return Response(serializer.data)
-    
-@api_view(['GET'])
-def GetWengineAgentInfo(request):
-    if request.method == "GET":
-        table = Wengineagentinfo.objects.all()
-        serializer = WengineagentinfoSerializer(table, many=True)
-        return Response(serializer.data)
-    
 
 @api_view(['GET', 'POST'])
 def PostWengineMainStat(request):
@@ -179,14 +147,6 @@ def PostWengine(request):
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
-            
-@api_view(['GET'])
-def GetWengineInfoById(request, pk):
-    if request.method == "GET":
-        table = Wengineinfo.objects.filter(id=pk)
-        serializer = WengineinfoSerializer(table, many=True)
-        return Response(serializer.data)
-    
 
 @api_view(['GET'])
 def GetColors(request):
@@ -194,3 +154,64 @@ def GetColors(request):
         table = Colors.objects.all()
         serializer = ColorsSerializer(table, many=True)
         return Response(serializer.data)
+
+"""
+
+VIEWS
+
+"""
+
+
+@api_view(['GET'])
+def GetPossibleStats(request):
+    if request.method == "GET":
+        table = Possiblestats.objects.all()
+        serializer = PossiblestatsSerializer(table, many=True)
+        return Response(serializer.data)
+    
+@api_view(['GET'])
+def GetPossibleSubStats(request):
+    if request.method == "GET":
+        table = Possiblesubstats.objects.all()
+        serializer = PossiblesubstatsSerializer(table, many=True)
+        return Response(serializer.data)
+    
+@api_view(['GET'])
+def GetConstantSubStats(request):
+    if request.method == "GET":
+        table = Constantsubstats.objects.all()
+        serializer = ConstantsubstatsSerializer(table, many=True)
+        return Response(serializer.data)
+    
+@api_view(['GET'])
+def GetWengineInfo(request):
+    if request.method == "GET":
+        table = Wengineinfo.objects.all()
+        serializer = WengineinfoSerializer(table, many=True)
+        return Response(serializer.data)
+    
+@api_view(['GET'])
+def GetWengineAgentInfo(request):
+    if request.method == "GET":
+        table = Wengineagentinfo.objects.all()
+        serializer = WengineagentinfoSerializer(table, many=True)
+        return Response(serializer.data)
+
+@api_view(['GET'])
+def GetWengineInfoById(request, pk):
+    if request.method == "GET":
+        table = Wengineinfo.objects.filter(id=pk)
+        serializer = WengineinfoSerializer(table, many=True)
+        return Response(serializer.data)
+
+@api_view(['GET'])
+def GetDiscsInfo(request):
+    table = Discsinfo.objects.all()
+    serializer = DiscsinfoSerializer(table, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def GetAgents(request):
+    table = Agents.objects.all()
+    serializer = AgentsSerializer(table, many=True)
+    return Response(serializer.data)

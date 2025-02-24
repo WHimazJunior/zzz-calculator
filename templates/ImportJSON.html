@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Import JSON</title>
+    </head>
+    <body style="background-color: rgb(35, 35, 35); color:white;">
+        <form id="form" name="form" method="POST" action="json">
+            {% csrf_token %}
+            <h1>Import Text to JSON</h1>
+            <br>
+            <label>Base Stats</label><br>
+            <input name="base-stats" type="text"
+                style="width: 200px; height: 200px;">
+            <br><br>
+            <label>Constant Stats</label><br>
+            <input name="constant-stats" type="text"
+                style="width: 200px; height: 200px;">
+            <br><br>
+            <button type="submit">Send</button>
+        </form>
+    </body>
+</html>

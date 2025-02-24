@@ -31,7 +31,6 @@ function activateCore(event){
             core_outline_list.forEach(core_outline => {
                 if(core["letter"] == core_outline.getAttribute("data-letter")){
                     core_outline.style = 
-                        "color: rgb(27, 28, 27);"+
                         "text-shadow: -1px -1px 0 rgb(13, 13, 13);";
                 }
             });

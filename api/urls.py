@@ -11,6 +11,7 @@ urlpatterns = [
     #Agents
     path('agents/', views.GetAgents),
     path('agents/stats/', views.PostAgentStats),
+    path('agents/levels/', views.PostAgentLevels),
     path('agents/info/', views.PostAgentInfo),
     
     #WEngines
@@ -41,4 +42,7 @@ urlpatterns = [
 
     #Colors
     path('colors/', views.GetColors),
+
+
+    #Agents Stats
 ]

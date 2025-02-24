@@ -1,10 +1,15 @@
 from rest_framework import serializers
-from .models import Agentinfo, Agentstats, Basestatsname, Constantmainstat, Constantsubstat, Discs, Element, Faction, Passivestat, Rolesubstat, Type, Wengine, WengineAgent, Wenginemainstats, Wenginesubstats, Colors
-from .models import Agents, Discsinfo, Possiblepositionstat, Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo
+from .models import Agentinfo, Agentstats, Basestatsname, Constantmainstat, Constantsubstat, Discs, Element, Faction, Passivestat, Type, Wengine, WengineAgent, Wenginemainstats, Wenginesubstats, Colors,Possiblepositionstat, AgentsStatsPerLevel
+from .models import Agents, Discsinfo, Possiblestats, Possiblesubstats, Constantsubstats, Wengineinfo, Wengineagentinfo
 
 class AgentinfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Agentinfo
+        fields = '__all__'
+
+class AgentsStatsPerLevelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AgentsStatsPerLevel
         fields = '__all__'
 
 class AgentstatsSerializer(serializers.ModelSerializer):
@@ -15,6 +20,11 @@ class AgentstatsSerializer(serializers.ModelSerializer):
 class BasestatsnameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Basestatsname
+        fields = '__all__'
+
+class ColorsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Colors
         fields = '__all__'
 
 class ConstantmainstatSerializer(serializers.ModelSerializer):
@@ -52,12 +62,6 @@ class PassivestatSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class RolesubstatSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Rolesubstat
-        fields = '__all__'
-
-
 class TypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Type
@@ -81,15 +85,19 @@ class WenginemainstatsSerializer(serializers.ModelSerializer):
         model = Wenginemainstats
         fields = '__all__'
 
+
 class WenginesubstatsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Wenginesubstats
         fields = '__all__'
 
-class PossiblepositionstatSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Possiblepositionstat
-        fields = '__all__'
+
+"""
+
+VIEWS
+
+"""
+
 
 class AgentsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -124,9 +132,4 @@ class WengineinfoSerializer(serializers.ModelSerializer):
 class WengineagentinfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Wengineagentinfo
-        fields = '__all__'
-
-class ColorsSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Colors
         fields = '__all__'

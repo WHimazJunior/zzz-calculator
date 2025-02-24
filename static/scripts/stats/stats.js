@@ -274,7 +274,7 @@ function changeDiscInfo(position){
                 substat_value_list.forEach(substat_value => {
                     let substat_position = substat_value.getAttribute("data-value")
 
-                    if(slot["substat_value_"+substat_position] != ""){
+                    if(slot["substat_value_"+substat_position] != 0){
                         if(slot["substat_type_"+substat_position] == "Flat")
                             substat_value.textContent = Number(Number(slot["substat_value_"+substat_position]) * (Number(slot["substat_role_"+substat_position])+1)).toFixed(0);
                         else

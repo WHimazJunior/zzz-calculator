@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     border-radius: 15px;
     width: 100%;
-    height: 47%;
+    height: 30%;
     padding-left: 14px;
     padding-right: 14px;
 }
@@ -31,8 +31,6 @@
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 200px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     font-size: 10px;

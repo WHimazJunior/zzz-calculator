@@ -8,11 +8,21 @@ class Agentinfo(models.Model):
     faction = models.ForeignKey('Faction', models.DO_NOTHING, blank=True, null=True)
     element = models.ForeignKey('Element', models.DO_NOTHING, blank=True, null=True)
     type = models.ForeignKey('Type', models.DO_NOTHING, blank=True, null=True)
-    stats = models.ForeignKey('Agentstats', models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'agentinfo'
+
+
+class AgentsStatsPerLevel(models.Model):
+    promotion_level = models.CharField(max_length=1, blank=True, null=True)
+    agent_level = models.CharField(max_length=2, blank=True, null=True)
+    stats = models.ForeignKey('Agentstats', models.DO_NOTHING, blank=True, null=True)
+    agent = models.ForeignKey(Agentinfo, models.DO_NOTHING, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'agents_stats_per_level'
 
 
 class Agentstats(models.Model):
@@ -31,14 +41,6 @@ class Agentstats(models.Model):
     class Meta:
         managed = False
         db_table = 'agentstats'
-
-
-class AuthGroup(models.Model):
-    name = models.CharField(unique=True, max_length=150)
-
-    class Meta:
-        managed = False
-        db_table = 'auth_group'
 
 
 class Basestatsname(models.Model):
@@ -113,13 +115,21 @@ class Passivestat(models.Model):
         db_table = 'passivestat'
 
 
-class Rolesubstat(models.Model):
-    role = models.IntegerField(blank=True, null=True)
-    stat = models.ForeignKey(Constantsubstat, models.DO_NOTHING, blank=True, null=True)
+class Possiblepositionstat(models.Model):
+    position = models.IntegerField(blank=True, null=True)
+    statname = models.ForeignKey(Basestatsname, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'rolesubstat'
+        db_table = 'possiblepositionstat'
+
+
+class Possiblesubstat(models.Model):
+    statname = models.ForeignKey(Basestatsname, models.DO_NOTHING, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'possiblesubstat'
 
 
 class Type(models.Model):
@@ -159,6 +169,7 @@ class Wenginemainstats(models.Model):
         managed = False
         db_table = 'wenginemainstats'
 
+
 class Wenginesubstats(models.Model):
     statname = models.ForeignKey(Basestatsname, models.DO_NOTHING, blank=True, null=True)
     value = models.FloatField(blank=True, null=True)
@@ -167,21 +178,26 @@ class Wenginesubstats(models.Model):
         managed = False
         db_table = 'wenginesubstats'
 
-class Possiblepositionstat(models.Model):
-    position = models.IntegerField(blank=True, null=True)
-    statname = models.ForeignKey(Basestatsname, models.DO_NOTHING, blank=True, null=True)
 
-    class Meta:
-        managed = False
-        db_table = 'possiblepositionstat'
+"""
+
+VIEWS
+
+"""
+
 
 class Agents(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
     nickname = models.CharField(max_length=255, blank=True, null=True)
     tier = models.CharField(max_length=1, blank=True, null=True)
+    
     faction = models.CharField(max_length=255, blank=True, null=True)
     element = models.CharField(max_length=255, blank=True, null=True)
     type = models.CharField(max_length=255, blank=True, null=True)
+
+    promotion_level = models.CharField(max_length=1, blank=True, null=True)
+    agent_level = models.CharField(max_length=2, blank=True, null=True)
+    
     health_point = models.IntegerField(blank=True, null=True)
     attack = models.IntegerField(blank=True, null=True)
     defense = models.IntegerField(blank=True, null=True)
@@ -197,6 +213,7 @@ class Agents(models.Model):
     class Meta:
         managed = False
         db_table = 'agents'
+
 
 class Discsinfo(models.Model):
     disc_name = models.CharField(max_length=255, blank=True, null=True)

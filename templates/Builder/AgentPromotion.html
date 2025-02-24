@@ -1,0 +1,15 @@
+{% load static %}
+<div class="agent-promotion-frame">
+    <div class="agent-promotion-level">
+        <img onclick="activateAgentMaxedLevel(event)" id="agent-promotion-maxed" class="agent-promotion-star-image" src="{% static 'Images/Maxed.png' %}">
+    </div>
+    <div class="agent-promotion-star">
+        <img onclick="activateAgentStar(event)" id="agent-promotion-star-image" data-value="5" class="agent-promotion-star-image" src="{% static 'Images/Star.png' %}">
+        <img onclick="activateAgentStar(event)" id="agent-promotion-star-image" data-value="4" class="agent-promotion-star-image" src="{% static 'Images/Star.png' %}">
+        <img onclick="activateAgentStar(event)" id="agent-promotion-star-image" data-value="3" class="agent-promotion-star-image" src="{% static 'Images/Star.png' %}">
+        <img onclick="activateAgentStar(event)" id="agent-promotion-star-image" data-value="2" class="agent-promotion-star-image" src="{% static 'Images/Star.png' %}">
+        <img onclick="activateAgentStar(event)" id="agent-promotion-star-image" data-value="1" class="agent-promotion-star-image" src="{% static 'Images/Star.png' %}">
+    </div>
+</div>
+
+<script src="{% static 'scripts/agent/agent-promotion.js' %}"></script>

@@ -1,6 +1,6 @@
 var agents = [];
 
-agents_list.forEach(agent => {
+agents_info_list.forEach(agent => {
     let path = static_path+"Agents/"+agent["name"]+".png";
     agents.push({ id : agent["id"], name : agent["name"], img : path, tier : agent["tier"]});
 });
@@ -21,7 +21,7 @@ function updateAgentGrid() {
         img.src = agents[i].img;
         img.alt = agents[i].name;
         img.classList.add("agent-grid-item");
-        img.addEventListener("click", (event) => getAgentInfo(event));
+        img.addEventListener("click", (event) => getAgentInfo(event.target.id));
 
         img.addEventListener("mouseenter", () => {
             agentDisplay.textContent = agents[i].name;
@@ -54,10 +54,12 @@ document.getElementById("agent-gridContainer").addEventListener("wheel", (event)
 }, { passive: false });
 
 updateAgentGrid();
-
-function getAgentInfo(event){
+getAgentInfo(1);
+function getAgentInfo(id){
+    const curr_agent_id = document.getElementById("current-agent-id");
     const agent_name = document.getElementById("agent-name");
     const agent_nickname = document.getElementById("agent-nickname");
+    const agent_level = document.getElementById("agent-actual-level-label");
     const agent_tier = document.getElementById("agent-tier-img");
     const agent_faction = document.getElementById("agent-faction");
     const faction_img = document.getElementById("faction-img");
@@ -78,11 +80,28 @@ function getAgentInfo(event){
     const stat_pen_ratio = document.getElementById("stat_pen_ratio");
     const stat_energy_regen = document.getElementById("stat_energy_regen");
 
-    console.log(event.target.id);
+    let promotion_level = 0;
+    let curr_level = 1;
+
+    curr_agent_id.value = id;
+    agent_promotion.forEach(promo => {
+        if(promo["slot"] >= promotion_level && promo["is_active"]){
+            promotion_level = promo["slot"];
+            let is_maxed = document.getElementById("agent-promotion-maxed").classList.contains("active");
+            if(is_maxed)
+                curr_level = promo["max"];
+            else
+                curr_level = promo["min"];
+            document.getElementById("agent-max-level-label").innerHTML = promo["max"];
+        }
+    });
+
+    console.log(id);
     agents_list.forEach(agent => {
-        if(event.target.id == agent['id']){
+        if(id == agent['id'] && promotion_level == agent["promotion_level"] && curr_level == agent["agent_level"]){
             agent_name.innerHTML = agent['name'];
             agent_nickname.innerHTML = agent['nickname'];
+            agent_level.innerHTML = "Lv."+agent['agent_level'];
 
             agent_tier.src = static_path + "Tier/" + agent['tier'] + '.png';
 

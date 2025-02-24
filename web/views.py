@@ -15,6 +15,97 @@ def index(request):
 def settings(request):
     return render(request, 'Settings/Settings.html', cache_api())
 
+def importJSON(request):
+    if request.method == "POST":
+        base_stats_content = request.POST.get("base-stats")
+        constant_stats_content = request.POST.get("constant-stats")
+        
+        REQUEST_URL = API_URL + "/agents/info/"
+        response = requests.get(REQUEST_URL, headers={'Content-Type': 'application/json'})
+        response.raise_for_status()
+
+        agent_query = response.json()
+        agents_list = []
+
+        base_stats_format = json.loads(base_stats_content)
+        constant_stats_format = json.loads(constant_stats_content)
+
+        
+        for const_agent in constant_stats_format:
+            curr_agent = {}
+            for base_agent in base_stats_format:
+                if base_agent["name"] == const_agent["name"]:
+                    stats = []
+                    for stat in base_agent["stats"]:
+                        stat_list = {}
+                        stat_list.update(stat)
+                        stat_list.update(const_agent["stats"])
+                        stats.append(stat_list)
+                        curr_agent.update({
+                            "name" : base_agent["name"],
+                            "stats": stats
+                        })
+            agents_list.append(curr_agent)
+
+        for agent in agents_list:
+            id = None
+            for query in agent_query:
+                if(query["name"] == agent["name"]):
+                    id = query["id"]
+                    break
+            if id != None:
+                print(agent["name"])
+                
+                for stats in agent["stats"]:
+                    stat_data = {
+                        "health_point": str(stats["health_point"]).replace(",", ""),
+                        "attack": str(stats["attack"]).replace(",", ""),
+                        "defense": str(stats["defense"]).replace(",", ""),
+                        "impact": str(stats["impact"]).replace(",", ""),
+                        "crit_rate": str(stats["crit_rate"]).replace(",", ""),
+                        "crit_damage": str(stats["crit_damage"]).replace(",", ""),
+                        "anomaly_mastery": str(stats["anomaly_mastery"]).replace(",", ""),
+                        "anomaly_proficiency": str(stats["anomaly_proficiency"]).replace(",", ""),
+                        "penetration_ratio": str(stats["penetration_ratio"]).replace(",", ""),
+                        "penetration": str(stats["penetration"]).replace(",", ""),
+                        "energy_regen": str(stats["energy_regen"]).replace(",", ""),
+                    }
+                    print("\n" + str(stat_data))
+                    try:
+                        REQUEST_URL = API_URL + "/agents/stats/"
+                        response = requests.post(REQUEST_URL, json=stat_data, headers={'Content-Type': 'application/json'})
+                        response.raise_for_status()
+                    except requests.RequestException as error:
+                        print(f"Erro ao criar objeto: {str(error)}")
+                        return render(request, 'ImportJSON.html')
+
+                    result = response.json()
+                    stat_id = result.get("id")
+
+                    level_data = {
+                        "promotion_level": stats["promotion_level"],
+                        "agent_level": stats["agent_level"],
+                        "stats": stat_id,
+                        "agent": id,
+                    }
+                    print(str(level_data) + "\n\n\n")
+                    try:
+                        REQUEST_URL = API_URL + "/agents/levels/"
+                        response = requests.post(REQUEST_URL, json=level_data, headers={'Content-Type': 'application/json'})
+                        response.raise_for_status()
+                    except requests.RequestException as error:
+                        print(f"Erro ao criar objeto: {str(error)}")
+                        return render(request, 'ImportJSON.html')
+
+                    result = response.json()
+                    
+                
+
+
+
+
+    return render(request, 'ImportJSON.html')
+
 def addWengine(request):
     tables = cache_api()
 
@@ -231,17 +322,18 @@ def getApiRequest(URL):
 def cache_api():
     endpoints = [
         '/agents/',             # 0
-        '/elements/',           # 1
-        '/types/',              # 2
-        '/factions/',           # 3
-        '/discs/',              # 4
-        '/stats/',              # 5
-        '/stats/possible',      # 6
-        '/stats/sub/possible',  # 7
-        '/stats/sub/constant',  # 8
-        '/wengines/',           # 9
-        '/wengines/agent',      # 10
-        '/colors/']             # 11
+        '/agents/info/',        # 1
+        '/elements/',           # 2
+        '/types/',              # 3
+        '/factions/',           # 4
+        '/discs/',              # 5
+        '/stats/',              # 6
+        '/stats/possible',      # 7
+        '/stats/sub/possible',  # 8
+        '/stats/sub/constant',  # 9
+        '/wengines/',           # 10
+        '/wengines/agent',      # 11
+        '/colors/']             # 12
     
     
     for endpoint in endpoints:
@@ -252,17 +344,18 @@ def cache_api():
 
     tables = {
         "Agents" : cache.get(endpoints[0]),
-        "Elements" : cache.get(endpoints[1]),
-        "Types" : cache.get(endpoints[2]),
-        "Factions" : cache.get(endpoints[3]),
-        "Discs" : cache.get(endpoints[4]),
-        "Stats" : cache.get(endpoints[5]),
-        "PossibleStats" : cache.get(endpoints[6]),
-        "PossibleSubStats": cache.get(endpoints[7]),
-        "ConstantSubStats": cache.get(endpoints[8]),
-        "Wengines": cache.get(endpoints[9]),
-        "WenginesAgent": cache.get(endpoints[10]),
-        "Colors": cache.get(endpoints[11]),
+        "AgentsInfo" : cache.get(endpoints[1]),
+        "Elements" : cache.get(endpoints[2]),
+        "Types" : cache.get(endpoints[3]),
+        "Factions" : cache.get(endpoints[4]),
+        "Discs" : cache.get(endpoints[5]),
+        "Stats" : cache.get(endpoints[6]),
+        "PossibleStats" : cache.get(endpoints[7]),
+        "PossibleSubStats": cache.get(endpoints[8]),
+        "ConstantSubStats": cache.get(endpoints[9]),
+        "Wengines": cache.get(endpoints[10]),
+        "WenginesAgent": cache.get(endpoints[11]),
+        "Colors": cache.get(endpoints[12]),
         "STYLES_URL": STYLES_URL,
         "STYLES_ROOT": STYLES_ROOT,
     }

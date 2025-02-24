@@ -72,3 +72,36 @@ ON wenginemainstats.statname_id = mainstatsname.id
 INNER JOIN basestatsname AS substatsname
 ON wenginesubstats.statname_id = substatsname.id
 ORDER BY wengine.tier;
+
+
+CREATE VIEW agents AS
+SELECT agentinfo.id,
+	agentinfo.name, agentinfo.nickname,
+	agentinfo.tier, faction.name AS 'faction',
+    element.name AS 'element',
+    type.name AS 'type',
+    agents_stats_per_level.promotion_level,
+    agents_stats_per_level.agent_level,
+    agentstats.health_point,
+    agentstats.attack,
+    agentstats.defense,
+    agentstats.impact,
+    agentstats.crit_rate,
+    agentstats.crit_damage,
+    agentstats.anomaly_mastery,
+    agentstats.anomaly_proficiency,
+    agentstats.penetration_ratio,
+    agentstats.penetration,
+    agentstats.energy_regen
+FROM agents_stats_per_level
+INNER JOIN agentstats
+ON agentstats.id = agents_stats_per_level.stats_id
+INNER JOIN agentinfo
+ON agents_stats_per_level.agent_id = agentinfo.id
+INNER JOIN faction
+ON agentinfo.faction_id = faction.id
+INNER JOIN element
+ON agentinfo.element_id = element.id
+INNER JOIN type
+ON agentinfo.type_id = type.id
+ORDER BY agentinfo.tier;

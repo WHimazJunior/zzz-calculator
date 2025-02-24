@@ -5,8 +5,72 @@
     const constant_substats = {{ConstantSubStats|safe}};
     const possible_substats_list = {{PossibleSubStats|safe}};
     const agents_list = {{Agents|safe}};
+    const agents_info_list = {{AgentsInfo|safe}};
     const discs_list = {{Discs|safe}};
     const wengine_list = {{Wengines|safe}};
     const wengine_agent_list = {{WenginesAgent|safe}};
     const static_path = "{% static '' %}";
+
+    let disc_slot = [
+        { id: 0, slot: 1, is_active: false, is_selected: false,
+                                            main_stat_name: "", main_stat_value: 0,  main_stat_type: "",
+                                            substat_name_1:"Stat 1",  substat_value_1: "", substat_type_1: "", substat_role_1: 0,
+                                            substat_name_2:"Stat 2",  substat_value_2: "", substat_type_2: "", substat_role_2: 0,
+                                            substat_name_3:"Stat 3",  substat_value_3: "", substat_type_3: "", substat_role_3: 0,
+                                            substat_name_4:"Stat 4",  substat_value_4: "", substat_type_4: "", substat_role_4: 0},
+
+        { id: 0, slot: 2, is_active: false, is_selected: false,
+                                            main_stat_name: "", main_stat_value: 0,  main_stat_type: "",
+                                            substat_name_1:"Stat 1",  substat_value_1: "", substat_type_1: "", substat_role_1: 0,
+                                            substat_name_2:"Stat 2",  substat_value_2: "", substat_type_2: "", substat_role_2: 0,
+                                            substat_name_3:"Stat 3",  substat_value_3: "", substat_type_3: "", substat_role_3: 0,
+                                            substat_name_4:"Stat 4",  substat_value_4: "", substat_type_4: "", substat_role_4: 0},
+
+        { id: 0, slot: 3, is_active: false, is_selected: false,
+                                            main_stat_name: "", main_stat_value: 0,  main_stat_type: "",
+                                            substat_name_1:"Stat 1",  substat_value_1: "", substat_type_1: "", substat_role_1: 0,
+                                            substat_name_2:"Stat 2",  substat_value_2: "", substat_type_2: "", substat_role_2: 0,
+                                            substat_name_3:"Stat 3",  substat_value_3: "", substat_type_3: "", substat_role_3: 0,
+                                            substat_name_4:"Stat 4",  substat_value_4: "", substat_type_4: "", substat_role_4: 0},
+
+        { id: 0, slot: 4, is_active: false, is_selected: false,
+                                            main_stat_name: "", main_stat_value: 0,  main_stat_type: "",
+                                            substat_name_1:"Stat 1",  substat_value_1: "", substat_type_1: "", substat_role_1: 0,
+                                            substat_name_2:"Stat 2",  substat_value_2: "", substat_type_2: "", substat_role_2: 0,
+                                            substat_name_3:"Stat 3",  substat_value_3: "", substat_type_3: "", substat_role_3: 0,
+                                            substat_name_4:"Stat 4",  substat_value_4: "", substat_type_4: "", substat_role_4: 0},
+
+        { id: 0, slot: 5, is_active: false, is_selected: false,
+                                            main_stat_name: "", main_stat_value: 0,  main_stat_type: "",
+                                            substat_name_1:"Stat 1",  substat_value_1: "", substat_type_1: "", substat_role_1: 0,
+                                            substat_name_2:"Stat 2",  substat_value_2: "", substat_type_2: "", substat_role_2: 0,
+                                            substat_name_3:"Stat 3",  substat_value_3: "", substat_type_3: "", substat_role_3: 0,
+                                            substat_name_4:"Stat 4",  substat_value_4: "", substat_type_4: "", substat_role_4: 0},
+
+        { id: 0, slot: 6, is_active: false, is_selected: false,
+                                            main_stat_name: "", main_stat_value: 0,  main_stat_type: "",
+                                            substat_name_1:"Stat 1",  substat_value_1: "", substat_type_1: "", substat_role_1: 0,
+                                            substat_name_2:"Stat 2",  substat_value_2: "", substat_type_2: "", substat_role_2: 0,
+                                            substat_name_3:"Stat 3",  substat_value_3: "", substat_type_3: "", substat_role_3: 0,
+                                            substat_name_4:"Stat 4",  substat_value_4: "", substat_type_4: "", substat_role_4: 0}];
+
+    let wengine_slot = [{ id: 0, main_stat_name: "", main_stat_value: 0, main_stat_type: "",
+                                    sub_stat_name:  "", sub_stat_value:  0, sub_stat_type:  ""}];
+
+    let agent_core = [
+        {slot: 1, letter: "A", stat_id: 3, stat_value: 25,  is_active: false},
+        {slot: 2, letter: "B", stat_id: 0, stat_value: 0,   is_active: false},
+        {slot: 3, letter: "C", stat_id: 3, stat_value: 25,  is_active: false},
+        {slot: 4, letter: "D", stat_id: 0, stat_value: 0,   is_active: false},
+        {slot: 5, letter: "E", stat_id: 3, stat_value: 25,  is_active: false},
+        {slot: 6, letter: "F", stat_id: 0, stat_value: 0,   is_active: false}];
+
+    let agent_promotion = [
+        {slot: 0, min: 1, max: 10, is_active: true},
+        {slot: 1, min: 10, max: 20, is_active: false},
+        {slot: 2, min: 20, max: 30, is_active: false},
+        {slot: 3, min: 30, max: 40, is_active: false},
+        {slot: 4, min: 40, max: 50, is_active: false},
+        {slot: 5, min: 50, max: 60, is_active: false},
+    ];
 </script>

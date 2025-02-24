@@ -21,8 +21,8 @@
 }
 
 .agent-faction-background-image{
-    height: 230%;
-    aspect-ratio: 1;
-    margin-right: -35px;
+    height: 400px;
+    aspect-ratio: 16/14;
+    margin-right: -90px;
     opacity: .069;
 }

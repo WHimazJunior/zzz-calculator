@@ -13,6 +13,7 @@ urlpatterns = [
     path('agents/stats/', views.PostAgentStats),
     path('agents/levels/', views.PostAgentLevels),
     path('agents/info/', views.PostAgentInfo),
+    path('agents/core/', views.GetAgentsCoreStats),
     
     #WEngines
     path('wengines/', views.GetWengineInfo),

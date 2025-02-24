@@ -1,5 +1,13 @@
 from django.db import models
 
+class AgentCoreConstantStat(models.Model):
+    agent = models.ForeignKey('Agentinfo', models.DO_NOTHING, blank=True, null=True)
+    constant_stat = models.ForeignKey('ConstantCoreStat', models.DO_NOTHING, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'agent_core_constant_stat'
+
 
 class Agentinfo(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
@@ -61,6 +69,15 @@ class Colors(models.Model):
     class Meta:
         managed = False
         db_table = 'colors'
+
+
+class ConstantCoreStat(models.Model):
+    stat = models.ForeignKey(Basestatsname, models.DO_NOTHING, blank=True, null=True)
+    value = models.FloatField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'constant_core_stat'
 
 
 class Constantmainstat(models.Model):
@@ -283,3 +300,16 @@ class Wengineinfo(models.Model):
     class Meta:
         managed = False
         db_table = 'wengine_info'
+
+
+class Agentcorestats(models.Model):
+    name = models.CharField(max_length=255, blank=True, null=True)
+    nickname = models.CharField(max_length=255, blank=True, null=True)
+    stat_id = models.IntegerField(blank=True, null=True)
+    stat_name = models.CharField(max_length=255, blank=True, null=True)
+    stat_type = models.CharField(max_length=10, blank=True, null=True)
+    stat_value = models.FloatField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'agent_core_stats'

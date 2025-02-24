@@ -159,11 +159,11 @@
 }
 
 .core-effect-stick-1{
-    margin-bottom: 52px;
+    margin-bottom: 48px;
 }
 
 .core-effect-stick-2{
-    margin-top: 52px;
+    margin-top: 48px;
 }
 
 .core-effect-stick-3{
@@ -174,20 +174,20 @@
 
 .core-effect-stick-4{
     transform: rotate(60deg);
-    margin-bottom: 26px;
-    margin-left: 45px;
+    margin-bottom: 24px;
+    margin-left: 44px;
 }
 
 .core-effect-stick-5{
     transform: rotate(-60deg);
-    margin-top: 26px;
-    margin-left: 45px;
+    margin-top: 24px;
+    margin-left: 44px;
 }
 
 .core-effect-stick-6{
     transform: rotate(-60deg);
-    margin-bottom: 26px;
-    margin-right: 45px;
+    margin-bottom: 24px;
+    margin-right: 44px;
 }
 
 .core-effect-triangle-outline{

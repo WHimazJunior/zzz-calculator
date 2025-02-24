@@ -103,7 +103,7 @@ function updateAgentStats(){
             let private_effects = { name: "", Flat_value: 0, Percentage_value: 0 };
             let private_main_wengine = { name: "", Flat_value: 0, Percentage_value: 0 };
             let private_sub_wengine = { name: "", Flat_value: 0, Percentage_value: 0 };
-            let exclusive_stats = ["CRIT Rate", "CRIT DMG", "PEN Ratio", "Physical Damage", "Eletric Damage", "Fire Damage", "Ice Damage", "Ether Damage"];
+            let private_core = { name: "", Flat_value: 0, Percentage_value: 0 };
             let temporary_disc_counter = [];
             let is_exclusive = false;
 
@@ -195,12 +195,27 @@ function updateAgentStats(){
                 }
             });
 
-            let base_stat_post_wengine = Number(base_stat) + (Number(base_stat * Number(private_main_wengine["Percentage_value"]))) + Number(private_main_wengine["Flat_value"]);
-            let effect_stat      = (Number(base_stat_post_wengine) * Number(private_effects["Percentage_value"])     / 100) + Number(private_effects["Flat_value"]);
-            let disc_stat        = (Number(base_stat_post_wengine) * Number(private_stats["Percentage_value"])       / 100) + Number(private_stats["Flat_value"]);
-            let wengine_sub_stat = (Number(base_stat_post_wengine) * Number(private_sub_wengine["Percentage_value"]) / 100) + Number(private_sub_wengine["Flat_value"]);
+            /* CORE STAT CALC */
 
-            base_stat = Number(base_stat_post_wengine) + Number(disc_stat) + Number(effect_stat) + Number(wengine_sub_stat);
+            agent_core.forEach(core => {
+                if(stat["id"] == core["stat_id"] && core["is_active"]){
+                    if(is_exclusive)
+                        private_core["Flat_value"] += Number(core["stat_value"]);
+                    else
+                        private_core[stat["type"]+"_value"] += Number(core["stat_value"]);
+                }
+            });
+
+            let base_stat_post_core = (Number(base_stat * Number(private_core["Percentage_value"]))) + Number(private_core["Flat_value"]);
+            let base_stat_post_wengine = (Number(base_stat * Number(private_main_wengine["Percentage_value"]))) + Number(private_main_wengine["Flat_value"]);
+
+            let altered_base = Number(base_stat_post_core) + Number(base_stat_post_wengine) + Number(base_stat);
+
+            let effect_stat      = (Number(altered_base) * Number(private_effects["Percentage_value"])     / 100) + Number(private_effects["Flat_value"]);
+            let disc_stat        = (Number(altered_base) * Number(private_stats["Percentage_value"])       / 100) + Number(private_stats["Flat_value"]);
+            let wengine_sub_stat = (Number(altered_base) * Number(private_sub_wengine["Percentage_value"]) / 100) + Number(private_sub_wengine["Flat_value"]);
+
+            base_stat = Number(altered_base) + Number(disc_stat) + Number(effect_stat) + Number(wengine_sub_stat);
 
             let perc_string = "";
             if(stat["type"] == "Percentage")

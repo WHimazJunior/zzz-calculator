@@ -152,6 +152,23 @@ CREATE TABLE colors(
     dark_gradient varchar(12)
 );
 
+CREATE TABLE constant_core_stat(
+	id int PRIMARY KEY AUTO_INCREMENT,
+	stat_id int,
+	value float,
+
+	FOREIGN KEY (stat_id) REFERENCES basestatsname (id) ON DELETE CASCADE
+);
+
+CREATE TABLE agent_core_constant_stat(
+	agent_id int,
+	constant_stat_id int,
+
+	FOREIGN KEY (agent_id) REFERENCES agentinfo (id) ON DELETE CASCADE,
+	FOREIGN KEY (constant_stat_id) REFERENCES constant_core_stat (id) ON DELETE CASCADE
+);
+
+
 INSERT INTO `colors` (`id`, `name`, `light_color`, `light_gradient`, `dark_gradient`)
 VALUES (NULL, 'Light Blue', '#1ce0ef', '#1fadba', '#115c62');
 

@@ -80,6 +80,20 @@ function getAgentInfo(id){
     const stat_pen_ratio = document.getElementById("stat_pen_ratio");
     const stat_energy_regen = document.getElementById("stat_energy_regen");
 
+    
+
+    agents_core_list.forEach(core => {
+        if(core["id"] == id){
+            agent_core.forEach(slot => {
+                if(slot["slot"]%2 == 0){
+                    slot["stat_id"] = core["stat_id"];
+                    slot["stat_value"] = core["stat_value"];
+                }
+            });
+        }
+    });
+
+
     let promotion_level = 0;
     let curr_level = 1;
 
@@ -150,7 +164,7 @@ function getAgentInfo(id){
 
             return;
         }
-    });
 
-    callResizer();
+        updateCoreDescription();
+    });
 }

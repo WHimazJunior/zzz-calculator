@@ -323,17 +323,18 @@ def cache_api():
     endpoints = [
         '/agents/',             # 0
         '/agents/info/',        # 1
-        '/elements/',           # 2
-        '/types/',              # 3
-        '/factions/',           # 4
-        '/discs/',              # 5
-        '/stats/',              # 6
-        '/stats/possible',      # 7
-        '/stats/sub/possible',  # 8
-        '/stats/sub/constant',  # 9
-        '/wengines/',           # 10
-        '/wengines/agent',      # 11
-        '/colors/']             # 12
+        '/agents/core/',        # 2
+        '/elements/',           # 3
+        '/types/',              # 4
+        '/factions/',           # 5
+        '/discs/',              # 6
+        '/stats/',              # 7
+        '/stats/possible',      # 8
+        '/stats/sub/possible',  # 9
+        '/stats/sub/constant',  # 10
+        '/wengines/',           # 11
+        '/wengines/agent',      # 12
+        '/colors/']             # 13
     
     
     for endpoint in endpoints:
@@ -345,17 +346,18 @@ def cache_api():
     tables = {
         "Agents" : cache.get(endpoints[0]),
         "AgentsInfo" : cache.get(endpoints[1]),
-        "Elements" : cache.get(endpoints[2]),
-        "Types" : cache.get(endpoints[3]),
-        "Factions" : cache.get(endpoints[4]),
-        "Discs" : cache.get(endpoints[5]),
-        "Stats" : cache.get(endpoints[6]),
-        "PossibleStats" : cache.get(endpoints[7]),
-        "PossibleSubStats": cache.get(endpoints[8]),
-        "ConstantSubStats": cache.get(endpoints[9]),
-        "Wengines": cache.get(endpoints[10]),
-        "WenginesAgent": cache.get(endpoints[11]),
-        "Colors": cache.get(endpoints[12]),
+        "AgentsCore" : cache.get(endpoints[2]),
+        "Elements" : cache.get(endpoints[3]),
+        "Types" : cache.get(endpoints[4]),
+        "Factions" : cache.get(endpoints[5]),
+        "Discs" : cache.get(endpoints[6]),
+        "Stats" : cache.get(endpoints[7]),
+        "PossibleStats" : cache.get(endpoints[8]),
+        "PossibleSubStats": cache.get(endpoints[9]),
+        "ConstantSubStats": cache.get(endpoints[10]),
+        "Wengines": cache.get(endpoints[11]),
+        "WenginesAgent": cache.get(endpoints[12]),
+        "Colors": cache.get(endpoints[13]),
         "STYLES_URL": STYLES_URL,
         "STYLES_ROOT": STYLES_ROOT,
     }

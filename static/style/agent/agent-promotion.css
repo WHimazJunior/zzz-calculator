@@ -37,20 +37,22 @@
     opacity: .3;
     width: 100%;
     aspect-ratio: 1;
-    -webkit-transition: transform .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
+    transition-property: opacity, transform;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
 }
 
 .agent-promotion-star-image.active{
     opacity: 1;
     width: 100%;
     aspect-ratio: 1;
-    -webkit-transition: transform .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
+    transition-property: opacity, transform;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
 }
 
 .agent-promotion-star-image:hover{
     transform: scale(1.25);
-    -webkit-transition: transform .2s ease-in-out;
     cursor: pointer;
+    -webkit-transition: transform .2s ease-in-out;
 }

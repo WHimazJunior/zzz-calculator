@@ -110,7 +110,6 @@ function getAgentInfo(id){
         }
     });
 
-    console.log(id);
     agents_list.forEach(agent => {
         if(id == agent['id'] && promotion_level == agent["promotion_level"] && curr_level == agent["agent_level"]){
             agent_name.innerHTML = agent['name'];
@@ -166,5 +165,6 @@ function getAgentInfo(id){
         }
 
         updateCoreDescription();
+        callResizer();
     });
 }

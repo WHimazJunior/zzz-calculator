@@ -1,5 +1,4 @@
 /*Resize Text Size of Stats*/
-let divs;
 callResizer();
 
 window.addEventListener('resize', function(){

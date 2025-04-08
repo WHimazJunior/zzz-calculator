@@ -30,7 +30,7 @@ def importJSON(request):
         base_stats_format = json.loads(base_stats_content)
         constant_stats_format = json.loads(constant_stats_content)
 
-        
+        print("\n\nhehe1\n\n")
         for const_agent in constant_stats_format:
             curr_agent = {}
             for base_agent in base_stats_format:
@@ -46,7 +46,7 @@ def importJSON(request):
                             "stats": stats
                         })
             agents_list.append(curr_agent)
-
+        print("\n\nhehe2\n\n")
         for agent in agents_list:
             id = None
             for query in agent_query:
@@ -55,7 +55,7 @@ def importJSON(request):
                     break
             if id != None:
                 print(agent["name"])
-                
+
                 for stats in agent["stats"]:
                     stat_data = {
                         "health_point": str(stats["health_point"]).replace(",", ""),

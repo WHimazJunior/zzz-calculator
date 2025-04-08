@@ -10,6 +10,27 @@ INSERT INTO wengine(name, tier, type_id, stat_id, substat_id)
 VALUES('Hailstorm Shrine', 'S', 1, 1, 1);
 
 INSERT INTO wenginemainstats(statname_id, value)
+VALUES(3, 624);
+INSERT INTO wenginesubstats(statname_id, value)
+VALUES(15, 15);
+INSERT INTO wengine(name, tier, type_id, stat_id, substat_id)
+VALUES('Box Cutter', 'A', 5, 60, 60);
+
+INSERT INTO wenginemainstats(statname_id, value)
+VALUES(3, 713);
+INSERT INTO wenginesubstats(statname_id, value)
+VALUES(7, 24);
+INSERT INTO wengine(name, tier, type_id, stat_id, substat_id)
+VALUES('Spectral Gaze', 'S', 5, 61, 61);
+
+INSERT INTO wenginemainstats(statname_id, value)
+VALUES(3, 743);
+INSERT INTO wenginesubstats(statname_id, value)
+VALUES(8, 48);
+INSERT INTO wengine(name, tier, type_id, stat_id, substat_id)
+VALUES('Severed Innocence', 'S', 2, 62, 62);
+
+INSERT INTO wenginemainstats(statname_id, value)
 VALUES(3, 594);
 INSERT INTO wenginesubstats(statname_id, value)
 VALUES(9, 75);

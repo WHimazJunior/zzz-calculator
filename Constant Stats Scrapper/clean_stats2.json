@@ -1,0 +1,327 @@
+[
+    {
+        "name": "Hoshimi Miyabi",
+        "stats": {
+            "impact": 86,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 116,
+            "anomaly_proficiency": 148,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Nicole Demara",
+        "stats": {
+            "impact": 8,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 93,
+            "anomaly_proficiency": 90,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Anby Demara",
+        "stats": {
+            "impact": 118,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 93,
+            "anomaly_proficiency": 94,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Astra Yao",
+        "stats": {
+            "impact": 83,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 93,
+            "anomaly_proficiency": 92,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Ellen Joe",
+        "stats": {
+            "impact": 93,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 93,
+            "anomaly_proficiency": 94,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Ben Bigger",
+        "stats": {
+            "impact": 95,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 90,
+            "anomaly_proficiency": 86,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Jane Doe",
+        "stats": {
+            "impact": 86,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 114,
+            "anomaly_proficiency": 112,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Luciana de Montefio",
+        "stats": {
+            "impact": 86,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 93,
+            "anomaly_proficiency": 94,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Billy Kid",
+        "stats": {
+            "impact": 91,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 91,
+            "anomaly_proficiency": 92,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Burnice White",
+        "stats": {
+            "impact": 83,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 118,
+            "anomaly_proficiency": 120,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Caesar King",
+        "stats": {
+            "impact": 105,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 87,
+            "anomaly_proficiency": 90,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Corin Wickes",
+        "stats": {
+            "impact": 93,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 96,
+            "anomaly_proficiency": 93,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Grace Howard",
+        "stats": {
+            "impact": 83,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 136,
+            "anomaly_proficiency": 115,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Koleda Belobog",
+        "stats": {
+            "impact": 116,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 96,
+            "anomaly_proficiency": 97,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Lighter",
+        "stats": {
+            "impact": 119,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 91,
+            "anomaly_proficiency": 90,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Von Lycaon",
+        "stats": {
+            "impact": 119,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 90,
+            "anomaly_proficiency": 91,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Nekomiya Mana",
+        "stats": {
+            "impact": 92,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 96,
+            "anomaly_proficiency": 97,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Piper Wheel",
+        "stats": {
+            "impact": 86,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 118,
+            "anomaly_proficiency": 116,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Qingyi",
+        "stats": {
+            "impact": 118,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 94,
+            "anomaly_proficiency": 93,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Alexandrina Sebastiane",
+        "stats": {
+            "impact": 83,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 92,
+            "anomaly_proficiency": 93,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Seth Lowell",
+        "stats": {
+            "impact": 94,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 90,
+            "anomaly_proficiency": 86,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Soldier 11",
+        "stats": {
+            "impact": 93,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 93,
+            "anomaly_proficiency": 94,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Soukaku",
+        "stats": {
+            "impact": 86,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 96,
+            "anomaly_proficiency": 93,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Tsukishiro Yanagi",
+        "stats": {
+            "impact": 86,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 112,
+            "anomaly_proficiency": 114,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    },
+    {
+        "name": "Zhu Yuan",
+        "stats": {
+            "impact": 90,
+            "crit_rate": 5,
+            "crit_damage": 50,
+            "anomaly_mastery": 92,
+            "anomaly_proficiency": 93,
+            "penetration_ratio": 0,
+            "penetration": 0,
+            "energy_regen": 1.2
+        }
+    }
+]

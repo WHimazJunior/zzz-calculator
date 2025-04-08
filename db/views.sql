@@ -1,4 +1,4 @@
-CREATE VIEW agents AS
+/*CREATE VIEW agents AS
 SELECT agentinfo.id, agentinfo.name, agentinfo.nickname, agentinfo.tier, faction.name AS 'faction', element.name AS 'element', type.name AS 'type', agentstats.health_point, agentstats.attack, agentstats.defense, agentstats.impact, agentstats.crit_rate, agentstats.crit_damage, agentstats.anomaly_mastery, agentstats.anomaly_proficiency, agentstats.penetration_ratio, agentstats.penetration, agentstats.energy_regen
 FROM agentinfo
 INNER JOIN faction
@@ -9,7 +9,7 @@ INNER JOIN type
 ON agentinfo.type_id = type.id
 INNER JOIN agentstats
 ON agentinfo.stats_id = agentstats.id
-ORDER BY agentinfo.tier;
+ORDER BY agentinfo.tier;*/
 
 CREATE VIEW discs_info AS
 SELECT discs.id, discs.name AS disc_name, basestatsname.name AS stat_name, passivestat.value AS value, basestatsname.type AS type

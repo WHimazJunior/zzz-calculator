@@ -1,0 +1,27 @@
+INSERT INTO agents_stats_per_level(promotion_level, agent_level, stats_id, agent_id)
+VALUES();
+
+INSERT INTO agents_stats_per_level(health_point, attack, defense, impact, crit_rate, crit_damage, anomaly_mastery, anomaly_proficiency, penetration_ratio, penetration, energy_regen)
+VALUES();
+
+
+{
+	"promotion_level":
+	"agent_level":
+	"stats_id":
+	"agent_id":
+}
+
+{
+	"health_point":
+	"attack":
+	"defense":
+	"impact":
+	"crit_rate":
+	"crit_damage":
+	"anomaly_mastery":
+	"anomaly_proficiency":
+	"penetration_ratio":
+	"penetration":
+	"energy_regen":
+}

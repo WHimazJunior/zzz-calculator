@@ -1,3 +1,27 @@
+/*import { promises as fs } from 'fs';
+
+async function checkIfFileExists(path) {
+    try{
+        await fs.access(path);
+        console.log(path + "\nExists");
+        return true;
+    }catch(err){
+        console.log(path + "\nDoes not Exists");
+        return false;
+    }
+}*/
+
+async function checkIfFileExists(url) {
+    try{
+        const resposta = await fetch(url, { method: 'HEAD' }); // HEAD evita baixar o conteúdo
+        return resposta.ok; // true se status 200–299
+    }catch(erro){
+        console.error("Erro ao tentar aceder ao ficheiro:", erro);
+        return false;
+    }
+}
+  
+
 var wengines = [];
 let wengine_startIndex = 0;
 const wengine_gridContainer = document.getElementById("wengine-gridContainer");
@@ -89,7 +113,22 @@ function getWEngineInfo(event){
             wengine_sub_stat_value.innerHTML  = wengine["sub_stat_value"] + perc_string;
 
             video_path = static_path+"WEngines/Video/"
-            wengine_player.src = video_path + wengine["name"] + '.mp4';
+            /*if(checkIfFileExists(video_path + wengine["name"] + '.mp4'))
+                wengine_player.src = video_path + wengine["name"] + '.mp4';
+            else
+                wengine_player.src = video_path + wengine["name"] + '.gif';*/
+
+            checkIfFileExists(video_path + wengine["name"] + '.mp4')
+            .then(exist => {
+                if(exist){
+                    wengine_player.src = video_path + wengine["name"] + '.mp4';
+                    console.log('O ficheiro existe!');
+                }else{
+                    wengine_player.src = video_path + wengine["name"] + '.gif';
+                    console.log('O ficheiro não existe.');
+                }
+            });
+            console.log(wengine_player.src);
 
 
             wengine_slot.forEach(slot => {

@@ -56,3 +56,17 @@ document.getElementById("disc-gridContainer").addEventListener("wheel", (event) 
 }, { passive: false });
 
 updateDiscGrid();
+
+function updateDiscSlotsImages(){
+    disc_slot.forEach(slot => {
+        if(slot["id"] != 0){
+            let disc_element = document.getElementById("disc-background-"+slot["slot"]);
+            document.getElementById("disc-label-"+slot["slot"]).innerHTML = "";
+            discs.forEach(disc => {
+                if(disc["id"] == slot["id"]){
+                    disc_element.style.backgroundImage = "url('"+disc["img"]+"')";
+                }
+            });
+        }
+    });
+}

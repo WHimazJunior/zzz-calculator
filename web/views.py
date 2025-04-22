@@ -341,7 +341,7 @@ def cache_api():
         data = cache.get(endpoint)
         if not data:
             data = getApiRequest(endpoint)
-            cache.set(endpoint, data, timeout=3600)
+            cache.set(endpoint, data, timeout=8600)
 
     tables = {
         "Agents" : cache.get(endpoints[0]),

@@ -1,0 +1,14 @@
+{% load static %}
+<div class="json-importer-exporter">
+    
+    <div class="import-button" onclick="ImportBuild()">
+        <label class="import-label">Import</label>
+        <input id="import-input" type="file" accept="application/json,.json" style="display: none;">
+    </div>
+    <div class="export-button" onclick="ExportBuild()">
+        <label class="export-label">Export</label>
+    </div>
+</div>
+
+<script src="{% static 'scripts/json/import.js' %}"></script>
+<script src="{% static 'scripts/json/export.js' %}"></script>

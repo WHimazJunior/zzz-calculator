@@ -43,7 +43,7 @@ function updateWengineGrid() {
         img.src = wengines[i].img;
         img.alt = wengines[i].name;
         img.classList.add("wengine-grid-item");
-        img.addEventListener("click", (event) => getWEngineInfo(event));
+        img.addEventListener("click", (event) => getWEngineInfo(event.target.id));
 
         img.addEventListener("mouseenter", () => {
             wengineDisplay.textContent = wengines[i].name;
@@ -79,7 +79,8 @@ document.getElementById("wengine-gridContainer").addEventListener("wheel", (even
 
 updateWengineGrid();
 
-function getWEngineInfo(event){
+function getWEngineInfo(id){
+    document.getElementById("current-wengine-id").value = id;
     wengine_name = document.getElementById("w-engine-name-label");
     wengine_video = document.getElementById("w-engine-video");
     wengine_player = document.getElementById("w-engine-video-player");
@@ -96,7 +97,7 @@ function getWEngineInfo(event){
         wengine_video.style === "block" ? "none" : "block";
 
     wengine_list.forEach(wengine => {
-        if(event.target.id == wengine["id"]){
+        if(id == wengine["id"]){
             wengine_owner = document.getElementById("w-engine-owner-image");
             let owner_path = "";
             let perc_string = "";

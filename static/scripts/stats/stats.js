@@ -80,7 +80,6 @@
 </script>
 */
 
-
 const stat_dropdownButton = document.getElementById("stat-dropdownButton");
 const stat_dropdownList = document.getElementById("stat-dropdownList");
 const stat_selected_name = document.getElementById("stat-selected-name");

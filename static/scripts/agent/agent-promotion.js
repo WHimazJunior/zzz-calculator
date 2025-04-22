@@ -39,11 +39,14 @@ function activateAgentStar(event){
 function activateAgentMaxedLevel(event){
     var button = event.target;
     var is_active = button.classList.contains("active");
+    
 
     if(is_active)
         button.classList.remove("active");
     else
         button.classList.add("active");
+
+    agent_maxed = button.classList.contains("active");
 
     getAgentInfo(document.getElementById("current-agent-id").value);
 }

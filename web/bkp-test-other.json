@@ -1,0 +1,22 @@
+{
+    'product_number': '1',
+    'field_name': 'MOB',
+    'product_name': 'MSI X670E GAMING PLUS WIFI',
+    'product_highest_price': '262.06',
+    'product_lowest_price': '262.06',
+    'url': 'https://www.pccomponentes.pt/msi-x670e-gaming-plus-wifi'
+}
+
+{
+    'CurrentBuild':[
+        {'id': 13, 'build_name': '2000 Mid-Range', 'build_date': '2025-04-15', 'product_number': 1, 'field_name': 'CPU', 'product_name': 'Ryzen 7 7800X3D', 'product_highest_price': 487.83, 'product_lowest_price': 487.83, 'product_url': 'https://www.pccomponentes.pt/amd-ryzen-7-7800x3d-42-ghz-5-ghz'},
+        {'id': 13, 'build_name': '2000 Mid-Range', 'build_date': '2025-04-15', 'product_number': 1, 'field_name': 'MOB', 'product_name': 'MSI X670E GAMING PLUS WIFI', 'product_highest_price': 262.06, 'product_lowest_price': 262.06, 'product_url': 'https://www.pccomponentes.pt/msi-x670e-gaming-plus-wifi'},
+        {'id': 13, 'build_name': '2000 Mid-Range', 'build_date': '2025-04-15', 'product_number': 1, 'field_name': 'GPU', 'product_name': 'RX 7800 XT GAMING OC 16GB', 'product_highest_price': 669.02, 'product_lowest_price': 669.02, 'product_url': 'https://www.pccomponentes.pt/gigabyte-amd-radeon-rx-7800-xt-gaming-oc-16gb-gddr6'},
+        {'id': 13, 'build_name': '2000 Mid-Range', 'build_date': '2025-04-15', 'product_number': 1, 'field_name': 'RAM', 'product_name': 'Corsair Vengeance 2x16GB CL30 DDR5 6000MHz', 'product_highest_price': 126.99, 'product_lowest_price': 126.99, 'product_url': 'https://www.pccomponentes.pt/corsair-vengeance-ddr5-6000mhz-32gb-2x16gb-cl30-memoria-dual-amd-expo-e-intel-xmp'},
+        {'id': 13, 'build_name': '2000 Mid-Range', 'build_date': '2025-04-15', 'product_number': 1, 'field_name': 'COB', 'product_name': 'Be Quiet! DARK ROCK 5', 'product_highest_price': 88.99, 'product_lowest_price': 88.99, 'product_url': 'https://www.pccomponentes.pt/cooler-cpu-be-quiet-dark-rock-pro-5-cooler-de-cpu-7-pipes-135mm-preto'},
+        {'id': 13, 'build_name': '2000 Mid-Range', 'build_date': '2025-04-15', 'product_number': 1, 'field_name': 'SSD', 'product_name': 'WD Black SN770 1TB NVMe', 'product_highest_price': 73.99, 'product_lowest_price': 73.99, 'product_url': 'https://www.pccomponentes.pt/wd-black-sn770-1tb-nvme-ssd'},
+        {'id': 13, 'build_name': '2000 Mid-Range', 'build_date': '2025-04-15', 'product_number': 1, 'field_name': 'HDD', 'product_name': 'Seagate IronWolf Nas 4 TB', 'product_highest_price': 115.09, 'product_lowest_price': 115.09, 'product_url': 'https://www.pccomponentes.pt/seagate-ironwolf-nas-35-4tb-sata-3'},
+        {'id': 13, 'build_name': '2000 Mid-Range', 'build_date': '2025-04-15', 'product_number': 1, 'field_name': 'PSU', 'product_name': 'Corsair 750W RM750e 80+ Gold', 'product_highest_price': 144.99, 'product_lowest_price': 144.99, 'product_url': 'https://www.pccomponentes.pt/fonte-alimentacao-corsair-rme-series-rm750e-atx-31-pcie-51-750w-cybenetics-80-plus-gold-modular'},
+        {'id': 13, 'build_name': '2000 Mid-Range', 'build_date': '2025-04-15', 'product_number': 1, 'field_name': 'BOX', 'product_name': 'Tooq RACK-406N Rack 19" 4U ATX', 'product_highest_price': 124.39, 'product_lowest_price': 124.39, 'product_url': 'https://www.pccomponentes.pt/tooq-rack-406n-usb3-armario-rack-19-4u-atx'}
+    ]
+}

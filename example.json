@@ -1,0 +1,202 @@
+{
+    "agent_id": 1,
+    "agent_core": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+    ],
+    "agent_promotion": [
+        true,
+        true,
+        true,
+        true,
+        true
+    ],
+    "agent_maxed": true,
+    "wengine_id": 1,
+    "disc_slot": [
+        {
+            "id": 1,
+            "slot": 1,
+            "is_active": true,
+            "is_selected": false,
+            "main_stat_name": "HP",
+            "main_stat_value": 2200,
+            "main_stat_type": "Flat",
+
+
+            "substat_name_1":"ATK",
+            "substat_value_1": 3,
+            "substat_type_1": "Percentage",
+            "substat_role_1": 1,
+
+            "substat_name_2":"CRIT Rate",
+            "substat_value_2": 2.4,
+            "substat_type_2": "Percentage",
+            "substat_role_2": 2,
+
+            "substat_name_3":"CRIT DMG",
+            "substat_value_3": 4.8,
+            "substat_type_3": "Percentage",
+            "substat_role_3": 3,
+
+            "substat_name_4":"Anomaly Proficiency",
+            "substat_value_4": 8,
+            "substat_type_4": "Flat",
+            "substat_role_4": 4
+        },
+        {
+            "id": 2,
+            "slot": 2,
+            "is_active": true,
+            "is_selected": false,
+            "main_stat_name": "ATK",
+            "main_stat_value": 316,
+            "main_stat_type": "Flat",
+
+
+            "substat_name_1":"ATK",
+            "substat_value_1": 3,
+            "substat_type_1": "Percentage",
+            "substat_role_1": 1,
+
+            "substat_name_2":"CRIT Rate",
+            "substat_value_2": 2.4,
+            "substat_type_2": "Percentage",
+            "substat_role_2": 2,
+
+            "substat_name_3":"CRIT DMG",
+            "substat_value_3": 4.8,
+            "substat_type_3": "Percentage",
+            "substat_role_3": 3,
+
+            "substat_name_4":"Anomaly Proficiency",
+            "substat_value_4": 8,
+            "substat_type_4": "Flat",
+            "substat_role_4": 4
+        },
+        {
+            "id": 1,
+            "slot": 3,
+            "is_active": true,
+            "is_selected": false,
+            "main_stat_name": "DEF",
+            "main_stat_value": 184,
+            "main_stat_type": "Flat",
+
+
+            "substat_name_1":"ATK",
+            "substat_value_1": 3,
+            "substat_type_1": "Percentage",
+            "substat_role_1": 1,
+
+            "substat_name_2":"CRIT Rate",
+            "substat_value_2": 2.4,
+            "substat_type_2": "Percentage",
+            "substat_role_2": 2,
+
+            "substat_name_3":"CRIT DMG",
+            "substat_value_3": 4.8,
+            "substat_type_3": "Percentage",
+            "substat_role_3": 3,
+
+            "substat_name_4":"Anomaly Proficiency",
+            "substat_value_4": 8,
+            "substat_type_4": "Flat",
+            "substat_role_4": 4
+        },
+        {
+            "id": 1,
+            "slot": 4,
+            "is_active": true,
+            "is_selected": false,
+            "main_stat_name": "CRIT DMG",
+            "main_stat_value": 48,
+            "main_stat_type": "Percentage",
+
+
+            "substat_name_1":"ATK",
+            "substat_value_1": 3,
+            "substat_type_1": "Percentage",
+            "substat_role_1": 1,
+
+            "substat_name_2":"ATK",
+            "substat_value_2": 19,
+            "substat_type_2": "Flat",
+            "substat_role_2": 2,
+
+            "substat_name_3":"CRIT Rate",
+            "substat_value_3": 2.4,
+            "substat_type_3": "Percentage",
+            "substat_role_3": 3,
+
+            "substat_name_4":"Anomaly Proficiency",
+            "substat_value_4": 8,
+            "substat_type_4": "Flat",
+            "substat_role_4": 4
+        },
+        {
+            "id": 2,
+            "slot": 5,
+            "is_active": true,
+            "is_selected": false,
+            "main_stat_name": "Ice Damage",
+            "main_stat_value": 30,
+            "main_stat_type": "Percentage",
+
+
+            "substat_name_1":"ATK",
+            "substat_value_1": 3,
+            "substat_type_1": "Percentage",
+            "substat_role_1": 1,
+
+            "substat_name_2":"CRIT Rate",
+            "substat_value_2": 2.4,
+            "substat_type_2": "Percentage",
+            "substat_role_2": 2,
+
+            "substat_name_3":"CRIT DMG",
+            "substat_value_3": 4.8,
+            "substat_type_3": "Percentage",
+            "substat_role_3": 3,
+
+            "substat_name_4":"Anomaly Proficiency",
+            "substat_value_4": 8,
+            "substat_type_4": "Flat",
+            "substat_role_4": 4
+        },
+        {
+            "id": 1,
+            "slot": 6,
+            "is_active": true,
+            "is_selected": false,
+            "main_stat_name": "ATK",
+            "main_stat_value": 30,
+            "main_stat_type": "Flat",
+
+
+            "substat_name_1":"ATK",
+            "substat_value_1": 19,
+            "substat_type_1": "Flat",
+            "substat_role_1": 1,
+
+            "substat_name_2":"CRIT Rate",
+            "substat_value_2": 2.4,
+            "substat_type_2": "Percentage",
+            "substat_role_2": 2,
+
+            "substat_name_3":"CRIT DMG",
+            "substat_value_3": 4.8,
+            "substat_type_3": "Percentage",
+            "substat_role_3": 3,
+
+            "substat_name_4":"Anomaly Proficiency",
+            "substat_value_4": 8,
+            "substat_type_4": "Flat",
+            "substat_role_4": 4
+        }
+    ]
+}

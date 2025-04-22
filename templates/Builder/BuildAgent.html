@@ -40,10 +40,14 @@
     {% include "Builder/SetGlobalVariablesScript.html" %}
     <header>
         <label class="title">ZZZ Calculator</label>
-        <img class="settings-icon active"
-            src="{% static 'Settings/settings-icon.png' %}"
-            alt=" "
-            onclick="location.href='/settings'">
+        <div class="right-side-header">
+            {% include "Builder/JSON/ImportExport.html" %}
+            <img class="settings-icon active"
+                src="{% static 'Settings/settings-icon.png' %}"
+                alt=" "
+                onclick="location.href='/settings'">
+        </div>
+        
     </header>
     <input type="hidden" id="current-agent-id" value="0">
     <div class="content">

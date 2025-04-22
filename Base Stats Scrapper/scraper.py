@@ -35,7 +35,8 @@ base_url = "https://zenless-zone-zero.fandom.com/wiki/"
 # List of characters to data scrape
 character_urls = []
 character_names = [
-    "Trigger"
+    "Anton_Ivanov", "Asaba_Harumasa", "Evelyn_Chevalier"
+    #"Trigger"
     #"Soldier_0_-_Anby", "Pulchra_Fellini"
     #"Hoshimi_Miyabi", "Nicole_Demara", "Anby_Demara", "Astra_Yao", "Ellen_Joe", 
     #"Ben_Bigger", "Jane_Doe", "Luciana_de_Montefio", "Billy_Kid", "Burnice_White", 
@@ -88,6 +89,7 @@ for url in character_urls:
 
         data.append(filtered_data)
 
+    filtered_headers = ['promotion_level', 'agent_level', 'health_point', 'attack', 'defense']
     character_data = {
         "name": character_name,
         "stats": [dict(zip(filtered_headers, row)) for row in data]

@@ -1,32 +1,6 @@
 [
     {
-        "name": "Anton Ivanov",
-        "stats": {
-            "impact": 0,
-            "crit_rate": 5,
-            "crit_damage": 50,
-            "anomaly_mastery": 0,
-            "anomaly_proficiency": 0,
-            "penetration_ratio": 0,
-            "penetration": 0,
-            "energy_regen": 1.2
-        }
-    },
-    {
-        "name": "Asaba Harumasa",
-        "stats": {
-            "impact": 0,
-            "crit_rate": 5,
-            "crit_damage": 50,
-            "anomaly_mastery": 0,
-            "anomaly_proficiency": 0,
-            "penetration_ratio": 0,
-            "penetration": 0,
-            "energy_regen": 1.2
-        }
-    },
-    {
-        "name": "Evelyn Chevalier",
+        "name": "Vivian Banshee",
         "stats": {
             "impact": 0,
             "crit_rate": 5,

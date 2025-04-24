@@ -41,6 +41,7 @@
     <header>
         <label class="title">ZZZ Calculator</label>
         <div class="right-side-header">
+            {% include "Builder/ExportImage/ExportImage.html" %}
             {% include "Builder/JSON/ImportExport.html" %}
             <img class="settings-icon active"
                 src="{% static 'Settings/settings-icon.png' %}"
@@ -50,7 +51,7 @@
         
     </header>
     <input type="hidden" id="current-agent-id" value="0">
-    <div class="content">
+    <div id="build-div" class="content">
         <div class="content-row">
             <div class="content-row-upper-separator-agent">
                 {% load GetRandomAgent %}

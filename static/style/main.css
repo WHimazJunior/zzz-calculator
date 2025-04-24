@@ -55,7 +55,7 @@ header{
   align-items: center;
 }
 
-.json-importer-exporter{
+.json-importer-exporter, .build-image-export{
   display: flex;
   gap: 10px;
   height: 140%;
@@ -63,7 +63,7 @@ header{
   padding-right: 20px;
 }
 
-.import-button, .export-button{
+.import-button, .export-button, .build-image-export-button{
   display: flex;
   height: 100%;
   width: 100px;
@@ -78,14 +78,14 @@ header{
   transition: background-color .25s ease-in-out;
 }
 
-.import-button:hover, .export-button:hover{
+.import-button:hover, .export-button:hover, .build-image-export-button:hover{
   cursor: pointer;
   transform: scale(1.1);
   color: var(--light-color);
   background-color: var(--dark-gradient);
 }
 
-.import-label:hover, .export-label:hover{
+.import-label:hover, .export-label:hover, .build-image-export-label:hover{
   cursor: pointer;
 }
 

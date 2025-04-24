@@ -35,6 +35,7 @@ base_url = "https://zenless-zone-zero.fandom.com/wiki/"
 # List of characters to data scrape
 character_urls = []
 character_names = [
+    "Vivian_Banshee",
     "Anton_Ivanov", "Asaba_Harumasa", "Evelyn_Chevalier"
     #"Trigger"
     #"Soldier_0_-_Anby", "Pulchra_Fellini"

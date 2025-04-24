@@ -1,0 +1,8 @@
+{% load static %}
+<div class="build-image-export">
+    <div class="build-image-export-button" onclick="exportBuildImage()">
+        <label class="build-image-export-label">Image</label>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="{% static 'scripts/build-image/build-image.js' %}"></script>

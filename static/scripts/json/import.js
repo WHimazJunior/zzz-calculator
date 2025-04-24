@@ -107,6 +107,8 @@ import_input.addEventListener('change', (event) => {
                         }
                     });
                 });
+                let disc_selected = document.getElementById("slot-position-selected").value;
+                changeDiscInfo(disc_selected);
                 updateDiscSlotsImages();
                 updateAgentStats();
 

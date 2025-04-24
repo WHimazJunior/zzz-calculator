@@ -1,268 +1,90 @@
 [
     {
-        "name": "Anton Ivanov",
+        "name": "Vivian Banshee",
         "stats": [
             {
                 "promotion_level": "0",
                 "agent_level": "1",
-                "health_point": "580",
-                "attack": "114",
-                "defense": "50"
-            },
-            {
-                "promotion_level": "0",
-                "agent_level": "10",
-                "health_point": "1,288",
-                "attack": "174",
-                "defense": "111"
-            },
-            {
-                "promotion_level": "1",
-                "agent_level": "10",
-                "health_point": "1,686",
-                "attack": "215",
-                "defense": "145"
-            },
-            {
-                "promotion_level": "1",
-                "agent_level": "20",
-                "health_point": "2,474",
-                "attack": "283",
-                "defense": "213"
-            },
-            {
-                "promotion_level": "2",
-                "agent_level": "20",
-                "health_point": "2,873",
-                "attack": "323",
-                "defense": "248"
-            },
-            {
-                "promotion_level": "2",
-                "agent_level": "30",
-                "health_point": "3,661",
-                "attack": "391",
-                "defense": "315"
-            },
-            {
-                "promotion_level": "3",
-                "agent_level": "30",
-                "health_point": "4,059",
-                "attack": "432",
-                "defense": "349"
-            },
-            {
-                "promotion_level": "3",
-                "agent_level": "40",
-                "health_point": "4,846",
-                "attack": "500",
-                "defense": "417"
-            },
-            {
-                "promotion_level": "4",
-                "agent_level": "40",
-                "health_point": "5,244",
-                "attack": "541",
-                "defense": "451"
-            },
-            {
-                "promotion_level": "4",
-                "agent_level": "50",
-                "health_point": "6,032",
-                "attack": "608",
-                "defense": "519"
-            },
-            {
-                "promotion_level": "5",
-                "agent_level": "50",
-                "health_point": "6,431",
-                "attack": "648",
-                "defense": "554"
-            },
-            {
-                "promotion_level": "5",
-                "agent_level": "60",
-                "health_point": "7,219",
-                "attack": "716",
-                "defense": "622"
-            }
-        ]
-    },
-    {
-        "name": "Asaba Harumasa",
-        "stats": [
-            {
-                "promotion_level": "0",
-                "agent_level": "1",
-                "health_point": "595",
-                "attack": "132",
-                "defense": "48"
-            },
-            {
-                "promotion_level": "0",
-                "agent_level": "10",
-                "health_point": "1,322",
-                "attack": "204",
-                "defense": "106"
-            },
-            {
-                "promotion_level": "1",
-                "agent_level": "10",
-                "health_point": "1,731",
-                "attack": "251",
-                "defense": "139"
-            },
-            {
-                "promotion_level": "1",
-                "agent_level": "20",
-                "health_point": "2,539",
-                "attack": "331",
-                "defense": "205"
-            },
-            {
-                "promotion_level": "2",
-                "agent_level": "20",
-                "health_point": "2,947",
-                "attack": "378",
-                "defense": "238"
-            },
-            {
-                "promotion_level": "2",
-                "agent_level": "30",
-                "health_point": "3,755",
-                "attack": "458",
-                "defense": "304"
-            },
-            {
-                "promotion_level": "3",
-                "agent_level": "30",
-                "health_point": "4,164",
-                "attack": "505",
-                "defense": "337"
-            },
-            {
-                "promotion_level": "3",
-                "agent_level": "40",
-                "health_point": "4,972",
-                "attack": "586",
-                "defense": "402"
-            },
-            {
-                "promotion_level": "4",
-                "agent_level": "40",
-                "health_point": "5,381",
-                "attack": "633",
-                "defense": "436"
-            },
-            {
-                "promotion_level": "4",
-                "agent_level": "50",
-                "health_point": "6,189",
-                "attack": "713",
-                "defense": "502"
-            },
-            {
-                "promotion_level": "5",
-                "agent_level": "50",
-                "health_point": "6,597",
-                "attack": "760",
-                "defense": "535"
-            },
-            {
-                "promotion_level": "5",
-                "agent_level": "60",
-                "health_point": "7,405",
-                "attack": "840",
-                "defense": "600"
-            }
-        ]
-    },
-    {
-        "name": "Evelyn Chevalier",
-        "stats": [
-            {
-                "promotion_level": "0",
-                "agent_level": "1",
-                "health_point": "626",
-                "attack": "134",
+                "health_point": "617",
+                "attack": "127",
                 "defense": "49"
             },
             {
                 "promotion_level": "0",
                 "agent_level": "10",
-                "health_point": "1,390",
-                "attack": "207",
-                "defense": "109"
+                "health_point": "1,370",
+                "attack": "196",
+                "defense": "108"
             },
             {
                 "promotion_level": "1",
                 "agent_level": "10",
-                "health_point": "1,820",
-                "attack": "255",
-                "defense": "143"
+                "health_point": "1,793",
+                "attack": "241",
+                "defense": "141"
             },
             {
                 "promotion_level": "1",
                 "agent_level": "20",
-                "health_point": "2,670",
-                "attack": "337",
-                "defense": "210"
+                "health_point": "2,630",
+                "attack": "317",
+                "defense": "207"
             },
             {
                 "promotion_level": "2",
                 "agent_level": "20",
-                "health_point": "3,099",
-                "attack": "384",
-                "defense": "244"
+                "health_point": "3,054",
+                "attack": "362",
+                "defense": "241"
             },
             {
                 "promotion_level": "2",
                 "agent_level": "30",
-                "health_point": "3,949",
-                "attack": "465",
-                "defense": "310"
+                "health_point": "3,891",
+                "attack": "439",
+                "defense": "307"
             },
             {
                 "promotion_level": "3",
                 "agent_level": "30",
-                "health_point": "4,379",
-                "attack": "513",
-                "defense": "343"
+                "health_point": "4,314",
+                "attack": "485",
+                "defense": "340"
             },
             {
                 "promotion_level": "3",
                 "agent_level": "40",
-                "health_point": "5,229",
-                "attack": "595",
-                "defense": "410"
+                "health_point": "5,152",
+                "attack": "562",
+                "defense": "407"
             },
             {
                 "promotion_level": "4",
                 "agent_level": "40",
-                "health_point": "5,659",
-                "attack": "643",
-                "defense": "444"
+                "health_point": "5,576",
+                "attack": "607",
+                "defense": "441"
             },
             {
                 "promotion_level": "4",
                 "agent_level": "50",
-                "health_point": "6,508",
-                "attack": "725",
-                "defense": "511"
+                "health_point": "6,413",
+                "attack": "683",
+                "defense": "507"
             },
             {
                 "promotion_level": "5",
                 "agent_level": "50",
-                "health_point": "6,938",
-                "attack": "773",
-                "defense": "545"
+                "health_point": "6,836",
+                "attack": "728",
+                "defense": "540"
             },
             {
                 "promotion_level": "5",
                 "agent_level": "60",
-                "health_point": "7,788",
-                "attack": "854",
-                "defense": "612"
+                "health_point": "7,673",
+                "attack": "805",
+                "defense": "606"
             }
         ]
     }

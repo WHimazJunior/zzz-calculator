@@ -64,7 +64,7 @@ function updateDiscSlotsImages(){
             document.getElementById("disc-label-"+slot["slot"]).innerHTML = "";
             discs.forEach(disc => {
                 if(disc["id"] == slot["id"]){
-                    disc_element.style.backgroundImage = "url('"+disc["img"]+"')";
+                    disc_element.style.backgroundImage = 'url("'+disc['img']+'")';
                 }
             });
         }

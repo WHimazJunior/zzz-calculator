@@ -591,7 +591,7 @@ document.querySelectorAll("#disc").forEach((disc) => {
                         if(slot["slot"] == position){
                             slot["is_active"] = true;
                             background_div = document.getElementById("disc-background-"+position);
-                            background_div.style = "background-image: url("+disc_div.getAttribute("data-img")+")";
+                            background_div.style = 'background-image: url("'+disc_div.getAttribute('data-img')+'")';
                             setDiscInfo(disc_div.getAttribute("data-id"), slot);
                             document.getElementById("slot-position-selected").value = position;
                             setDropdownStats(slot);

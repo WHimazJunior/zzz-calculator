@@ -231,14 +231,27 @@
                             <div id="disc-{{forloop.counter}}" class="disc">
                                 <div class="disc-header">
                                     <div class="disc-info">
-                                        <div class="disc-name">{{disc.disc_name}} [{{forloop.counter}}]</div>
-                                        <div class="disc-effect">
-                                            2-Piece Set:
-                                            <br>
-                                            <label>{{disc.disc_set}}</label>
-                                        </div>
+                                        {% if disc.disc_name == "0" %}
+                                            <div class="disc-name"></div>
+                                        {% else %}
+                                            <div class="disc-name">{{disc.disc_name}} [{{forloop.counter}}]</div>
+                                        {% endif %}
+                                        {% if disc.disc_set == "0" %}
+                                            <div class="disc-effect">
+                                            </div>    
+                                        {% else %}
+                                            <div class="disc-effect">
+                                                2-Piece Set:
+                                                <br>
+                                                <label>{{disc.disc_set}}</label>
+                                            </div>
+                                        {% endif %}
                                     </div>
-                                    <img draggable="false" class="disc-img" src="{% static 'Discs/'|add:disc.disc_name|add:'.png' %}">
+                                    {% if disc.disc_name == "0" %}
+                                        <div class="disc-img"></div>
+                                    {% else %}
+                                        <img draggable="false" class="disc-img" src="{% static 'Discs/'|add:disc.disc_name|add:'.png' %}">
+                                    {% endif %}
                                 </div>
                                 <div class="disc-main-stat">
                                     <span>{{disc.disc_main_stat_name}}</span>
@@ -591,7 +604,11 @@
                         </div>
                         <div class="wengine-info">
                             <div class="wengine-main">
-                                <div class="wengine-name">Rainforest Gourmet</div>
+                                {% if WEngineInfo.wengine_name == "0" %}
+                                    <div class="wengine-name"></div>
+                                {% else %}
+                                    <div class="wengine-name">{{WEngineInfo.wengine_name}}</div>
+                                {% endif %}
                                 <div class="wnengine-modification">
                                     <img draggable="false" class="wengine-modification-star" src="{% static 'Images/Star.png' %}">
                                     <img draggable="false" class="wengine-modification-star" src="{% static 'Images/Star.png' %}">
@@ -609,7 +626,11 @@
                                         {% else %}
                                             <img draggable="false" class="wengine-badge" src="{% static 'Agents/'|add:WEngineInfo.wengine_owner|add:'.png' %}">
                                         {% endif %}
-                                        <img draggable="false" class="wengine-badge" src="{% static 'Types/'|add:WEngineInfo.wengine_type|add:'.png' %}">
+                                        {% if WEngineInfo.wengine_type == "" %}
+                                            <img draggable="false" class="wengine-badge" src="{% static 'Agents/Missing.png' %}">
+                                        {% else %}
+                                            <img draggable="false" class="wengine-badge" src="{% static 'Types/'|add:WEngineInfo.wengine_type|add:'.png' %}">
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -639,11 +660,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
         <script>
             const card = document.getElementById("agent-card");
+            let agent = "";
+            agent = {{AgentInfo|safe}};
+            color_list = {{ColorList|safe}};
+            color_id = {{Color|safe}};
+
+            const root = document.documentElement;
+            color_list.forEach(color => {
+                if(color_id == color["id"]){
+                    root.style.setProperty('--light-color', color["light_color"]);
+                    root.style.setProperty('--light-gradient', color["light_gradient"]);
+                    root.style.setProperty('--dark-gradient', color["dark_gradient"]);
+                    return;
+                }
+            });
 
             function saveCard(){
                 html2canvas(card).then(canvas => {
                     const link = document.createElement("a");
-                    link.download = "minha-div.png";
+                    link.download = agent.agent_name+".png";
                     link.href = canvas.toDataURL();
                     link.click();
                 });

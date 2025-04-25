@@ -14,5 +14,4 @@ urlpatterns = [
     path('add/disc', views.addDisc),
     path('add/wengine', views.addWengine),
     path('import/json', views.importJSON),
-
 ]

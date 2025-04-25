@@ -65,9 +65,13 @@
             }else if(name.startsWith("stat-")){
                 info.value = document.getElementById(name).innerHTML;
             }
-            console.log(info);
+            //console.log(info);
         });
 
-        document.getElementById('BuildImage').submit()
+        document.getElementById("color-id-save").value = document.getElementById("color-id").getAttribute("data-color-id");
+        document.getElementById("color-list-save").value = JSON.stringify(color_list, null, 2);
+        console.log(document.getElementById("color-list-save").value);
+        console.log(document.getElementById("color-id-save").value);
+        document.getElementById('BuildImage').submit();
     }
 </script>

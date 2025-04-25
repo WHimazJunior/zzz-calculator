@@ -96,78 +96,110 @@ function getWEngineInfo(id){
     wengine_video.style.display =
         wengine_video.style === "block" ? "none" : "block";
 
-    wengine_list.forEach(wengine => {
-        if(id == wengine["id"]){
-            wengine_owner = document.getElementById("w-engine-owner-image");
-            let owner_path = "";
-            let perc_string = "";
+    id = wengineExists(id);
+    if(id != 0){
+        wengine_list.forEach(wengine => {
+            if(id == wengine["id"]){
+                wengine_owner = document.getElementById("w-engine-owner-image");
+                let owner_path = "";
+                let perc_string = "";
 
-            wengine_name.innerHTML = wengine["name"];
-            document.getElementById("wengine-name").value = wengine["name"];
+                wengine_name.innerHTML = wengine["name"];
+                document.getElementById("wengine-name").value = wengine["name"];
 
-            wengine_base_stat_name.innerHTML  = wengine["main_stat_name"];
-            document.getElementById("wengine-main-stat-name").value = wengine["main_stat_name"];
-            wengine_base_stat_value.innerHTML = wengine["main_stat_value"];
-            document.getElementById("wengine-main-stat-value").value = wengine["main_stat_value"];
-            
+                wengine_base_stat_name.innerHTML  = wengine["main_stat_name"];
+                document.getElementById("wengine-main-stat-name").value = wengine["main_stat_name"];
+                wengine_base_stat_value.innerHTML = wengine["main_stat_value"];
+                document.getElementById("wengine-main-stat-value").value = wengine["main_stat_value"];
+                
 
-            if(wengine["sub_stat_type"] == "Percentage") perc_string = "%";
+                if(wengine["sub_stat_type"] == "Percentage") perc_string = "%";
 
-            wengine_sub_stat_name.innerHTML   = wengine["sub_stat_name"];
-            document.getElementById("wengine-substat-name").value = wengine["sub_stat_name"];
-            wengine_sub_stat_value.innerHTML  = wengine["sub_stat_value"] + perc_string;
-            document.getElementById("wengine-substat-value").value = wengine["sub_stat_value"] + perc_string;
+                wengine_sub_stat_name.innerHTML   = wengine["sub_stat_name"];
+                document.getElementById("wengine-substat-name").value = wengine["sub_stat_name"];
+                wengine_sub_stat_value.innerHTML  = wengine["sub_stat_value"] + perc_string;
+                document.getElementById("wengine-substat-value").value = wengine["sub_stat_value"] + perc_string;
 
-            video_path = static_path+"WEngines/Video/"
-            /*if(checkIfFileExists(video_path + wengine["name"] + '.mp4'))
-                wengine_player.src = video_path + wengine["name"] + '.mp4';
-            else
-                wengine_player.src = video_path + wengine["name"] + '.gif';*/
-
-            checkIfFileExists(video_path + wengine["name"] + '.mp4')
-            .then(exist => {
-                if(exist){
+                video_path = static_path+"WEngines/Video/"
+                /*if(checkIfFileExists(video_path + wengine["name"] + '.mp4'))
                     wengine_player.src = video_path + wengine["name"] + '.mp4';
-                }else{
-                    wengine_player.src = video_path + wengine["name"] + '.gif';
-                }
-            });
-            console.log(wengine_player.src);
+                else
+                    wengine_player.src = video_path + wengine["name"] + '.gif';*/
+
+                checkIfFileExists(video_path + wengine["name"] + '.mp4')
+                .then(exist => {
+                    if(exist){
+                        wengine_player.src = video_path + wengine["name"] + '.mp4';
+                    }else{
+                        wengine_player.src = video_path + wengine["name"] + '.gif';
+                    }
+                });
+                //console.log(wengine_player.src);
 
 
-            wengine_slot.forEach(slot => {
-                slot["id"] = wengine["id"];
-                slot["main_stat_name"] = wengine["main_stat_name"];
-                slot["main_stat_value"] = wengine["main_stat_value"];
-                slot["main_stat_type"] = wengine["main_stat_type"];
+                wengine_slot.forEach(slot => {
+                    slot["id"] = wengine["id"];
+                    slot["main_stat_name"] = wengine["main_stat_name"];
+                    slot["main_stat_value"] = wengine["main_stat_value"];
+                    slot["main_stat_type"] = wengine["main_stat_type"];
 
-                slot["sub_stat_name"] = wengine["sub_stat_name"];
-                slot["sub_stat_value"] = wengine["sub_stat_value"];
-                slot["sub_stat_type"] = wengine["sub_stat_type"];
-            });
+                    slot["sub_stat_name"] = wengine["sub_stat_name"];
+                    slot["sub_stat_value"] = wengine["sub_stat_value"];
+                    slot["sub_stat_type"] = wengine["sub_stat_type"];
+                });
 
-            let owner = "";
+                let owner = "";
 
-            wengine_agent_list.forEach(wengine_agent => {
-                if(wengine_agent["id"] == wengine["id"]){
-                    owner = wengine_agent["agent_name"];
-                    owner_path = static_path+"Agents/" + wengine_agent["agent_name"] + ".png";
-                }
-            });
+                wengine_agent_list.forEach(wengine_agent => {
+                    if(wengine_agent["id"] == wengine["id"]){
+                        owner = wengine_agent["agent_name"];
+                        owner_path = static_path+"Agents/" + wengine_agent["agent_name"] + ".png";
+                    }
+                });
 
-            wengine_owner.src = 
-                owner_path == "" ? wengine_owner.src = static_path+"Agents/Icon.png" : wengine_owner.src = owner_path;
+                wengine_owner.src = 
+                    owner_path == "" ? wengine_owner.src = static_path+"Agents/Icon.png" : wengine_owner.src = owner_path;
 
-            document.getElementById("wengine-owner").value = owner;
-            document.getElementById("wengine-type").value = wengine["type"];
+                document.getElementById("wengine-owner").value = owner;
+                document.getElementById("wengine-type").value = wengine["type"];
 
-            let type_icon_path = static_path+"Types/" + wengine["type"] + ".png";
-            wengine_type_icon.src = type_icon_path;
+                let type_icon_path = static_path+"Types/" + wengine["type"] + ".png";
+                wengine_type_icon.src = type_icon_path;
 
-            updateAgentStats();
-        }
-    });
+                updateAgentStats();
+                return;
+            }
+        });
+    }else{
+        wengine_name.innerHTML = "";
+        document.getElementById("wengine-name").value = "";
+
+        wengine_base_stat_name.innerHTML  = "";
+        document.getElementById("wengine-main-stat-name").value = "";
+        wengine_base_stat_value.innerHTML = "";
+        document.getElementById("wengine-main-stat-value").value = "";
+        wengine_sub_stat_name.innerHTML   = "";
+        document.getElementById("wengine-substat-name").value = "";
+        wengine_sub_stat_value.innerHTML  = ""
+        document.getElementById("wengine-substat-value").value = "";
+
+        wengine_player.src = "";
+        document.getElementById("wengine-owner").value = "";
+        wengine_owner.src = static_path+"Agents/Icon.png";
+        document.getElementById("wengine-type").value = "";
+        wengine_type_icon.src = static_path+"Agents/Missing.png";
+        updateAgentStats();
+    }
 
     //resizeWEngineOverflowText(document.getElementById("overflow-div-wengine-name"));
     callResizer();
+}
+
+function wengineExists(id){
+    let exists = 0;
+    wengine_list.forEach(wengine => {
+        if(id == wengine["id"])
+            exists = id;
+    });
+    return exists;
 }

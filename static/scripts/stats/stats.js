@@ -559,7 +559,7 @@ document.querySelectorAll("#disc").forEach((disc) => {
         var isSelected = false;
         
         if(!disc.contains(event.target) && disc.classList.contains("active")){
-            let select_exception = ["#stat-dropdownButton", "#stat-dropdownList","#substat-dropdownButton", "#substat-dropdownList", "#up-stat", "#down-stat"];
+            let select_exception = ["li", "#stat-dropdownList", "#stat-dropdownButton", "#stat-dropdownList","#substat-dropdownButton", "#substat-dropdownList", "#up-stat", "#down-stat"];
             let position = disc.getAttribute("data-value");
             let disc_div;
             
@@ -575,9 +575,12 @@ document.querySelectorAll("#disc").forEach((disc) => {
                 }
             });
 
-            select_exception.forEach(div => {
-                isSelected = setSelectedDetection(div, isSelected);
-            });
+
+            if(!isSelected)
+                select_exception.forEach(div => {
+                    isSelected = setSelectedDetection(div, isSelected, event.target);
+                    if(isSelected) return;
+                });
 
             if(!isSelected){
                 disc.classList.remove('active');
@@ -604,10 +607,11 @@ document.querySelectorAll("#disc").forEach((disc) => {
     });
 });
 
-function setSelectedDetection(div, isSelected){
+function setSelectedDetection(div, isSelected, target){
     document.querySelectorAll(div).forEach((disc_selected) => {
         if(!isSelected)
-            isSelected = disc_selected.contains(event.target);
+            isSelected = disc_selected.outerHTML.includes(target.outerHTML);
+        if(isSelected) return;
     });
     return isSelected;
 }

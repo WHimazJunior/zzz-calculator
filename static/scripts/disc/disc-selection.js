@@ -67,6 +67,10 @@ function updateDiscSlotsImages(){
                     disc_element.style.backgroundImage = 'url("'+disc['img']+'")';
                 }
             });
+        }else{
+            let disc_element = document.getElementById("disc-background-"+slot["slot"]);
+            document.getElementById("disc-label-"+slot["slot"]).innerHTML = slot["slot"];
+            disc_element.style.backgroundImage = '';
         }
     });
 }

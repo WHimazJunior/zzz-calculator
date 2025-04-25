@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="{% static 'style/color/color.css' %}">
 </head>
 <body>
+    <script>
+        const color_list = {{Colors|safe}};
+    </script>
     <header>
         <label class="title active"
             onclick="location.href='../'">ZZZ Calculator</label>

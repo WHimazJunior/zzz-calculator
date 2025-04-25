@@ -202,10 +202,15 @@ def imageEditor(request):
 
         discs = [ disc_1, disc_2, disc_3, disc_4, disc_5, disc_6 ]
 
+        color_id = int(request.POST.get("color-id-save"))
+        color_list = json.loads(request.POST.get("color-list-save"))
+        
         tables = {
             "AgentInfo" : agent,
             "WEngineInfo" : wengine,
-            "DiscsInfo" : discs
+            "DiscsInfo" : discs,
+            "Color" : color_id,
+            "ColorList" : color_list
         }
 
 
@@ -536,7 +541,7 @@ def cache_api():
         data = cache.get(endpoint)
         if not data:
             data = getApiRequest(endpoint)
-            cache.set(endpoint, data, timeout=8600)
+            cache.set(endpoint, data, timeout=3600)
 
     tables = {
         "Agents" : cache.get(endpoints[0]),

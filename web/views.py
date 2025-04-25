@@ -50,6 +50,7 @@ def imageEditor(request):
             "wengine_name": request.POST.get("wengine-name"),
             "wengine_owner": request.POST.get("wengine-owner"),
             "wengine_type": request.POST.get("wengine-type"),
+            "wengine_tier": request.POST.get("wengine-tier"),
             "wengine_main_stat_name": request.POST.get("wengine-main-stat-name"),
             "wengine_sub_stat_name": request.POST.get("wengine-substat-name"),
             "wengine_main_stat_value": request.POST.get("wengine-main-stat-value"),
@@ -204,7 +205,7 @@ def imageEditor(request):
 
         color_id = int(request.POST.get("color-id-save"))
         color_list = json.loads(request.POST.get("color-list-save"))
-        
+
         tables = {
             "AgentInfo" : agent,
             "WEngineInfo" : wengine,

@@ -111,6 +111,7 @@ function getWEngineInfo(id){
                 document.getElementById("wengine-main-stat-name").value = wengine["main_stat_name"];
                 wengine_base_stat_value.innerHTML = wengine["main_stat_value"];
                 document.getElementById("wengine-main-stat-value").value = wengine["main_stat_value"];
+                document.getElementById("wengine-tier").value = wengine["tier"];
                 
 
                 if(wengine["sub_stat_type"] == "Percentage") perc_string = "%";
@@ -182,6 +183,8 @@ function getWEngineInfo(id){
         document.getElementById("wengine-substat-name").value = "";
         wengine_sub_stat_value.innerHTML  = ""
         document.getElementById("wengine-substat-value").value = "";
+
+        document.getElementById("wengine-tier").value = "";
 
         wengine_player.src = "";
         document.getElementById("wengine-owner").value = "";

@@ -9,9 +9,15 @@
             <div class="background-info">
                 <div class="agent-info">
                     <div class="agent-main-info">
-                        <div class="agent-img-background">
-                            <img draggable="false" class="agent-img" src="{% static 'Agents/'|add:AgentInfo.agent_name|add:'.png' %}">
-                        </div>
+                        {% if AgentInfo.agent_tier == "A" %}
+                            <div class="agent-img-background" style="background: linear-gradient(-75deg, rgb(158, 0, 250), rgb(240, 5, 250));">
+                                <img draggable="false" class="agent-img" src="{% static 'Agents/'|add:AgentInfo.agent_name|add:'.png' %}">
+                            </div>
+                        {% elif AgentInfo.agent_tier == "S" %}
+                            <div class="agent-img-background" style="background: linear-gradient(-75deg, rgb(255, 125, 0), rgb(250, 210, 5));">
+                                <img draggable="false" class="agent-img" src="{% static 'Agents/'|add:AgentInfo.agent_name|add:'.png' %}">
+                            </div>
+                        {% endif %}
                         <div class="agent-right-side-info">
                             <div class="agent-name">
                                 <label class="agent-name-label">{{AgentInfo.agent_name}}</label>
@@ -599,9 +605,23 @@
                         -->
                     </div>
                     <div class="wengine">
-                        <div class="wengine-img-background">
-                            <img draggable="false" class="wengine-img" src="{% static 'WEngines/'|add:WEngineInfo.wengine_name|add:'.png' %}" alt="">
-                        </div>
+                        {% if WEngineInfo.wengine_tier == "B" %}
+                            <div class="wengine-img-background" style="background: linear-gradient(-75deg, rgb(0, 122, 189), rgb(50, 192, 226));">
+                                <img draggable="false" class="wengine-img" src="{% static 'WEngines/'|add:WEngineInfo.wengine_name|add:'.png' %}" alt="">
+                            </div>
+                        {% elif WEngineInfo.wengine_tier == "A" %}
+                            <div class="wengine-img-background" style="background: linear-gradient(-75deg, rgb(158, 0, 250), rgb(240, 5, 250));">
+                                <img draggable="false" class="wengine-img" src="{% static 'WEngines/'|add:WEngineInfo.wengine_name|add:'.png' %}" alt="">
+                            </div>
+                        {% elif WEngineInfo.wengine_tier == "S" %}
+                            <div class="wengine-img-background" style="background: linear-gradient(-75deg, rgb(255, 125, 0), rgb(250, 210, 5));">
+                                <img draggable="false" class="wengine-img" src="{% static 'WEngines/'|add:WEngineInfo.wengine_name|add:'.png' %}" alt="">
+                            </div>
+                        {% else %}
+                            <div class="wengine-img-background" style="background: rgba(0, 0, 0, 0.65)">
+                                <img draggable="false" class="wengine-img" src="{% static 'WEngines/'|add:WEngineInfo.wengine_name|add:'.png' %}" alt="">
+                            </div>
+                        {% endif %}
                         <div class="wengine-info">
                             <div class="wengine-main">
                                 {% if WEngineInfo.wengine_name == "0" %}

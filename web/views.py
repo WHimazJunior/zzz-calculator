@@ -15,6 +15,202 @@ def index(request):
 def settings(request):
     return render(request, 'Settings/Settings.html', cache_api())
 
+def imageEditor(request):
+    if request.method == "POST":
+        print(request.POST.get("agent-name"))
+        agent = {
+            "hp" : request.POST.get("stat-hp"),
+            "atk" : request.POST.get("stat-atk"),
+            "def" : request.POST.get("stat-def"),
+            "impact" : request.POST.get("stat-impact"),
+            "crit_rate" : request.POST.get("stat-crit-rate"),
+            "crit_damage" : request.POST.get("stat-crit-damage"),
+            "anomaly_mastery" : request.POST.get("stat-anomaly-mastery"),
+            "anomaly_proficiency" : request.POST.get("stat-anomaly-proficiency"),
+            "pen_ratio" : request.POST.get("stat-pen-ratio"),
+            "energy_regen" : request.POST.get("stat-energy-regen"),
+            "pen" : request.POST.get("stat-pen"),
+            "physical_dmg" : request.POST.get("stat-physical-dmg"),
+            "fire_dmg" : request.POST.get("stat-fire-dmg"),
+            "ice_dmg" : request.POST.get("stat-ice-dmg"),
+            "eletric_dmg" : request.POST.get("stat-eletric-dmg"),
+            "ether_dmg" : request.POST.get("stat-ether-dmg"),
+            "agent_name" : request.POST.get("agent-name"),
+            "agent_nickname" : request.POST.get("agent-nickname"),
+            "agent_max_level" : request.POST.get("agent-max-level"),
+            "agent_current_level" : request.POST.get("agent-current-level"),
+            "agent_element" : request.POST.get("agent-element-label"),
+            "agent_type" : request.POST.get("agent-type-label"),
+            "agent_faction" : request.POST.get("agent-faction"),
+            "agent_tier" : request.POST.get("agent-tier"),
+            "agent_core": request.POST.get("agent-core")
+        }
+
+        wengine = {
+            "wengine_name": request.POST.get("wengine-name"),
+            "wengine_owner": request.POST.get("wengine-owner"),
+            "wengine_type": request.POST.get("wengine-type"),
+            "wengine_main_stat_name": request.POST.get("wengine-main-stat-name"),
+            "wengine_sub_stat_name": request.POST.get("wengine-substat-name"),
+            "wengine_main_stat_value": request.POST.get("wengine-main-stat-value"),
+            "wengine_sub_stat_value": request.POST.get("wengine-substat-value")
+        }
+
+        disc_1 = {
+            "disc_name": request.POST.get("disc-1-name"),
+            "disc_set": request.POST.get("disc-1-set"),
+
+            "disc_main_stat_name": request.POST.get("disc-1-main-stat-name"),
+            "disc_main_stat_value": request.POST.get("disc-1-main-stat-value"),
+
+            "disc_substat_name_1": request.POST.get("disc-1-substat-name-1"),
+            "disc_substat_value_1": request.POST.get("disc-1-substat-value-1"),
+            "disc_substat_role_1": request.POST.get("disc-1-substat-role-1"),
+
+            "disc_substat_name_2": request.POST.get("disc-1-substat-name-2"),
+            "disc_substat_value_2": request.POST.get("disc-1-substat-value-2"),
+            "disc_substat_role_2": request.POST.get("disc-1-substat-role-2"),
+
+            "disc_substat_name_3": request.POST.get("disc-1-substat-name-3"),
+            "disc_substat_value_3": request.POST.get("disc-1-substat-value-3"),
+            "disc_substat_role_3": request.POST.get("disc-1-substat-role-3"),
+
+            "disc_substat_name_4": request.POST.get("disc-1-substat-name-4"),
+            "disc_substat_value_4": request.POST.get("disc-1-substat-value-4"),
+            "disc_substat_role_4": request.POST.get("disc-1-substat-role-4")
+        }
+
+        disc_2 = {
+            "disc_name": request.POST.get("disc-2-name"),
+            "disc_set": request.POST.get("disc-2-set"),
+
+            "disc_main_stat_name": request.POST.get("disc-2-main-stat-name"),
+            "disc_main_stat_value": request.POST.get("disc-2-main-stat-value"),
+
+            "disc_substat_name_1": request.POST.get("disc-2-substat-name-1"),
+            "disc_substat_value_1": request.POST.get("disc-2-substat-value-1"),
+            "disc_substat_role_1": request.POST.get("disc-2-substat-role-1"),
+
+            "disc_substat_name_2": request.POST.get("disc-2-substat-name-2"),
+            "disc_substat_value_2": request.POST.get("disc-2-substat-value-2"),
+            "disc_substat_role_2": request.POST.get("disc-2-substat-role-2"),
+
+            "disc_substat_name_3": request.POST.get("disc-2-substat-name-3"),
+            "disc_substat_value_3": request.POST.get("disc-2-substat-value-3"),
+            "disc_substat_role_3": request.POST.get("disc-2-substat-role-3"),
+
+            "disc_substat_name_4": request.POST.get("disc-2-substat-name-4"),
+            "disc_substat_value_4": request.POST.get("disc-2-substat-value-4"),
+            "disc_substat_role_4": request.POST.get("disc-2-substat-role-4")
+        }
+
+        disc_3 = {
+            "disc_name": request.POST.get("disc-3-name"),
+            "disc_set": request.POST.get("disc-3-set"),
+
+            "disc_main_stat_name": request.POST.get("disc-3-main-stat-name"),
+            "disc_main_stat_value": request.POST.get("disc-3-main-stat-value"),
+
+            "disc_substat_name_1": request.POST.get("disc-3-substat-name-1"),
+            "disc_substat_value_1": request.POST.get("disc-3-substat-value-1"),
+            "disc_substat_role_1": request.POST.get("disc-3-substat-role-1"),
+
+            "disc_substat_name_2": request.POST.get("disc-3-substat-name-2"),
+            "disc_substat_value_2": request.POST.get("disc-3-substat-value-2"),
+            "disc_substat_role_2": request.POST.get("disc-3-substat-role-2"),
+
+            "disc_substat_name_3": request.POST.get("disc-3-substat-name-3"),
+            "disc_substat_value_3": request.POST.get("disc-3-substat-value-3"),
+            "disc_substat_role_3": request.POST.get("disc-3-substat-role-3"),
+
+            "disc_substat_name_4": request.POST.get("disc-3-substat-name-4"),
+            "disc_substat_value_4": request.POST.get("disc-3-substat-value-4"),
+            "disc_substat_role_4": request.POST.get("disc-3-substat-role-4")
+        }
+
+        disc_4 = {
+            "disc_name": request.POST.get("disc-4-name"),
+            "disc_set": request.POST.get("disc-4-set"),
+
+            "disc_main_stat_name": request.POST.get("disc-4-main-stat-name"),
+            "disc_main_stat_value": request.POST.get("disc-4-main-stat-value"),
+
+            "disc_substat_name_1": request.POST.get("disc-4-substat-name-1"),
+            "disc_substat_value_1": request.POST.get("disc-4-substat-value-1"),
+            "disc_substat_role_1": request.POST.get("disc-4-substat-role-1"),
+
+            "disc_substat_name_2": request.POST.get("disc-4-substat-name-2"),
+            "disc_substat_value_2": request.POST.get("disc-4-substat-value-2"),
+            "disc_substat_role_2": request.POST.get("disc-4-substat-role-2"),
+
+            "disc_substat_name_3": request.POST.get("disc-4-substat-name-3"),
+            "disc_substat_value_3": request.POST.get("disc-4-substat-value-3"),
+            "disc_substat_role_3": request.POST.get("disc-4-substat-role-3"),
+
+            "disc_substat_name_4": request.POST.get("disc-4-substat-name-4"),
+            "disc_substat_value_4": request.POST.get("disc-4-substat-value-4"),
+            "disc_substat_role_4": request.POST.get("disc-4-substat-role-4")
+        }
+        
+        disc_5 = {
+            "disc_name": request.POST.get("disc-5-name"),
+            "disc_set": request.POST.get("disc-5-set"),
+
+            "disc_main_stat_name": request.POST.get("disc-5-main-stat-name"),
+            "disc_main_stat_value": request.POST.get("disc-5-main-stat-value"),
+
+            "disc_substat_name_1": request.POST.get("disc-5-substat-name-1"),
+            "disc_substat_value_1": request.POST.get("disc-5-substat-value-1"),
+            "disc_substat_role_1": request.POST.get("disc-5-substat-role-1"),
+
+            "disc_substat_name_2": request.POST.get("disc-5-substat-name-2"),
+            "disc_substat_value_2": request.POST.get("disc-5-substat-value-2"),
+            "disc_substat_role_2": request.POST.get("disc-5-substat-role-2"),
+
+            "disc_substat_name_3": request.POST.get("disc-5-substat-name-3"),
+            "disc_substat_value_3": request.POST.get("disc-5-substat-value-3"),
+            "disc_substat_role_3": request.POST.get("disc-5-substat-role-3"),
+
+            "disc_substat_name_4": request.POST.get("disc-5-substat-name-4"),
+            "disc_substat_value_4": request.POST.get("disc-5-substat-value-4"),
+            "disc_substat_role_4": request.POST.get("disc-5-substat-role-4")
+        }
+
+        disc_6 = {
+            "disc_name": request.POST.get("disc-6-name"),
+            "disc_set": request.POST.get("disc-6-set"),
+
+            "disc_main_stat_name": request.POST.get("disc-6-main-stat-name"),
+            "disc_main_stat_value": request.POST.get("disc-6-main-stat-value"),
+
+            "disc_substat_name_1": request.POST.get("disc-6-substat-name-1"),
+            "disc_substat_value_1": request.POST.get("disc-6-substat-value-1"),
+            "disc_substat_role_1": request.POST.get("disc-6-substat-role-1"),
+
+            "disc_substat_name_2": request.POST.get("disc-6-substat-name-2"),
+            "disc_substat_value_2": request.POST.get("disc-6-substat-value-2"),
+            "disc_substat_role_2": request.POST.get("disc-6-substat-role-2"),
+
+            "disc_substat_name_3": request.POST.get("disc-6-substat-name-3"),
+            "disc_substat_value_3": request.POST.get("disc-6-substat-value-3"),
+            "disc_substat_role_3": request.POST.get("disc-6-substat-role-3"),
+
+            "disc_substat_name_4": request.POST.get("disc-6-substat-name-4"),
+            "disc_substat_value_4": request.POST.get("disc-6-substat-value-4"),
+            "disc_substat_role_4": request.POST.get("disc-6-substat-role-4")
+        }
+
+        discs = [ disc_1, disc_2, disc_3, disc_4, disc_5, disc_6 ]
+
+        tables = {
+            "AgentInfo" : agent,
+            "WEngineInfo" : wengine,
+            "DiscsInfo" : discs
+        }
+
+
+    return render(request, 'Builder/ExportImage/ImageEditor.html', tables)
+
 def importJSON(request):
     if request.method == "POST":
         base_stats_content = request.POST.get("base-stats")
@@ -300,7 +496,6 @@ def addDisc(request):
             return render(request, 'Add/AddDisc.html', tables)
         
     return render(request, 'Add/AddDisc.html', tables)
-
 
 def getTableId(table, name):
     id = -1

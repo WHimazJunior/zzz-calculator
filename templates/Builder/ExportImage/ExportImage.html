@@ -1,8 +1,73 @@
 {% load static %}
 <div class="build-image-export">
-    <div class="build-image-export-button" onclick="exportBuildImage()">
+    {% csrf_token %}
+    <div class="build-image-export-button" onclick="sendImageValues()">
         <label class="build-image-export-label">Image</label>
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="{% static 'scripts/build-image/build-image.js' %}"></script>
+
+<script>
+    function sendImageValues(){
+        const info_list = document.querySelectorAll("#save-value");
+
+        info_list.forEach(info => {
+            const name = info.name;
+            
+            if(name.startsWith("disc-")){
+                let position = name[5];
+                
+                disc_slot.forEach(slot => {
+                    let variable = "";
+                    variable = name.slice(7).replaceAll('-', '_');
+                    if(Number(slot["slot"]) == Number(position)){
+                        if(name.includes("disc-"+position+"-name") || name.endsWith("-set")){
+                            discs_list.forEach(disc => {
+                                if(disc["id"] == slot["id"]){
+                                    let perc_string = disc["type"] == "Percentage" ? "%": "";
+                                    info.value =
+                                        name.includes("disc-"+position+"-name") ? disc["disc_name"]:
+                                        name.includes("-set") ? disc["stat_name"]+"+"+disc["value"]+perc_string:
+                                        "";
+                                }
+                            });
+                        }else{
+                            if(!name.includes("value"))
+                                info.value = slot[variable];
+                            else{
+                                let type = slot[variable.replace('value', 'type')];
+                                info.value =
+                                    type == "Percentage" ? slot[variable] + "%" : slot[variable];
+                            }
+                        }
+                    }
+                });
+                
+            }else if(name.startsWith("wengine-"))
+                info.value = document.getElementById(name).value;
+            else if(name.startsWith("agent-")){
+                switch(name){
+                    case "agent-name":
+                    case "agent-nickname":
+                    case "agent-element-label":
+                    case "agent-type-label":
+                    case "agent-faction":
+                        info.value = document.getElementById(name).innerHTML;
+                        break;
+                    case "agent-max-level":
+                    case "agent-current-level":
+                    case "agent-core":
+                    case "agent-tier":
+                        info.value = document.getElementById(name).value;
+                        break;
+                }
+            }else if(name.startsWith("stat-")){
+                info.value = document.getElementById(name).innerHTML;
+            }
+            console.log(info);
+        });
+
+        document.getElementById('BuildImage').submit()
+    }
+</script>

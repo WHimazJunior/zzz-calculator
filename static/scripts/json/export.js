@@ -70,5 +70,5 @@ function ExportBuild(){
     link.click();
 
     URL.revokeObjectURL(link.href);
-    console.log(export_file);
+    //console.log(export_file);
 }

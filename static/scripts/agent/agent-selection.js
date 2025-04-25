@@ -60,7 +60,8 @@ function getAgentInfo(id){
     const agent_name = document.getElementById("agent-name");
     const agent_nickname = document.getElementById("agent-nickname");
     const agent_level = document.getElementById("agent-actual-level-label");
-    const agent_tier = document.getElementById("agent-tier-img");
+    const agent_tier = document.getElementById("agent-tier");
+    const agent_tier_img = document.getElementById("agent-tier-img");
     const agent_faction = document.getElementById("agent-faction");
     const faction_img = document.getElementById("faction-img");
     const faction_background = document.getElementById("agent-faction-background-image");
@@ -69,19 +70,19 @@ function getAgentInfo(id){
     const agent_type = document.getElementById("agent-type-img");
     const agent_type_label = document.getElementById("agent-type-label");
 
-    const stat_hp = document.getElementById("stat_hp");
-    const stat_atk = document.getElementById("stat_atk");
-    const stat_def = document.getElementById("stat_def");
-    const stat_impact = document.getElementById("stat_impact");
-    const stat_crit_rate = document.getElementById("stat_crit_rate");
-    const stat_crit_damage = document.getElementById("stat_crit_damage");
-    const stat_anomaly_mastery = document.getElementById("stat_anomaly_mastery");
-    const stat_anomaly_proficiency= document.getElementById("stat_anomaly_proficiency");
-    const stat_pen_ratio = document.getElementById("stat_pen_ratio");
-    const stat_energy_regen = document.getElementById("stat_energy_regen");
+    const stat_hp = document.getElementById("stat-hp");
+    const stat_atk = document.getElementById("stat-atk");
+    const stat_def = document.getElementById("stat-def");
+    const stat_impact = document.getElementById("stat-impact");
+    const stat_crit_rate = document.getElementById("stat-crit-rate");
+    const stat_crit_damage = document.getElementById("stat-crit-damage");
+    const stat_anomaly_mastery = document.getElementById("stat-anomaly-mastery");
+    const stat_anomaly_proficiency= document.getElementById("stat-anomaly-proficiency");
+    const stat_pen_ratio = document.getElementById("stat-pen-ratio");
+    const stat_energy_regen = document.getElementById("stat-energy-regen");
+
 
     
-
     agents_core_list.forEach(core => {
         if(core["id"] == id){
             agent_core.forEach(slot => {
@@ -107,6 +108,7 @@ function getAgentInfo(id){
             else
                 curr_level = promo["min"];
             document.getElementById("agent-max-level-label").innerHTML = promo["max"];
+            document.getElementById("agent-max-level").value = promo["max"];
         }
     });
 
@@ -115,8 +117,10 @@ function getAgentInfo(id){
             agent_name.innerHTML = agent['name'];
             agent_nickname.innerHTML = agent['nickname'];
             agent_level.innerHTML = "Lv."+agent['agent_level'];
+            document.getElementById("agent-current-level").value = agent['agent_level']
 
-            agent_tier.src = static_path + "Tier/" + agent['tier'] + '.png';
+            agent_tier.value = agent["tier"];
+            agent_tier_img.src = static_path + "Tier/" + agent['tier'] + '.png';
 
             agent_faction.innerHTML = agent['faction'];
 

@@ -7,6 +7,7 @@
         </div>
         <div class="agent-info-labels">
             <div id="overflow-div-agent-faction" class="agent-info-row1">
+                <input id="agent-tier" type="hidden" value="A">
                 <img id="agent-tier-img" class="agent-tier-img" src="{% static 'Tier/'|add:random_agent.tier|add:'.png' %}">
                 <label id="agent-faction" class="agent-faction" style="vertical-align: middle;">{{random_agent.faction}}</label>
             </div>
@@ -26,6 +27,7 @@
             <div class="agent-level">
                 <div class="agent-level-row">
                     <div class="agent-actual-level">
+                        <input id="agent-current-level" type="hidden" value="0">
                         <label id="agent-actual-level-label" class="agent-actual-level-label">Lv.60</label>
                     </div>
                     <div class="black_bar"></div>
@@ -34,6 +36,7 @@
                             <label id="agent-max-level-label" class="agent-max-level-label">60</label>
                         </div>
                         <div class="agent-max">
+                            <input id="agent-max-level" type="hidden" value="0">
                             <label class="agent-max-label">MAX</label>
                         </div>
                     </div>
@@ -58,43 +61,43 @@
             <div class="stats">
                 <div class="stat">
                     <span>HP</span>
-                    <span id="stat_hp" class="stat_1" data-value="{{random_agent.health_point}}" data-statid="1">{{random_agent.health_point}}</span>
+                    <span id="stat-hp" class="stat-1" data-value="{{random_agent.health_point}}" data-statid="1">{{random_agent.health_point}}</span>
                 </div>
                 <div class="stat">
                     <span>ATK</span>
-                    <span id="stat_atk" class="stat_3" data-value="{{random_agent.attack}}" data-statid="3">{{random_agent.attack}}</span>
+                    <span id="stat-atk" class="stat-3" data-value="{{random_agent.attack}}" data-statid="3">{{random_agent.attack}}</span>
                 </div>
                 <div class="stat">
                     <span>DEF</span>
-                    <span id="stat_def" class="stat_5" data-value="{{random_agent.defense}}" data-statid="5">{{random_agent.defense}}</span>
+                    <span id="stat-def" class="stat-5" data-value="{{random_agent.defense}}" data-statid="5">{{random_agent.defense}}</span>
                 </div>
                 <div class="stat">
                     <span>Impact</span>
-                    <span id="stat_impact" class="stat_14" data-value="{{random_agent.impact}}" data-statid="14">{{random_agent.impact}}</span>
+                    <span id="stat-impact" class="stat-14" data-value="{{random_agent.impact}}" data-statid="14">{{random_agent.impact}}</span>
                 </div>
                 <div class="stat">
                     <span>CRIT Rate</span>
-                    <span id="stat_crit_rate" class="stat_7" data-value="{{random_agent.crit_rate}}" data-statid="7">{{random_agent.crit_rate}}%</span>
+                    <span id="stat-crit-rate" class="stat-7" data-value="{{random_agent.crit_rate}}" data-statid="7">{{random_agent.crit_rate}}%</span>
                 </div>
                 <div class="stat">
                     <span>CRIT DMG</span>
-                    <span id="stat_crit_damage" class="stat_8" data-value="{{random_agent.crit_damage}}" data-statid="8">{{random_agent.crit_damage}}%</span>
+                    <span id="stat-crit-damage" class="stat-8" data-value="{{random_agent.crit_damage}}" data-statid="8">{{random_agent.crit_damage}}%</span>
                 </div>
                 <div class="stat">
                     <span>Anomaly Mastery</span>
-                    <span id="stat_anomaly_mastery" class="stat_10" data-value="{{random_agent.anomaly_mastery}}" data-statid="10">{{random_agent.anomaly_mastery}}</span>
+                    <span id="stat-anomaly-mastery" class="stat-10" data-value="{{random_agent.anomaly_mastery}}" data-statid="10">{{random_agent.anomaly_mastery}}</span>
                 </div>
                 <div class="stat">
                     <span>Anomaly Proficiency</span>
-                    <span id="stat_anomaly_proficiency" class="stat_9" data-value="{{random_agent.anomaly_proficiency}}" data-statid="9">{{random_agent.anomaly_proficiency}}</span>
+                    <span id="stat-anomaly-proficiency" class="stat-9" data-value="{{random_agent.anomaly_proficiency}}" data-statid="9">{{random_agent.anomaly_proficiency}}</span>
                 </div>
                 <div class="stat">
                     <span>PEN Ratio</span>
-                    <span id="stat_pen_ratio" class="stat_13" data-value="{{random_agent.penetration_ratio}}" data-statid="13">{{random_agent.penetration_ratio}}%</span>
+                    <span id="stat-pen-ratio" class="stat-13" data-value="{{random_agent.penetration_ratio}}" data-statid="13">{{random_agent.penetration_ratio}}%</span>
                 </div>
                 <div class="stat">
                     <span>Energy Regen</span>
-                    <span id="stat_energy_regen" class="stat_16" data-value="{{random_agent.energy_regen}}" data-statid="16">{{random_agent.energy_regen}}</span>
+                    <span id="stat-energy-regen" class="stat-16" data-value="{{random_agent.energy_regen}}" data-statid="16">{{random_agent.energy_regen}}</span>
                 </div>
             </div>
         </div>

@@ -103,15 +103,20 @@ function getWEngineInfo(id){
             let perc_string = "";
 
             wengine_name.innerHTML = wengine["name"];
+            document.getElementById("wengine-name").value = wengine["name"];
 
             wengine_base_stat_name.innerHTML  = wengine["main_stat_name"];
+            document.getElementById("wengine-main-stat-name").value = wengine["main_stat_name"];
             wengine_base_stat_value.innerHTML = wengine["main_stat_value"];
+            document.getElementById("wengine-main-stat-value").value = wengine["main_stat_value"];
             
 
             if(wengine["sub_stat_type"] == "Percentage") perc_string = "%";
 
             wengine_sub_stat_name.innerHTML   = wengine["sub_stat_name"];
+            document.getElementById("wengine-substat-name").value = wengine["sub_stat_name"];
             wengine_sub_stat_value.innerHTML  = wengine["sub_stat_value"] + perc_string;
+            document.getElementById("wengine-substat-value").value = wengine["sub_stat_value"] + perc_string;
 
             video_path = static_path+"WEngines/Video/"
             /*if(checkIfFileExists(video_path + wengine["name"] + '.mp4'))
@@ -123,10 +128,8 @@ function getWEngineInfo(id){
             .then(exist => {
                 if(exist){
                     wengine_player.src = video_path + wengine["name"] + '.mp4';
-                    console.log('O ficheiro existe!');
                 }else{
                     wengine_player.src = video_path + wengine["name"] + '.gif';
-                    console.log('O ficheiro não existe.');
                 }
             });
             console.log(wengine_player.src);
@@ -143,14 +146,20 @@ function getWEngineInfo(id){
                 slot["sub_stat_type"] = wengine["sub_stat_type"];
             });
 
-            
+            let owner = "";
+
             wengine_agent_list.forEach(wengine_agent => {
-                if(wengine_agent["id"] == wengine["id"])
+                if(wengine_agent["id"] == wengine["id"]){
+                    owner = wengine_agent["agent_name"];
                     owner_path = static_path+"Agents/" + wengine_agent["agent_name"] + ".png";
+                }
             });
 
             wengine_owner.src = 
                 owner_path == "" ? wengine_owner.src = static_path+"Agents/Icon.png" : wengine_owner.src = owner_path;
+
+            document.getElementById("wengine-owner").value = owner;
+            document.getElementById("wengine-type").value = wengine["type"];
 
             let type_icon_path = static_path+"Types/" + wengine["type"] + ".png";
             wengine_type_icon.src = type_icon_path;

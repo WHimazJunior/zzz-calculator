@@ -1,0 +1,653 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style/image-editor/style.css' %}">
+    </head>
+    <body>
+        <div id="agent-card" class="agent-card">
+            <div class="background-info">
+                <div class="agent-info">
+                    <div class="agent-main-info">
+                        <div class="agent-img-background">
+                            <img draggable="false" class="agent-img" src="{% static 'Agents/'|add:AgentInfo.agent_name|add:'.png' %}">
+                        </div>
+                        <div class="agent-right-side-info">
+                            <div class="agent-name">
+                                <label class="agent-name-label">{{AgentInfo.agent_name}}</label>
+                                <label class="agent-nickname-label">{{AgentInfo.agent_nickname}}</label>
+                            </div>
+                            <div class="agent-mindscape">
+                                <img draggable="false" class="agent-mindscape-img" src="{% static 'Backgrounds/'|add:AgentInfo.agent_name|add:'/C6.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agent-sub-info">
+                        <div class="badges">
+                            <img draggable="false" class="badge" src="{% static 'Elements/'|add:AgentInfo.agent_element|add:'.png' %}">
+                            <img draggable="false" class="badge" src="{% static 'Types/'|add:AgentInfo.agent_type|add:'.png' %}">
+                            <img draggable="false" class="badge" src="{% static 'Factions/'|add:AgentInfo.agent_faction|add:'.png' %}">
+                            <img draggable="false" class="badge" src="{% static 'Tier/'|add:AgentInfo.agent_tier|add:'.png' %}">
+                        </div>
+                        <div class="agent-core">
+                            <div class="core-column-level">
+                                <div id="core-button" class="core-level-outline" data-letter="A">
+                                    <div class="core-label-outline" data-letter="A">
+                                        <div class="core-base" data-letter="A">
+                                            <label class="core-label" data-letter="A">A</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="core-button" class="core-level-outline" data-letter="B">
+                                    <div class="core-label-outline" data-letter="B">
+                                        <div class="core-base" data-letter="B">
+                                            <label class="core-label" data-letter="B">B</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="core-column-level">
+                                <div id="core-button" class="core-level-outline" data-letter="C">
+                                    <div class="core-label-outline" data-letter="C">
+                                        <div class="core-base" data-letter="C">
+                                            <label class="core-label" data-letter="C">C</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="core-button" class="core-level-outline" data-letter="D">
+                                    <div class="core-label-outline" data-letter="D">
+                                        <div class="core-base" data-letter="D">
+                                            <label class="core-label" data-letter="D">D</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="core-column-level">
+                                <div id="core-button" class="core-level-outline" data-letter="E">
+                                    <div class="core-label-outline" data-letter="E">
+                                        <div class="core-base" data-letter="E">
+                                            <label class="core-label" data-letter="E">E</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="core-button" class="core-level-outline" data-letter="F">
+                                    <div class="core-label-outline" data-letter="F">
+                                        <div class="core-base" data-letter="F">
+                                            <label class="core-label" data-letter="F">F</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="core-column-effect">
+                                <div class="core-level-outline">
+                                    <div class="core-effect-outline">
+                                        <div class="core-effect-base" style="outline: 1px solid rgb(81, 77, 81);">
+                                            <div class="core-effect-background">
+                                                <div class="core-effect-center">
+                                                    <div class="core-effect-nut">
+                                                        <div id="core-effect-stick" class="core-effect-stick-1"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-2"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-3"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-4"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-5"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-6"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div class="core-effect-triangle-outline">
+                                    <div class="core-effect-triangle">
+                                        <div class="core-effect-sub-triangle">
+                                            <div id="core-effect-triangle-bar-1" class="core-effect-triangle-bar"></div>
+                                            <div id="core-effect-triangle-bar-2" class="core-effect-triangle-bar"></div>
+                                            <div id="core-effect-triangle-bar-3" class="core-effect-triangle-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                                <div class="core-level-outline">
+                                    <div class="core-effect-outline">
+                                        <div class="core-effect-base" style="outline: 1px solid rgb(81, 77, 81);">
+                                            <div class="core-effect-background">
+                                                <div class="core-effect-center">
+                                                    <div class="core-effect-nut">
+                                                        <div id="core-effect-stick" class="core-effect-stick-1"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-2"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-3"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-4"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-5"></div>
+                                                        <div id="core-effect-stick" class="core-effect-stick-6"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agent-level">
+                        <label class="agent-current-level">Lv.{{AgentInfo.agent_current_level}}</label>
+                        <label class="agent-max-level">Max {{AgentInfo.agent_max_level}}</label>
+                    </div>
+                    <div class="agent-stats">
+                        <div class="stats">
+                            <div class="stat">
+                                <span>HP</span>
+                                <span>{{AgentInfo.hp}}</span>
+                            </div>
+                            <div class="stat">
+                                <span>ATK</span>
+                                <span>{{AgentInfo.atk}}</span>
+                            </div>
+                            <div class="stat">
+                                <span>DEF</span>
+                                <span>{{AgentInfo.def}}</span>
+                            </div>
+                            <div class="stat">
+                                <span>Impact</span>
+                                <span>{{AgentInfo.impact}}</span>
+                            </div>
+                            <div class="stat">
+                                <span>CRIT Rate</span>
+                                {% load AdditionalFuncs %}
+                                <span>{{AgentInfo.crit_rate|roundDecimal:1}}</span>
+                            </div>
+
+                            <div class="stat">
+                                <span>CRIT DMG</span>
+                                {% load AdditionalFuncs %}
+                                <span>{{AgentInfo.crit_damage|roundDecimal:1}}</span>
+                            </div>
+                            <div class="stat">
+                                <span>Anomaly Mastery</span>
+                                <span>{{AgentInfo.anomaly_mastery}}</span>
+                            </div>
+                            <div class="stat">
+                                <span>Anomaly Proficiency</span>
+                                <span>{{AgentInfo.anomaly_proficiency}}</span>
+                            </div>
+                            <div class="stat">
+                                <span>PEN Ratio</span>
+                                {% load AdditionalFuncs %}
+                                <span>{{AgentInfo.pen_ratio|roundDecimal:1}}</span> 
+                            </div>
+                            <div class="stat">
+                                <span>Energy Regen</span>
+                                <span>{{AgentInfo.energy_regen}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agent-hidden-stats">
+                        <div class="hidden-stats">
+                            <div class="hidden-stat">
+                                <span>PEN</span>
+                                <span>{{AgentInfo.pen}}</span>
+                            </div>
+                            <div class="hidden-stat">
+                                <div class="element-stat">
+                                    <img draggable="false" class="icon-stat" src="{% static 'Elements/Physical.png' %}">
+                                    DMG
+                                </div>
+                                <span>{{AgentInfo.physical_dmg}}</span>
+                            </div>
+                            <div class="hidden-stat">
+                                <div class="element-stat">
+                                    <img draggable="false" class="icon-stat" src="{% static 'Elements/Fire.png' %}">
+                                    DMG
+                                </div>
+                                <span>{{AgentInfo.fire_dmg}}</span>
+                            </div>
+                            <div class="hidden-stat">
+                                <div class="element-stat">
+                                    <img draggable="false" class="icon-stat" src="{% static 'Elements/Ice.png' %}">
+                                    DMG
+                                </div>
+                                <span>{{AgentInfo.ice_dmg}}</span>
+                            </div>
+                            <div class="hidden-stat">
+                                <div class="element-stat">
+                                    <img draggable="false" class="icon-stat" src="{% static 'Elements/Eletric.png' %}">
+                                    DMG
+                                </div>
+                                <span>{{AgentInfo.eletric_dmg}}</span>
+                            </div>
+                            <div class="hidden-stat">
+                                <div class="element-stat">
+                                    <img draggable="false" class="icon-stat" src="{% static 'Elements/Ether.png' %}">
+                                    DMG
+                                </div>
+                                <span>{{AgentInfo.ether_dmg}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background-stats">
+                <div class="agent-items">
+                    <div class="discs">
+                        {% for disc in DiscsInfo %}
+                            <div id="disc-{{forloop.counter}}" class="disc">
+                                <div class="disc-header">
+                                    <div class="disc-info">
+                                        <div class="disc-name">{{disc.disc_name}} [{{forloop.counter}}]</div>
+                                        <div class="disc-effect">
+                                            2-Piece Set:
+                                            <br>
+                                            <label>{{disc.disc_set}}</label>
+                                        </div>
+                                    </div>
+                                    <img draggable="false" class="disc-img" src="{% static 'Discs/'|add:disc.disc_name|add:'.png' %}">
+                                </div>
+                                <div class="disc-main-stat">
+                                    <span>{{disc.disc_main_stat_name}}</span>
+                                    <span>{{disc.disc_main_stat_value}}</span>
+                                </div>
+                                <div class="disc-stats">
+                                    <div class="sub-stat">
+                                        <div class="sub-stat-info">
+                                            <span class="sub-stat-name">{{disc.disc_substat_name_1}}</span>
+                                            {% load AdditionalFuncs %}
+                                            {% if disc.disc_substat_role_1|greaterThan:0 %}
+                                                <span class="sub-stat-role">+{{disc.disc_substat_role_1}}</span>
+                                            {% else %}
+                                                <span class="sub-stat-role"></span>
+                                            {% endif %}
+                                        </div>
+                                        {% load AdditionalFuncs %}
+                                        <span class="sub-stat-value">{{disc.disc_substat_value_1|multiply:disc.disc_substat_role_1}}</span>
+                                    </div>
+                                    <div class="sub-stat">
+                                        <div class="sub-stat-info">
+                                            <span class="sub-stat-name">{{disc.disc_substat_name_2}}</span>
+                                            {% load AdditionalFuncs %}
+                                            {% if disc.disc_substat_role_2|greaterThan:0 %}
+                                                <span class="sub-stat-role">+{{disc.disc_substat_role_2}}</span>
+                                            {% else %}
+                                                <span class="sub-stat-role"></span>
+                                            {% endif %}
+                                        </div>
+                                        {% load AdditionalFuncs %}
+                                        <span class="sub-stat-value">{{disc.disc_substat_value_2|multiply:disc.disc_substat_role_2}}</span>
+                                    </div>
+                                    <div class="sub-stat">
+                                        <div class="sub-stat-info">
+                                            <span class="sub-stat-name">{{disc.disc_substat_name_3}}</span>
+                                            {% load AdditionalFuncs %}
+                                            {% if disc.disc_substat_role_3|greaterThan:0 %}
+                                                <span class="sub-stat-role">+{{disc.disc_substat_role_3}}</span>
+                                            {% else %}
+                                                <span class="sub-stat-role"></span>
+                                            {% endif %}
+                                        </div>
+                                        {% load AdditionalFuncs %}
+                                        <span class="sub-stat-value">{{disc.disc_substat_value_3|multiply:disc.disc_substat_role_3}}</span>
+                                    </div>
+                                    <div class="sub-stat">
+                                        <div class="sub-stat-info">
+                                            <span class="sub-stat-name">{{disc.disc_substat_name_4}}</span>
+                                            {% load AdditionalFuncs %}
+                                            {% if disc.disc_substat_role_4|greaterThan:0 %}
+                                                <span class="sub-stat-role">+{{disc.disc_substat_role_4}}</span>
+                                            {% else %}
+                                                <span class="sub-stat-role"></span>
+                                            {% endif %}
+                                        </div>
+                                        {% load AdditionalFuncs %}
+                                        <span class="sub-stat-value">{{disc.disc_substat_value_4|multiply:disc.disc_substat_role_4}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <!--
+                        <div id="disc-1" class="disc">
+                            <div class="disc-header">
+                                <div class="disc-info">
+                                    <div class="disc-name">Chaos Jazz [1]</div>
+                                    <div class="disc-effect">
+                                        2-Piece Set:
+                                        <br>
+                                        <label>Anomaly Proficiency+30</label>
+                                    </div>
+                                </div>
+                                <img draggable="false" class="disc-img" src="Chaos Jazz.png">
+                            </div>
+                            <div class="disc-main-stat">
+                                <span>HP</span>
+                                <span>2200</span>
+                            </div>
+                            <div class="disc-stats">
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">DEF</span>
+                                        <span class="sub-stat-role">+1</span>
+                                    </div>
+                                    <span class="sub-stat-value">30</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">CRIT DMG</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">4.8%</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">Anomaly Proficiency</span>
+                                        <span class="sub-stat-role">+1</span>
+                                    </div>
+                                    <span class="sub-stat-value">18</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">ATK</span>
+                                        <span class="sub-stat-role">+1</span>
+                                    </div>
+                                    <span class="sub-stat-value">38</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="disc-2" class="disc">
+                            <div class="disc-header">
+                                <div class="disc-info">
+                                    <div class="disc-name">Phaethon's Melody [2]</div>
+                                    <div class="disc-effect">
+                                        2-Piece Set:
+                                        <br>
+                                        <label>Anomaly Mastery+8%</label>
+                                    </div>
+                                </div>
+                                <img draggable="false" class="disc-img" src="Phaethon's Melody.png">
+                            </div>
+                            <div class="disc-main-stat">
+                                <span>ATK</span>
+                                <span>318</span>
+                            </div>
+                            <div class="disc-stats">
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">CRIT DMG</span>
+                                        <span class="sub-stat-role">+1</span>
+                                    </div>
+                                    <span class="sub-stat-value">9.6%</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">ATK</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">3.0%</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">Anomaly Proficiency</span>
+                                        <span class="sub-stat-role">+2</span>
+                                    </div>
+                                    <span class="sub-stat-value">27</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">HP</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">3.0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="disc-3" class="disc">
+                            <div class="disc-header">
+                                <div class="disc-info">
+                                    <div class="disc-name">Phaethon's Melody [3]</div>
+                                    <div class="disc-effect">
+                                        2-Piece Set:
+                                        <br>
+                                        <label>Anomaly Mastery+8%</label>
+                                    </div>
+                                </div>
+                                <img draggable="false" class="disc-img" src="Phaethon's Melody.png">
+                            </div>
+                            <div class="disc-main-stat">
+                                <span>DEF</span>
+                                <span>184</span>
+                            </div>
+                            <div class="disc-stats">
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">ATK</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">19</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">Anomaly Proficiency</span>
+                                        <span class="sub-stat-role">+1</span>
+                                    </div>
+                                    <span class="sub-stat-value">18</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">HP</span>
+                                        <span class="sub-stat-role">+1</span>
+                                    </div>
+                                    <span class="sub-stat-value">224</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">DEF</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">4.8%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="disc-4" class="disc">
+                            <div class="disc-header">
+                                <div class="disc-info">
+                                    <div class="disc-name">Phaethon's Melody [4]</div>
+                                    <div class="disc-effect">
+                                        2-Piece Set:
+                                        <br>
+                                        <label>Anomaly Mastery+8%</label>
+                                    </div>
+                                </div>
+                                <img draggable="false" class="disc-img" src="Phaethon's Melody.png">
+                            </div>
+                            <div class="disc-main-stat">
+                                <span>Anomaly Proficiency</span>
+                                <span>30</span>
+                            </div>
+                            <div class="disc-stats">
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">DEF</span>
+                                        <span class="sub-stat-role">+1</span>
+                                    </div>
+                                    <span class="sub-stat-value">9.6%</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">HP</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">3.0%</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">HP</span>
+                                        <span class="sub-stat-role">+1</span>
+                                    </div>
+                                    <span class="sub-stat-value">224</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">ATK</span>
+                                        <span class="sub-stat-role">+1</span>
+                                    </div>
+                                    <span class="sub-stat-value">6.0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="disc-5" class="disc">
+                            <div class="disc-header">
+                                <div class="disc-info">
+                                    <div class="disc-name">Phaethon's Melody [5]</div>
+                                    <div class="disc-effect">
+                                        2-Piece Set:
+                                        <br>
+                                        <label>Anomaly Mastery+8%</label>
+                                    </div>
+                                </div>
+                                <img draggable="false" class="disc-img" src="Phaethon's Melody.png">
+                            </div>
+                            <div class="disc-main-stat">
+                                <span>Ether Damage</span>
+                                <span>30%</span>
+                            </div>
+                            <div class="disc-stats">
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">ATK</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">3.0%</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">PEN</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">9</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">DEF</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">15</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">DEF</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">4.8%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="disc-6" class="disc">
+                            <div class="disc-header">
+                                <div class="disc-info">
+                                    <div class="disc-name">Chaos Jazz [6]</div>
+                                    <div class="disc-effect">
+                                        2-Piece Set:
+                                        <br>
+                                        <label>Anomaly Proficiency+30</label>
+                                    </div>
+                                </div>
+                                <img draggable="false" class="disc-img" src="Chaos Jazz.png">
+                            </div>
+                            <div class="disc-main-stat">
+                                <span>Anomaly Mastery</span>
+                                <span>30%</span>
+                            </div>
+                            <div class="disc-stats">
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">Anomaly Proficiency</span>
+                                        <span class="sub-stat-role">+2</span>
+                                    </div>
+                                    <span class="sub-stat-value">27</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">CRIT Rate</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">2.4%</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">PEN</span>
+                                        <span class="sub-stat-role">+2</span>
+                                    </div>
+                                    <span class="sub-stat-value">27</span>
+                                </div>
+                                <div class="sub-stat">
+                                    <div class="sub-stat-info">
+                                        <span class="sub-stat-name">ATK</span>
+                                        <span class="sub-stat-role"></span>
+                                    </div>
+                                    <span class="sub-stat-value">3.0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                    <div class="wengine">
+                        <div class="wengine-img-background">
+                            <img draggable="false" class="wengine-img" src="{% static 'WEngines/'|add:WEngineInfo.wengine_name|add:'.png' %}" alt="">
+                        </div>
+                        <div class="wengine-info">
+                            <div class="wengine-main">
+                                <div class="wengine-name">Rainforest Gourmet</div>
+                                <div class="wnengine-modification">
+                                    <img draggable="false" class="wengine-modification-star" src="{% static 'Images/Star.png' %}">
+                                    <img draggable="false" class="wengine-modification-star" src="{% static 'Images/Star.png' %}">
+                                    <img draggable="false" class="wengine-modification-star" src="{% static 'Images/Star.png' %}">
+                                    <img draggable="false" class="wengine-modification-star" src="{% static 'Images/Star.png' %}">
+                                    <img draggable="false" class="wengine-modification-star" src="{% static 'Images/Star.png' %}">
+                                </div>
+                                <div class="wengine-bottom">
+                                    <div class="wengine-level">
+                                        Lv. 60/60
+                                    </div>
+                                    <div class="wengine-badges">
+                                        {% if WEngineInfo.wengine_owner == "" %}
+                                            <img draggable="false" class="wengine-badge" src="{% static 'Agents/Icon.png' %}">
+                                        {% else %}
+                                            <img draggable="false" class="wengine-badge" src="{% static 'Agents/'|add:WEngineInfo.wengine_owner|add:'.png' %}">
+                                        {% endif %}
+                                        <img draggable="false" class="wengine-badge" src="{% static 'Types/'|add:WEngineInfo.wengine_type|add:'.png' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wengine-stats">
+                                <div class="wengine-main-stat">
+                                    <label class="wengine-main-stat-label">Base Stat</label>
+                                    <div class="wengine-main-stat-div">
+                                        <span>{{WEngineInfo.wengine_main_stat_name}}</span>
+                                        <span>{{WEngineInfo.wengine_main_stat_value}}</span>
+                                    </div>
+                                </div>
+                                <div class="wengine-sub-stat">
+                                    <label class="wengine-sub-stat-label">Advanced Stat</label>
+                                    <div class="wengine-sub-stat-div">
+                                        <span>{{WEngineInfo.wengine_sub_stat_name}}</span>
+                                        <span>{{WEngineInfo.wengine_sub_stat_value}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button style="width: 100px; margin-top: 10px;" onclick="saveCard()">Print Card</button>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script>
+            const card = document.getElementById("agent-card");
+
+            function saveCard(){
+                html2canvas(card).then(canvas => {
+                    const link = document.createElement("a");
+                    link.download = "minha-div.png";
+                    link.href = canvas.toDataURL();
+                    link.click();
+                });
+            }
+        </script>
+    </body>
+</html>

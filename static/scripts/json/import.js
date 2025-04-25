@@ -43,7 +43,6 @@ import_input.addEventListener('change', (event) => {
                     }
                 });
 
-                console.log("click");
                 if(temp_agent_maxed != document.getElementById("agent-promotion-maxed").classList.contains("active"))
                     document.getElementById("agent-promotion-maxed").click();
 
@@ -113,8 +112,8 @@ import_input.addEventListener('change', (event) => {
                 updateAgentStats();
 
             }catch(error){
-                console.log("teste3");
-                console.log("JSON ERROR:\n" + error);
+                /*console.log("teste3");
+                console.log("JSON ERROR:\n" + error);*/
                 alert("File not valid!");
             }
         };
@@ -125,6 +124,6 @@ import_input.addEventListener('change', (event) => {
 });
 
 function ImportBuild(){
-    console.log("import build");
+    //console.log("import build");
     import_input.click();
 }

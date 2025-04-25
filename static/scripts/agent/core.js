@@ -46,9 +46,12 @@ function updateCoreDescription(){
     extra_stat_id = 0;
     extra_stat = 0;
 
+    number_core_active = 0;
+
     agent_core.forEach(slot => {
         if(slot["slot"]%2 == 0) extra_stat_id = slot["stat_id"];
         if(slot["is_active"]){
+            number_core_active++;
             if(slot["slot"]%2 == 0)
                 extra_stat+=slot["stat_value"];
             else
@@ -56,6 +59,7 @@ function updateCoreDescription(){
         }
     });
 
+    document.getElementById("agent-core").value = number_core_active;
 
     let base_div = document.getElementById("core-base-effect");
     let extra_div = document.getElementById("core-second-effect");

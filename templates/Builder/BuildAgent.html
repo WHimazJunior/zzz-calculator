@@ -41,7 +41,12 @@
     <header>
         <label class="title">ZZZ Calculator</label>
         <div class="right-side-header">
-            {% include "Builder/ExportImage/ExportImage.html" %}
+            <form id="BuildImage" action="/editor" target="_blank" method="POST">
+                <div style="display: none;">
+                    {% include "Builder/NameInputPOST.html" %}
+                </div>
+                {% include "Builder/ExportImage/ExportImage.html" %}
+            </form>
             {% include "Builder/JSON/ImportExport.html" %}
             <img class="settings-icon active"
                 src="{% static 'Settings/settings-icon.png' %}"
@@ -81,7 +86,8 @@
             </div>
         </div>
     </div>
-
+    
     <script src="{% static 'scripts/stats/stats.js' %}"></script>
+    
 </body>
 </html>

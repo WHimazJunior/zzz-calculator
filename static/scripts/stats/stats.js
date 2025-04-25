@@ -177,7 +177,7 @@ updateAgentStats();
 
 function updateAgentStats(){
     stats_list.forEach(stat => {
-        let stat_label = document.querySelector(".stat_"+stat["id"]);
+        let stat_label = document.querySelector(".stat-"+stat["id"]);
 
         if(stat_label){
             let base_stat = stat_label.getAttribute("data-value");

@@ -1,0 +1,713 @@
+@font-face {
+    font-family: ZZZ;
+    src: url(../ZZZ.ttf);
+}
+
+
+@font-face {
+    font-family: ZZZCore;
+    src: url(../ZZZCore.ttf);
+}
+
+:root{
+    --light-color: #741cef;
+    --light-gradient: #601fba;
+    --dark-gradient: #331162;
+}
+
+body, html{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(5,5,5);
+    width: 100%;
+    font-family: ZZZ;
+    user-select: none;
+}
+
+.agent-card{
+    display: flex;
+    width: 1500px;
+    aspect-ratio: 11/6;
+    background-image: linear-gradient(var(--light-color), var(--dark-gradient));
+    padding: .5%;
+    gap: .5%;
+    box-sizing: border-box;
+}
+
+.background-info, .background-stats{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    background-color: rgb(5,5,5);
+    border-radius: 5px;
+}
+
+.background-stats{
+    width: 60%;
+    height: 100%;
+}
+
+.agent-info, .agent-items{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5%;
+    gap: 1.5%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.8) 0px, rgba(0, 0, 0, 0.8) 2px, rgba(255, 255, 255, 0.05) 4px, rgba(255, 255, 255, 0.05) 8px );
+}
+
+.agent-main-info{
+    display: flex;
+    padding: 2%;
+    gap: 5%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0,0,0,0.45);
+    border-radius: 5px;
+}
+
+.agent-img-background{
+    display: flex;
+    height: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: linear-gradient(-75deg, rgb(255, 125, 0), rgb(250, 210, 5));
+    padding: 1%;
+}
+
+.agent-img{
+    display: flex;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.agent-side-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.agent-right-side-info{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.agent-name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+}
+
+.agent-name-label{
+    font-size: 160%;
+    color: white;
+}
+
+.agent-nickname-label{
+    font-size: 100%;
+    color: var(--dark-gradient);
+}
+
+.agent-mindscape{
+    display: flex;
+    height: 60%;
+    width: 100%;
+}
+
+.agent-mindscape-img{
+    height: 110%;
+}
+
+.agent-sub-info{
+    display: flex;
+    background-color: rgba(0,0,0,0.45);
+    width: 100%;
+    height: 15%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1.5%;
+    gap: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 5px;
+}
+
+.badges, .agent-core{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge{
+    height: 60%;
+}
+
+.agent-level{
+    display: flex;
+    width: 100%;
+    background-color: rgba(0,0,0,0.45);
+    height: 5%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 12%;
+    padding-right: 12%;
+    font-size: 120%;
+}
+
+.agent-stats{
+    display: flex;
+    width: 100%;
+    background-color: rgba(0,0,0,0.45);
+    height: 30%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+
+.stats, .hidden-stats{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5%;
+    font-size: 70%;
+    row-gap: 6%;
+}
+
+.hidden-stats{
+    row-gap: 8%;
+}
+
+.stat, .hidden-stat{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 8px;
+    height: 100%;
+    justify-content: space-between;
+    padding: 2%;
+    box-sizing: border-box;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.agent-hidden-stats{
+    display: flex;
+    width: 100%;
+    background-color: rgba(0,0,0,0.45);
+    height: 20%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+
+.icon-stat{
+    height: 20px;
+    aspect-ratio: 1;
+}
+
+.element-stat{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 20%;
+}
+
+.discs{
+    display: grid;
+    height: 75%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.45);
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: border-box;
+    gap: 2%;
+    padding: 1%;
+}
+
+.disc{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.65);
+    box-sizing: border-box;
+    height: 100%;
+    padding: 3%;
+    gap: 2%;
+    border-radius: 5px;
+    color: white;
+}
+
+.disc-header{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.disc-name{
+    font-size: 90%;
+}
+
+.disc-effect{
+    font-size: 60%;
+}
+
+.disc-img{
+    height: 60px;
+    aspect-ratio: 1;
+}
+
+.disc-main-stat{
+    display: flex;
+    height: 15%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.65);
+    box-sizing: border-box;
+    border: 2px white solid;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.disc-stats{
+    display: flex;
+    flex-direction: column;
+    height: 55%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.65);
+    box-sizing: border-box;
+    border: 2px white solid;
+}
+
+.sub-stat{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 25%;
+    font-size: 80%;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.sub-stat-role{
+    color: rgb(255, 175, 42);
+}
+
+.wengine{
+    display: flex;
+    height: 25%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.45);
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: border-box;
+    gap: 2%;
+    padding: 1%;
+}
+
+.wengine-img-background{
+    height: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(-75deg, rgb(158, 0, 250), rgb(240, 5, 250));
+    border-radius: 5px;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.wengine-img{
+    height: 100%;
+}
+
+.wengine-info{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    gap: 2%;
+}
+
+.wengine-main{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    gap: 3%;
+    background-color: rgba(0,0,0,0.65);
+    border-radius: 5px;
+    flex-direction: column;
+    color: white;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.wengine-stats{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0,0,0,0.65);
+    border-radius: 5px;
+    color: white;
+}
+
+.wengine-name{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45%;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 130%;
+    box-sizing: border-box;
+}
+
+.wnengine-modification{
+    display: flex;
+    height: 25%;
+    width: 100%;
+    padding: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.65);
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.wengine-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.65);
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.wengine-level{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    font-size: 120%;
+}
+
+.wengine-badges{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 1%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.wengine-badge{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.wengine-modification-star{
+    height: 25px;
+    aspect-ratio: 1;
+}
+
+.wengine-main-stat, .wengine-sub-stat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 2%;
+    height: 50%;
+    width: 100%;
+    gap: 5%;
+}
+
+.wengine-main-stat-label, .wengine-sub-stat-label{
+    font-size: 90%;
+    color: #8E8E8E;
+}
+
+.wengine-main-stat-div, .wengine-sub-stat-div{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    background-color: black;
+    border-radius: 200px;
+    justify-content: space-between;
+    font-size: 90%;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+
+
+
+.core-column-level, .core-column-effect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.15) 25%, transparent 10%) 0 0 / 4px 4px,
+                radial-gradient(circle, rgba(0, 0, 0, 0.25) 25%, transparent 10%) 6px 6px / 4px 4px,
+                linear-gradient(90deg, var(--light-gradient), var(--dark-gradient));
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2px solid rgb(49, 49, 49);
+    outline: 2px solid black;
+    gap: 10%;
+    border-radius: 100px;
+    transform: rotate(15deg);
+}
+
+.core-column-effect{
+    background: linear-gradient(rgb(11, 11, 11), rgb(43, 43, 43));
+}
+
+.core-level-outline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(30deg, rgb(59, 59, 59), rgb(12, 12, 12));
+    border: 2px solid rgb(31, 31, 31);
+}
+
+.core-label-outline, .core-effect-outline{
+    text-shadow: -1px -1px 0 rgb(13, 13, 13);
+    display: flex;
+    justify-content: center;
+    color: rgb(27, 28, 27);
+    align-items: center;
+    width: 75%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid rgb(18, 15, 18);
+    -webkit-transition: transform .2s ease-in-out;
+}
+
+.core-label-outline{
+    background: linear-gradient(30deg, rgb(32, 31, 32), rgb(90, 93, 90));
+    -webkit-transition: color .5s ease-in-out, text-shadow 1s ease-in-out;
+}
+
+.core-effect-outline{
+    background-color: rgb(18, 15, 18);
+    animation: rotateCore 10s linear infinite;
+}
+
+@keyframes rotateCore{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes glow {
+    from{
+        text-shadow: -1px -1px 0 rgb(13, 13, 13);
+    }
+    to{
+        text-shadow: -1px -1px 0 rgb(13, 13, 13), 0 0 3px var(--light-color), 0 0 4px var(--light-color), 0 0 5px var(--light-color), 0 0 6px var(--light-color), 0 0 9px var(--light-color);
+    }
+}
+
+.core-base{
+    font-family: ZZZCore;
+    transform: rotate(-15deg);
+    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(30deg, rgb(90, 93, 90), rgb(32, 31, 32));
+    user-select: none;
+}
+
+.core-effect-base{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 75%;
+    aspect-ratio: 1;
+    border: 2px solid rgb(54, 55, 54);
+}
+
+.core-effect-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 65%;
+    aspect-ratio: 1;
+    background-color: var(--light-color);
+}
+
+.core-effect-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 75%;
+    aspect-ratio: 1;
+    background-color: rgb(54, 55, 54);
+}
+
+.core-effect-nut{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 3px;
+    aspect-ratio: 1;
+    background-color: rgb(36, 36, 36);
+    border: 1px solid rgb(20, 15, 20);
+}
+
+#core-effect-stick{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 200%;
+    background-color: rgb(54, 55, 54);
+}
+
+.core-effect-stick-1{
+    margin-bottom: 560%;
+}
+
+.core-effect-stick-2{
+    margin-top: 560%;
+}
+
+.core-effect-stick-3{
+    transform: rotate(60deg);
+    margin-top: 300%;
+    margin-right: 480%;
+}
+
+.core-effect-stick-4{
+    transform: rotate(60deg);
+    margin-bottom: 300%;
+    margin-left: 480%;
+}
+
+.core-effect-stick-5{
+    transform: rotate(-60deg);
+    margin-top: 300%;
+    margin-left: 480%;
+}
+
+.core-effect-stick-6{
+    transform: rotate(-60deg);
+    margin-bottom: 300%;
+    margin-right: 480%;
+}
+
+.core-effect-triangle-outline{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    border-bottom: 12px solid rgb(16, 16, 16);
+    border-left: 8px solid transparent;
+    border-right: 7px solid transparent;
+    transform: rotate(32deg);
+    margin-left: 68%;
+}
+
+.core-effect-triangle{
+    position: absolute;
+    border-bottom: 9px solid rgb(25, 25, 25);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    margin-top: 2px;
+}
+
+.core-effect-sub-triangle{
+    position: absolute;
+    border-bottom: 6px solid var(--light-color);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    margin-left: -4px;
+    margin-top: 2px;
+}
+
+.core-effect-triangle-bar{
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    background-color: rgb(25, 25, 25);
+}
+
+#core-effect-triangle-bar-1{
+    transform: rotate(90deg);
+    margin-top: 3px;
+    margin-left: 0px;
+}
+
+#core-effect-triangle-bar-2{
+    transform: rotate(210deg);
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+#core-effect-triangle-bar-3{
+    transform: rotate(330deg);
+    margin-left: -6px;
+    margin-top: 13px;
+}
+
+.core-label{
+    transform: skewX(-20deg);
+    color: var(--light-color);
+    /*text-shadow: -1px -1px 0 rgb(13, 13, 13), 0 0 3px var(--light-color), 0 0 4px var(--light-color), 0 0 5px var(--light-color), 0 0 6px var(--light-color), 0 0 9px var(--light-color);*/
+}
